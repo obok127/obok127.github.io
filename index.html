@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>장예은 · Data Scientist & AI Engineer</title>
-  <meta name="description" content="Python/SQL 기반 데이터 분석, <span class="nowrap">LLM·RAG</span> 서비스 개발, Kaggle 상위 4~8% 성과를 보유한 데이터사이언티스트 장예은 포트폴리오." />
+  <meta name="description" content="Python/SQL 기반 데이터 분석, LLM·RAG 서비스 개발, Kaggle 상위 4~8% 성과를 보유한 데이터사이언티스트 장예은 포트폴리오." />
   <meta name="author" content="장예은" />
   <meta name="theme-color" content="#014BB7" />
   
@@ -24,21 +24,21 @@
 
   <!-- Schema.org (JSON-LD) -->
   <script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"장예은",
-  "jobTitle":"Data Scientist & AI Engineer",
-  "email":"mailto:jangyeeun330@gmail.com",
-  "telephone":"+82-10-5417-4594",
-  "url":"https://obok127.github.io/",
-  "sameAs":[
-    "https://skuldium.xyz/",
-    "https://velog.io/@obok127/posts",
-    "https://www.kaggle.com/obok127"
-  ]
-}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "장예은",
+    "jobTitle": "Data Scientist & AI Engineer",
+    "email": "mailto:jangyeeun330@gmail.com",
+    "telephone": "+82-10-5417-4594",
+    "url": "https://obok127.github.io/",
+    "sameAs": [
+      "https://skuldium.xyz/",
+      "https://velog.io/@obok127/posts",
+      "https://www.kaggle.com/obok127"
+    ]
+  }
+  </script>
 
   <style>
     /* ===== Color System (Brand: Blue/Yellow, High Readability) ===== */
@@ -143,25 +143,40 @@
       .grid-3,.grid-2{grid-template-columns:1fr}
       .hero{padding:72px 0 56px}
     }
+
     /* ===== Typography & Paragraph Control ===== */
-  :root{ --leading:1.65; --p-gap:14px; }
-  body{ line-height:var(--leading); word-break:keep-all; overflow-wrap:break-word; }
-  p{ margin:0 0 var(--p-gap); }
-  li{ word-break:keep-all; }
-  h1,h2,h3{ text-wrap:balance; }
-  .nowrap{ white-space:nowrap; }
-  .certs-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow)}
-.copyable{cursor:pointer;text-decoration:underline;text-decoration-style:dashed;text-underline-offset:3px}
-.copyable:hover{opacity:.92}
-.copyable[data-copied="true"]::after{content:" 복사됨";margin-left:8px;font-weight:800;color:var(--brand)}
-.hscroll{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-color: var(--border) transparent}
-.hscroll .project{flex:0 0 340px;scroll-snap-align:start}
-.hscroll::-webkit-scrollbar{height:10px}
-.hscroll::-webkit-scrollbar-thumb{background:rgba(17,24,39,.2);border-radius:999px}
-.hscroll::-webkit-scrollbar-track{background:rgba(17,24,39,.06)}
-@media (max-width:640px){.hscroll .project{flex-basis:85vw}}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(2,6,23,.2);opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease;pointer-events:none;z-index:1000;font-weight:700}
-</style>
+    :root{ --leading:1.65; --p-gap:14px; }
+    body{ line-height:var(--leading); word-break:keep-all; overflow-wrap:break-word; }
+    p{ margin:0 0 var(--p-gap); }
+    li{ word-break:keep-all; }
+    h1,h2,h3{ text-wrap:balance; }
+    .nowrap{ white-space:nowrap; }
+
+    /* HScroll projects */
+    .hscroll{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-color: var(--border) transparent}
+    .hscroll .project{flex:0 0 340px;scroll-snap-align:start}
+    .hscroll::-webkit-scrollbar{height:10px}
+    .hscroll::-webkit-scrollbar-thumb{background:rgba(17,24,39,.2);border-radius:999px}
+    .hscroll::-webkit-scrollbar-track{background:rgba(17,24,39,.06)}
+    @media (max-width:640px){.hscroll .project{flex-basis:85vw}}
+
+    /* Copy feedback */
+    .copyable{cursor:pointer;text-decoration:underline;text-decoration-style:dashed;text-underline-offset:3px}
+    .copyable:hover{opacity:.92}
+    .copyable[data-copied="true"]::after{content:" 복사됨";margin-left:8px;font-weight:800;color:var(--brand)}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(2,6,23,.2);opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease;pointer-events:none;z-index:1000;font-weight:700}
+
+    /* Contact form */
+    .form{display:grid;gap:14px}
+    .label{font-weight:800;color:var(--brand);display:inline-flex;align-items:center;gap:8px}
+    .req{font-size:12px;background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:2px 6px;color:var(--brand)}
+    .input,.textarea{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:16px;background:#fff;outline:none}
+    .input:focus,.textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px rgba(1,75,183,.08)}
+    .btn-accent{background:var(--accent);color:#111827;border-color:transparent;box-shadow:0 8px 22px rgba(252,235,0,.35)}
+    .btn-accent:hover{transform:translateY(-1px)}
+    .contact .label{color:#cbd5e1}
+    .contact .input,.contact .textarea{background:#fff;color:#111827;border-color:rgba(255,255,255,.18)}
+  </style>
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -190,19 +205,19 @@
         <div>
           <span class="kicker">Data Scientist · AI Engineer</span>
           <h1 class="hero-title">
-  <span class="nowrap">데이터로 문제를 정의하고</span><br/>
-  <span class="nowrap">모델을 만들고</span><br/>
-  <span class="nowrap">제품으로 연결합니다.</span>
-</h1>
-          <p class="hero-sub">Python/SQL 기반 대규모 분석, <span class="nowrap">LLM·RAG</span> 서비스 개발과 서빙까지 한 번에 진행하는 실전형 데이터사이언티스트입니다.</p>
+            <span class="nowrap">데이터로 문제를 정의하고</span><br/>
+            <span class="nowrap">모델을 만들고</span><br/>
+            <span class="nowrap">제품으로 연결합니다.</span>
+          </h1>
+          <p class="hero-sub">Python/SQL 기반 대규모 분석, LLM·RAG 서비스 개발과 서빙까지 한 번에 진행하는 실전형 데이터사이언티스트입니다.</p>
           <div class="hero-cta">
-            <a id="downloadResume" class="btn btn-primary" href="assets/resume.pdf" download="JangYeeun_Resume.pdf">📄 이력서 다운로드</a>
+            <a id="goContact" class="btn btn-primary" href="#contact">📨 Contact</a>
             <a class="btn btn-ghost" href="#projects">🧪 대표 프로젝트 보기</a>
             <button class="btn btn-ghost" id="copyMail" type="button" aria-label="이메일 복사">📧 이메일 복사</button>
           </div>
           <div class="stat-row" aria-label="주요 지표">
-            <div class="stat"><span class="dot"></span><strong><span class="nowrap">Kaggle Top 4~8%</span></strong> (5 comps)</div>
-            <div class="stat"><span class="dot"></span><strong><span class="nowrap">LLM·RAG</span></strong> 실서비스 PoC</div>
+            <div class="stat"><span class="dot"></span><strong>Kaggle Top 4~8%</strong> (5 comps)</div>
+            <div class="stat"><span class="dot"></span><strong>LLM·RAG</strong> 실서비스 PoC</div>
             <div class="stat"><span class="dot"></span><strong>EDA→서빙</strong> E2E 경험</div>
           </div>
         </div>
@@ -211,7 +226,7 @@
             <span class="badge">Core Strengths</span>
             <ul class="list" style="margin-top:12px">
               <li><span class="tick">✔</span>문제정의→데이터수집/정제→모델링→배포 파이프라인 구성</li>
-              <li><span class="tick">✔</span><span class="nowrap">LLM·RAG</span> 기반 AI 기능을 제품 맥락에 녹여내는 기획/개발</li>
+              <li><span class="tick">✔</span>LLM·RAG 기반 AI 기능을 제품 맥락에 녹여내는 기획/개발</li>
               <li><span class="tick">✔</span>협업 친화적 커뮤니케이션 & 사용자 중심 설계</li>
             </ul>
           </div>
@@ -229,8 +244,7 @@
       </div>
       <div class="card reveal">
         <div>
-          <img src="/avatar-placeholder.svg" alt="프로필 이미지 자리표시자" style="width:220px;height:220px;border-radius:16px;border:1px solid var(--border);object-fit:cover;background:#fff" />
-          <p class="muted" style="margin-top:10px">* 프로필 이미지를 교체하려면 <code>/avatar-placeholder.svg</code> 대신 본인 사진을 넣어주세요</p>
+          <img src="/avatar-placeholder.svg" alt="프로필 이미지" style="width:220px;height:220px;border-radius:16px;border:1px solid var(--border);object-fit:cover;background:#fff" />
         </div>
         <div>
           <p style="margin:0 0 12px">마케팅·제품기획 경험을 거쳐 데이터 분석과 LLM 기반 AI 서비스 개발로 확장했습니다. Kaggle에서 상위 4~8% 성과를 달성했고, 사용자 문제를 데이터와 모델, 제품으로 연결하는 것을 목표로 합니다.</p>
@@ -247,11 +261,11 @@
           <div class="grid-2" style="margin-top:16px">
             <div class="card" style="padding:16px">
               <strong>연락처</strong>
-<p class="muted" style="margin:6px 0 0">
-  <a href="#" class="copyable" data-copy="jangyeeun330@gmail.com">jangyeeun330@gmail.com</a>
-  <span aria-hidden="true"> · </span>
-  <a href="#" class="copyable" data-copy="+82 10-5417-4594">+82 10-5417-4594</a>
-</p>
+              <p class="muted" style="margin:6px 0 0">
+                <a href="#" class="copyable" data-copy="jangyeeun330@gmail.com">jangyeeun330@gmail.com</a>
+                <span aria-hidden="true"> · </span>
+                <a href="#" class="copyable" data-copy="+82 10-5417-4594">+82 10-5417-4594</a>
+              </p>
             </div>
             <div class="card" style="padding:16px">
               <strong>링크</strong>
@@ -308,8 +322,14 @@
     </div>
   </section>
 
-  <!-- ===== Projects ===== -->
-  <div class="hscroll" role="region" aria-label="Featured Projects" tabindex="0">
+  <!-- ===== Projects (H-Scroll) ===== -->
+  <section id="projects" style="background:var(--bg-soft)">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">문제 → 데이터 → 모델 → 결과/인사이트</p>
+      </div>
+      <div class="hscroll" role="region" aria-label="Featured Projects" tabindex="0">
         <article class="card project reveal">
           <span class="badge">NLP · 감정/토픽 분석</span>
           <h3>티빙 소비자 리뷰 감정 분석</h3>
@@ -371,28 +391,27 @@
           <ul class="list" style="margin-top:10px">
             <li><span class="tick">🎓</span>세종대학교 행정/융합창업학사 (우등 졸업)</li>
             <li><span class="tick">📚</span>SeSAC 데이터 AI 개발자 과정</li>
-            <li><span class="tick">🪪</span>ADSP, 파이썬프로그래밍 1급</li>
             <li style="display:block">
-  <button class="btn btn-ghost" id="toggleCerts" type="button">🧾 Certificate 목록 보기</button>
-  <div id="certsPanel" class="certs-panel card" style="padding:16px;margin-top:12px;display:none">
-    <strong>Certificates / Courses</strong>
-    <ul class="list" style="margin-top:10px">
-      <li><span class="tick">✔</span>Coursera — Google AI Essentials <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Kaggle — Data Visualization <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Kaggle — Feature Engineering <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Kaggle — Time Series <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Kaggle — Computer Vision <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — Agents <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — Audio <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — Community Computer Vision <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — Deep RL <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — Diffusion <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — LLM <span class="tag">진행 중</span></li>
-      <li><span class="tick">✔</span>Hugging Face — MCP <span class="tag">진행 중</span></li>
-    </ul>
-    <p class="muted" style="margin-top:8px">* 완료/수강중 상태는 필요 시 텍스트만 수정하면 바로 반영됩니다.</p>
-  </div>
-</li>
+              <button class="btn btn-ghost" id="toggleCerts" type="button">🧾 Certificate 목록 보기</button>
+              <div id="certsPanel" class="card" style="padding:16px;margin-top:12px;display:none">
+                <strong>Certificates / Courses</strong>
+                <ul class="list" style="margin-top:10px">
+                  <li><span class="tick">✔</span>Coursera — Google AI Essentials <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Kaggle — Data Visualization <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Kaggle — Feature Engineering <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Kaggle — Time Series <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Kaggle — Computer Vision <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — Agents <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — Audio <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — Community Computer Vision <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — Deep RL <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — Diffusion <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — LLM <span class="tag">진행 중</span></li>
+                  <li><span class="tick">✔</span>Hugging Face — MCP <span class="tag">진행 중</span></li>
+                </ul>
+                <p class="muted" style="margin-top:8px">* 완료/수강중 상태는 필요 시 텍스트만 수정하면 바로 반영됩니다.</p>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -405,22 +424,34 @@
       <div class="section-head">
         <h2 class="section-title" style="color:#fff">Let’s Connect</h2>
         <p class="section-desc" style="color:#cbd5e1">새로운 기회와 협업을 기다립니다</p>
+        <p class="section-desc" style="color:#cbd5e1">관심 있으신 분은 연락처를 남겨주시면 빠르게 회신드리겠습니다.</p>
       </div>
-      <div class="grid-3">
-        <div class="card reveal">
-          <h3 style="margin-top:0;color:#fff">Email</h3>
-          <p><a href="#" class="copyable" data-copy="jangyeeun330@gmail.com">jangyeeun330@gmail.com</a></p>
-          <span class="tag">클릭하면 복사</span>
-        </div>
-        <div class="card reveal">
-          <h3 style="margin-top:0;color:#fff">Phone</h3>
-          <p><a href="#" class="copyable" data-copy="+82 10-5417-4594">+82 10-5417-4594</a></p>
-          <span class="tag">한국/아시아(Seoul) 타임존</span>
-        </div>
+      <div class="grid-2">
         <div class="card reveal">
           <h3 style="margin-top:0;color:#fff">Links</h3>
           <p><a href="https://obok127.github.io/" target="_blank" rel="noreferrer">Portfolio</a> · <a href="https://skuldium.xyz/" target="_blank" rel="noreferrer">Skuldium</a> · <a href="https://velog.io/@obok127/posts" target="_blank" rel="noreferrer">Velog</a> · <a href="https://www.kaggle.com/obok127" target="_blank" rel="noreferrer">Kaggle</a></p>
           <span class="tag">포트폴리오/블로그/프로젝트</span>
+        </div>
+        <div class="card reveal">
+          <h3 style="margin-top:0;color:#fff">문의할 사항이 있으신가요?</h3>
+          <form id="contactForm" class="form" novalidate>
+            <label class="label" for="org">소속</label>
+            <input id="org" name="org" class="input" placeholder="학교/기업/소속" />
+
+            <label class="label" for="name">이름 <span class="req">필수</span></label>
+            <input id="name" name="name" class="input" placeholder="이름" required />
+
+            <label class="label" for="email">이메일 <span class="req">필수</span></label>
+            <input id="email" name="email" type="email" class="input" placeholder="name@example.com" required />
+
+            <label class="label" for="phone">연락처 <span class="req">필수</span></label>
+            <input id="phone" name="phone" class="input" placeholder="010-1234-5678" required />
+
+            <label class="label" for="message">문의 내용 <span class="req">필수</span></label>
+            <textarea id="message" name="message" class="textarea" rows="6" placeholder="문의 내용을 입력해 주세요" required></textarea>
+
+            <button class="btn btn-accent" type="submit" style="align-self:start">확인</button>
+          </form>
         </div>
       </div>
     </div>
@@ -433,6 +464,7 @@
     </div>
   </footer>
 
+  <!-- ===== Scripts ===== -->
   <script>
     // 현재 연도
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -443,32 +475,35 @@
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // 이메일 복사
+    // 이메일 복사 (Hero 버튼)
     const email = 'jangyeeun330@gmail.com';
-    document.getElementById('copyMail').addEventListener('click', async () => {
-      try{ await navigator.clipboard.writeText(email); 
-        const b = document.getElementById('copyMail');
-        b.textContent = '✅ 이메일 복사됨';
-        setTimeout(()=> b.textContent='📧 이메일 복사', 1400);
-      }catch(err){ alert('복사에 실패했습니다: '+err); }
-    });
+    const copyBtn = document.getElementById('copyMail');
+    if(copyBtn){
+      copyBtn.addEventListener('click', async () => {
+        try{ await navigator.clipboard.writeText(email); 
+          copyBtn.textContent = '✅ 이메일 복사됨';
+          setTimeout(()=> copyBtn.textContent='📧 이메일 복사', 1400);
+        }catch(err){ alert('복사에 실패했습니다: '+err); }
+      });
+    }
   </script>
   <script>
+    // 전역 복사 위임(a[href^="mailto:"], a[href^="tel:"], .copyable)
     (function(){
       function showToast(msg){
-        var t = document.getElementById('toast');
+        const t = document.getElementById('toast');
         if(!t) return; t.textContent = msg; t.style.visibility='visible'; t.style.opacity='1';
-        clearTimeout(window.__toastTimer); window.__toastTimer = setTimeout(function(){t.style.opacity='0'; t.style.visibility='hidden';}, 1200);
+        clearTimeout(window.__toastTimer); window.__toastTimer = setTimeout(()=>{t.style.opacity='0'; t.style.visibility='hidden';}, 1200);
       }
       document.addEventListener('click', function(e){
-        var el = e.target.closest('.copyable, a[href^="mailto:"], a[href^="tel:"]');
+        const el = e.target.closest('.copyable, a[href^="mailto:"], a[href^="tel:"]');
         if(!el) return;
         e.preventDefault();
-        var text = (el.dataset && el.dataset.copy) ? el.dataset.copy : (el.textContent || '').trim();
+        const text = (el.dataset && el.dataset.copy) ? el.dataset.copy : (el.textContent || '').trim();
         if(!text) return;
         navigator.clipboard.writeText(text).then(function(){
           if(el.classList && el.classList.contains('copyable')){
-            el.setAttribute('data-copied','true'); setTimeout(function(){ el.removeAttribute('data-copied'); }, 1200);
+            el.setAttribute('data-copied','true'); setTimeout(()=> el.removeAttribute('data-copied'), 1200);
           }
           showToast('복사됨: ' + text);
         }).catch(function(err){
@@ -479,30 +514,72 @@
   </script>
   <div id="toast" class="toast" role="status" aria-live="polite">복사됨</div>
   <script>
+    // Contact 버튼 스크롤 + 폼 mailto 제출
     (function(){
-      var link = document.getElementById('downloadResume');
-      if(!link) return;
-      var candidates = [
-        'assets/resume.pdf',
-        'resume.pdf',
-        'assets/장예은_DS_최종본 (2).pdf',
-        '장예은_DS_최종본 (2).pdf'
-      ];
-      (async function resolveResume(){
-        for (var i=0;i<candidates.length;i++){
-          try{
-            var url = encodeURI(candidates[i]);
-            var r = await fetch(url, {method:'HEAD'});
-            if(r.ok){ link.href = url; return; }
-          }catch(e){}
-        }
-        link.addEventListener('click', function(ev){
+      // Smooth scroll to contact
+      const btn = document.getElementById('goContact');
+      if(btn){
+        btn.addEventListener('click', function(ev){
           ev.preventDefault();
-          alert('이력서 파일을 찾을 수 없습니다. 프로젝트에 /assets/resume.pdf 로 파일을 넣어주세요.');
-        }, {once:true});
-      })();
+          const section = document.getElementById('contact');
+          if(section && section.scrollIntoView){ section.scrollIntoView({behavior:'smooth'}); }
+          setTimeout(()=>{
+            const first = document.querySelector('#contactForm #name');
+            if(first) first.focus();
+          }, 450);
+        });
+      }
+
+      // Form submit via mailto
+      function showToast2(msg){
+        const t = document.getElementById('toast');
+        if(!t) return; t.textContent = msg; t.style.visibility='visible'; t.style.opacity='1';
+        clearTimeout(window.__toastTimer2); window.__toastTimer2 = setTimeout(()=>{t.style.opacity='0'; t.style.visibility='hidden';}, 1500);
+      }
+      const form = document.getElementById('contactForm');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          const org = (form.org.value||'').trim();
+          const name = (form.name.value||'').trim();
+          const email = (form.email.value||'').trim();
+          const phone = (form.phone.value||'').trim();
+          const msg = (form.message.value||'').trim();
+          if(!name || !email || !phone || !msg){ showToast2('필수 항목을 입력해 주세요.'); return; }
+          const subject = encodeURIComponent('[포트폴리오 문의] ' + (org? org+' / ' : '') + name);
+          const body = encodeURIComponent(
+            '소속: ' + (org||'-') + '
+' +
+            '이름: ' + name + '
+' +
+            '이메일: ' + email + '
+' +
+            '연락처: ' + phone + '
+
+' +
+            '문의 내용:
+' + msg + '
+
+' +
+            '(보낸 페이지: ' + location.href + ')'
+          );
+          window.location.href = 'mailto:jangyeeun330@gmail.com?subject=' + subject + '&body=' + body;
+          showToast2('메일 작성 창을 열었어요!');
+          form.reset();
+        });
+      }
+
+      // Certificates toggle
+      const toggleBtn = document.getElementById('toggleCerts');
+      const panel = document.getElementById('certsPanel');
+      if (toggleBtn && panel){
+        toggleBtn.addEventListener('click', () => {
+          const opened = panel.style.display !== 'none';
+          panel.style.display = opened ? 'none' : 'block';
+          toggleBtn.textContent = opened ? '🧾 Certificate 목록 보기' : '🔽 Certificate 목록 닫기';
+        });
+      }
     })();
   </script>
-  <div id="toast" class="toast" role="status" aria-live="polite">복사됨</div>
 </body>
 </html>
