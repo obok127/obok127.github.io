@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>장예은 · Data Scientist &amp; AI Engineer</title>
+<meta content="Python/SQL 기반 데이터 분석, LLM·RAG 서비스 개발, Kaggle 상위 4~8% 성과를 보유한 데이터사이언티스트 장예은 포트폴리오." name="description"/>
+<meta content="장예은" name="author"/>
+<meta content="#014BB7" name="theme-color"/>
+<!-- Open Graph -->
+<meta content="website" property="og:type"/>
+<meta content="ko_KR" property="og:locale"/>
+<meta content="장예은 · Data Scientist &amp; AI Engineer" property="og:title"/>
+<meta content="데이터로 문제를 정의하고, 모델을 만들고, 제품으로 연결합니다." property="og:description"/>
+<meta content="/og-image.png" property="og:image"/>
+<meta content="/" property="og:url"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="장예은 · Data Scientist &amp; AI Engineer" name="twitter:title"/>
+<meta content="데이터로 문제를 정의하고, 모델을 만들고, 제품으로 연결합니다." name="twitter:description"/>
+<meta content="/og-image.png" name="twitter:image"/>
+<!-- Schema.org (JSON-LD) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "장예은",
+    "jobTitle": "Data Scientist & AI Engineer",
+    "email": "mailto:jangyeeun330@gmail.com",
+    "telephone": "+82-10-5417-4594",
+    "url": "https://obok127.github.io/",
+    "sameAs": [
+      "https://skuldium.xyz/",
+      "https://velog.io/@obok127/posts",
+      "https://www.kaggle.com/obok127",
+      "https://www.linkedin.com/in/예은-장-385578374/",
+      "https://github.com/obok127"
+    ]
+  }
+  </script>
+<style>
+    /* ===== Color System (Brand: Blue/Yellow, High Readability) ===== */
+    :root{
+      --brand:#014BB7;           /* 짙은 파랑 */
+      --brand-600:#0d43a3;       
+      --accent:#FCEB00;          /* 노랑 */
+      --bg:#FFFFFF;              /* 기본 배경 */
+      --bg-soft:#F9FAFB;         /* 소프트 배경 */
+      --text:#111827;            /* 본문 텍스트(거의 검정) */
+      --text-muted:#4B5563;      /* 보조 텍스트 */
+      --border:#E5E7EB;          /* 구분선 */
+      --card:#FFFFFF;            /* 카드 배경 */
+      --shadow:0 10px 30px rgba(2,6,23,.06);
+      --radius-xl:20px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif;
+      color:var(--text);background:var(--bg);line-height:1.6;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* ===== Layout ===== */
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(1.5) blur(10px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.02em}
+    .logo-badge{width:28px;height:28px;border-radius:8px;background:var(--brand);position:relative;box-shadow:0 4px 18px rgba(1,75,183,.35)}
+    .logo-badge::after{content:'';position:absolute;inset:6px;border-radius:6px;border:2px solid var(--accent)}
+    .nav-links{display:flex;gap:20px}
+    .nav-links a{padding:8px 12px;border-radius:12px;color:var(--text-muted);font-weight:600}
+    .nav-links a:hover{color:var(--brand);background:var(--bg-soft)}
+
+    .hero{position:relative;padding:96px 0 72px;background:linear-gradient(180deg,#DDF3FF 0%, #F8FBFF 100%);} 
+    .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+    .kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--bg-soft);color:var(--brand);font-weight:800;border:1px solid var(--border)}
+    h1.hero-title{font-size:clamp(36px,6vw,56px);line-height:1.15;letter-spacing:-.03em;margin:14px 0 10px;font-weight:900}
+    .hero-sub{font-size:18px;color:var(--text-muted)}
+
+    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;border:1px solid var(--border);font-weight:800}
+    .btn-primary{background:var(--brand);color:#fff;border-color:transparent;box-shadow:0 8px 22px rgba(1,75,183,.25)}
+    .btn-primary:hover{background:var(--brand-600);transform:translateY(-1px)}
+    .btn-ghost{background:#fff}
+    .btn-ghost:hover{background:var(--bg-soft)}
+
+    .stat-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .stat{display:flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff}
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(252,235,0,.35)}
+
+    section{padding:72px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+    .section-title{font-size:28px;letter-spacing:-.02em}
+    .section-desc{color:var(--text-muted)}
+
+    .about{background:linear-gradient(180deg,#fff, #fbfcff)}
+    .about .card{display:grid;grid-template-columns:1fr 1.6fr;gap:28px;align-items:center}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);box-shadow:var(--shadow);padding:26px}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--bg-soft);border:1px solid var(--border);font-weight:700;color:var(--brand)}
+    .muted{color:var(--text-muted)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+    .tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:10px;background:var(--bg-soft);border:1px solid var(--border);font-weight:600;color:var(--text-muted)}
+    .tag.brand{background:rgba(1,75,183,.08);color:var(--brand);border-color:rgba(1,75,183,.22)}
+
+    .project{display:flex;flex-direction:column;gap:14px}
+    .project h3{margin:0;font-size:20px}
+    .project p{margin:0;color:var(--text-muted)}
+
+    .list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .list li{display:flex;gap:10px}
+    .list .tick{color:#10b981;font-weight:900}
+
+    .contact{background:var(--brand);color:#f8fafc}
+    .contact .card{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.12)}
+    .contact a{color:#fff}
+    .contact .tag{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#e5e7eb}
+
+    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--text-muted)}
+
+    /* Animations */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+      .about .card{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      nav .nav-links{display:none}
+      .grid-3,.grid-2{grid-template-columns:1fr}
+      .hero{padding:72px 0 56px}
+    }
+
+    /* ===== Typography & Paragraph Control ===== */
+    :root{ --leading:1.65; --p-gap:14px; }
+    body{ line-height:var(--leading); word-break:keep-all; overflow-wrap:break-word; }
+    p{ margin:0 0 var(--p-gap); }
+    li{ word-break:keep-all; }
+    h1,h2,h3{ text-wrap:balance; }
+    .nowrap{ white-space:nowrap; }
+
+    /* HScroll projects */
+    .hscroll{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-color: var(--border) transparent}
+    .hscroll .project{flex:0 0 340px;scroll-snap-align:start}
+    .hscroll::-webkit-scrollbar{height:10px}
+    .hscroll::-webkit-scrollbar-thumb{background:rgba(17,24,39,.2);border-radius:999px}
+    .hscroll::-webkit-scrollbar-track{background:rgba(17,24,39,.06)}
+    @media (max-width:640px){.hscroll .project{flex-basis:85vw}}
+
+    /* Copy feedback */
+    .copyable{cursor:pointer;text-decoration:underline;text-decoration-style:dashed;text-underline-offset:3px}
+    .copyable:hover{opacity:.92}
+    
+    .toast{position:fixed;top:18px;right:18px;background:#E6F3FF;color:#374151;padding:10px 14px;border-radius:999px;box-shadow:0 10px 30px rgba(2,6,23,.08);opacity:0;visibility:hidden;transition:opacity .25s ease, visibility .25s ease;pointer-events:none;z-index:1000;font-weight:700}
+
+    /* Contact form */
+    .form{display:grid;gap:14px}
+    .label{font-weight:800;color:var(--brand);display:inline-flex;align-items:center;gap:8px}
+    .req{font-size:12px;background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:2px 6px;color:var(--brand)}
+    .input,.textarea{width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:16px;background:#fff;outline:none}
+    .input:focus,.textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px rgba(1,75,183,.08)}
+    .btn-accent{background:var(--accent);color:#111827;border-color:transparent;box-shadow:0 8px 22px rgba(252,235,0,.35)}
+    .btn-accent:hover{transform:translateY(-1px)}
+    .contact .label{color:#cbd5e1}
+    .contact .input,.contact .textarea{background:#fff;color:#111827;border-color:rgba(255,255,255,.18)}
+
+    /* Profile meta under About photo */
+    .profile-meta{margin-top:12px;padding:12px;border:1px solid var(--border);border-radius:12px;background:#fff}
+    .profile-meta p{margin:0}
+    .profile-meta p + p{margin-top:6px}
+
+    /* Social icon buttons (About Me) */
+    .socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .social-btn{width:52px;height:52px;display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid var(--border);border-radius:14px;background:#fff;box-shadow:var(--shadow);
+      transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease}
+    .social-btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(1,75,183,.18);border-color:rgba(1,75,183,.35)}
+    .social-btn .mono{font-weight:900;letter-spacing:-.02em;font-family:ui-sans-serif,system-ui,-apple-system;
+      font-size:18px;color:var(--brand)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,1,1);white-space:nowrap;border:0}
+
+    /* Brand-colored social buttons */
+    .social-btn--linkedin{background:#0A66C2;border-color:#0A66C2}
+    .social-btn--linkedin .mono{color:#fff}
+    .social-btn--velog{background:#20C997;border-color:#20C997}
+    .social-btn--velog .mono{color:#fff}
+    .social-btn--kaggle{background:#38BDF8;border-color:#38BDF8}
+    .social-btn--kaggle .mono{color:#FCEB00}
+    .social-btn--github{background:#171515;border-color:#171515}
+    .social-btn--github .mono{color:#fff}
+
+    /* Featured Projects hover tint */
+    .hscroll .project{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .25s ease}
+    .hscroll .project:hover{
+      background:linear-gradient(180deg,#E6F3FF 0%, #FFFFFF 65%);
+      border-color:rgba(1,75,183,.35);
+      box-shadow:0 14px 36px rgba(1,75,183,.18), 0 0 0 4px rgba(56,189,248,.16);
+      transform:translateY(-2px);
+    }
+    .hscroll .project:hover .badge{
+      background:rgba(1,75,183,.08);
+      border-color:rgba(1,75,183,.22);
+      color:var(--brand);
+    }
+    .hscroll .project:hover .tag{
+      background:rgba(56,189,248,.10);
+      border-color:rgba(56,189,248,.35);
+    }
+
+
+    [hidden]{display:none !important}
+  </style>
+<style>
+  /* ==== Fix: Add breathing room above project cards so rounded corners aren't visually cut ==== */
+  #projects{padding-top:56px !important;}
+  #projects .hscroll{padding-top:12px !important;}
+  /* In case a parent has clipping, make sure the section itself does not clip vertical shadows */
+  #projects, #projects .container{overflow:visible !important;}
+</style>
+
+<style>
+  /* Let's Connect: subtle decorative plates */
+  #contact { position: relative; overflow: hidden; }
+  #contact .container { position: relative; }
+  #contact .section-head, #contact .grid-2 { position: relative; z-index: 2; }
+  #contact .bg-plate{
+    position:absolute;
+    z-index:1;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,.14);
+    /* 아주 약간만 하얗게 */
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+      rgba(255,255,255,.05);
+    box-shadow: 0 24px 60px rgba(0,0,0,.16), inset 0 1px 0 rgba(255,255,255,.25);
+    backdrop-filter: blur(4px) saturate(1.05);
+    -webkit-backdrop-filter: blur(4px) saturate(1.05);
+  }
+  #contact .bg-left{ top:46px; left:-20px; width:min(46%,560px); height:calc(100% - 100px); transform:rotate(-0.8deg); }
+  #contact .bg-right{ top:90px; right:-24px; width:min(46%,560px); height:calc(100% - 140px); transform:rotate(0.9deg); }
+
+  /* 노란 배경 확인 버튼 내 텍스트 가운데 정렬 */
+  #contact .btn-accent{ display:inline-flex; align-items:center; justify-content:center; text-align:center; }
+
+  /* Mobile */
+  @media (max-width: 920px){
+    #contact .bg-left, #contact .bg-right{
+      left:12px !important; right:12px !important; width:calc(100% - 24px);
+      height:220px; transform:none; opacity:.95;
+    }
+    #contact .bg-left{ top:48px; }
+    #contact .bg-right{ top:320px; }
+  }
+</style>
+</head>
+<body>
+<!-- ===== Header ===== -->
+<header>
+<div class="container">
+<nav>
+<a aria-label="홈으로" class="logo" href="#top">
+<span aria-hidden="true" class="logo-badge"></span>
+          YE EUN Portfolio
+        </a>
+<div aria-label="주요 섹션" class="nav-links" role="navigation">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</div>
+</header>
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+<div class="container">
+<div class="hero-grid">
+<div>
+<span class="kicker">Data Scientist · AI Engineer</span>
+<h1 class="hero-title">
+<span class="nowrap">데이터로 문제를 정의하고</span><br/>
+<span class="nowrap">모델을 만들고</span><br/>
+<span class="nowrap">제품으로 연결합니다.</span>
+</h1>
+<p class="hero-sub">Python/SQL 기반 대규모 분석, LLM·RAG 서비스 개발과 서빙까지 한 번에 진행하는 실전형 데이터사이언티스트입니다.</p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#contact" id="goContact">📨 Contact</a>
+<a class="btn btn-ghost" href="#projects">🧪 대표 프로젝트 보기</a></div>
+<div aria-label="주요 지표" class="stat-row">
+<div class="stat"><span class="dot"></span><strong>Kaggle Top 4~8%</strong> (5 comps)</div>
+<div class="stat"><span class="dot"></span><strong>LLM·RAG</strong> 실서비스 PoC</div>
+<div class="stat"><span class="dot"></span><strong>EDA→서빙</strong> E2E 경험</div>
+<div class="stat"><span class="dot"></span><strong>프론트→MLops/LLMops</strong> E2E 경험</div>
+</div>
+</div>
+<div>
+<div aria-label="핵심 역량 하이라이트" class="card">
+<span class="badge">Core Strengths</span>
+<ul class="list" style="margin-top:12px">
+<li><span class="tick">✔</span>문제정의→데이터수집/정제→모델링→배포 파이프라인 구성</li>
+<li><span class="tick">✔</span>LLM·RAG 기반 AI 기능을 제품 맥락에 녹여내는 기획/개발</li>
+<li><span class="tick">✔</span>협업 친화적 커뮤니케이션 &amp; 사용자 중심 설계</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== About ===== -->
+<section class="about" id="about">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">About Me</h2>
+<p class="section-desc">꾸준함·학습력·실행력으로 증명하는 성장 곡선</p>
+</div>
+<div class="card reveal">
+<div>
+<img alt="프로필 이미지" src="/avatar-placeholder.svg" style="width:220px;height:220px;border-radius:16px;border:1px solid var(--border);object-fit:cover;background:#fff"/>
+<div class="profile-meta">
+<p><strong>장예은(Sarah)</strong></p>
+<p>2000.03.19(만 25세)</p>
+<p>서울시 중랑구</p>
+<p>취미 : 웨이트, 필라테스</p>
+<p>특기 : 맨땅에 헤딩하기🤕</p>
+</div>
+</div>
+<div>
+<p style="margin:0 0 12px">마케팅·제품기획 경험을 거쳐 데이터 분석과 LLM 기반 AI 서비스 개발로 확장했습니다. Kaggle에서 상위 4~8% 성과를 달성했고, 사용자 문제를 데이터와 모델, 제품으로 연결하는 것을 목표로 합니다.</p>
+<div class="grid-auto" style="margin-top:12px">
+<span class="tag brand">Python · SQL</span>
+<span class="tag brand">PyTorch · scikit-learn</span>
+<span class="tag brand">LLM · RAG</span>
+<span class="tag">FastAPI</span>
+<span class="tag">Docker</span>
+<span class="tag">Oracle Cloud</span>
+<span class="tag">Figma/UX</span>
+<span class="tag">Tableau</span>
+</div>
+<div class="grid-2" style="margin-top:16px">
+<div class="card" style="padding:16px">
+<strong>연락처</strong>
+<p class="muted" style="margin:6px 0 0">
+<a class="copyable" data-copy="jangyeeun330@gmail.com" href="#">jangyeeun330@gmail.com</a>
+<span aria-hidden="true"> · </span>
+<a class="copyable" data-copy="+82 10-5417-4594" href="#">+82 10-5417-4594</a>
+</p>
+</div>
+<div class="card" style="padding:16px"><strong>링크</strong><div class="socials"><a aria-label="LinkedIn" class="social-btn social-btn--linkedin" href="https://www.linkedin.com/in/예은-장-385578374/" rel="noreferrer" target="_blank" title="LinkedIn"><span class="mono">in</span><span class="sr-only">LinkedIn</span></a><a aria-label="Velog" class="social-btn social-btn--velog" href="https://velog.io/@obok127/posts" rel="noreferrer" target="_blank" title="Velog"><span class="mono">V</span><span class="sr-only">Velog</span></a><a aria-label="Kaggle" class="social-btn social-btn--kaggle" href="https://www.kaggle.com/obok127" rel="noreferrer" target="_blank" title="Kaggle"><span class="mono">K</span><span class="sr-only">Kaggle</span></a><a aria-label="GitHub" class="social-btn social-btn--github" href="https://github.com/obok127" rel="noreferrer" target="_blank" title="GitHub"><span class="mono">GH</span><span class="sr-only">GitHub</span></a></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== Skills ===== -->
+<section id="skills">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Core Skills</h2>
+<p class="section-desc">모델링 · 데이터 · 제품 · 서빙</p>
+</div>
+<div class="grid-3">
+<div class="card reveal">
+<h3>Machine Learning &amp; LLM</h3>
+<p class="muted">지도/비지도, 앙상블, 임베딩, RAG(검색·리랭킹·프롬프트), 지표 설계</p>
+<div class="grid-auto" style="margin-top:10px">
+<span class="tag brand">PyTorch</span>
+<span class="tag brand">scikit-learn</span>
+<span class="tag brand">bge-m3</span>
+<span class="tag">LoRA/QLoRA</span>
+<span class="tag">vLLM</span>
+</div>
+</div>
+<div class="card reveal">
+<h3>Data Engineering</h3>
+<p class="muted">크롤링, 정제, 피처 엔지니어링, 파이프라인, SQL 모델링</p>
+<div class="grid-auto" style="margin-top:10px">
+<span class="tag brand">Python</span>
+<span class="tag brand">SQL</span>
+<span class="tag">Pandas</span>
+<span class="tag">NumPy</span>
+<span class="tag">FAISS</span>
+</div>
+</div>
+<div class="card reveal">
+<h3>Product &amp; Serving</h3>
+<p class="muted">FastAPI, Docker, Oracle Cloud, Vercel, UX 리서치/설계</p>
+<div class="grid-auto" style="margin-top:10px">
+<span class="tag brand">FastAPI</span>
+<span class="tag">Docker</span>
+<span class="tag">Oracle Cloud</span>
+<span class="tag">Vercel</span>
+<span class="tag">React/TS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== Projects (H-Scroll) ===== -->
+<section id="projects" style="background:var(--bg-soft)">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Featured Projects</h2>
+<p class="section-desc">문제 → 데이터 → 모델 → 결과/인사이트</p>
+</div>
+<div aria-label="Featured Projects" class="hscroll" role="region" tabindex="0">
+<article class="card project reveal">
+<span class="badge">NLP · 감정/토픽 분석</span>
+<h3>티빙 소비자 리뷰 감정 분석</h3>
+<p>유튜브 댓글 10만 건 수집·정제 → 감정사전 + LDA 토픽 → 지도학습 전환으로 정확도 개선. 시계열 감정 추이와 이탈 구간 상관관계 분석.</p>
+<div class="grid-auto">
+<span class="tag">Python</span><span class="tag">크롤링</span><span class="tag">LDA</span><span class="tag">감정분석</span>
+</div>
+</article>
+<article class="card project reveal">
+<span class="badge">LLM · RAG · 제품</span>
+<h3>시니어 AI 놀이터 ‘놀멍’</h3>
+<p>상속/운동/여행/커뮤니티 등 모듈형 LLM·RAG 서비스. FastAPI 백엔드, React/TS UI, Vercel/Oracle Cloud 배포.</p>
+<div class="grid-auto">
+<span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">FastAPI</span><span class="tag">React</span>
+</div>
+<p><a class="btn btn-ghost" href="https://pure-html-deploy.vercel.app/" rel="noreferrer" target="_blank">데모 보기 →</a></p>
+</article>
+<article class="card project reveal">
+<span class="badge">RAG · 임베딩</span>
+<h3>운동 자세 추천 시스템 (RAG)</h3>
+<p>니즈/부위 매핑 데이터(≈1K쌍)와 자세 설명 문서를 RAG로 결합. bge-m3 파인튜닝, FAISS 검색, YouTube API 후처리.</p>
+<div class="grid-auto">
+<span class="tag">bge-m3</span><span class="tag">FAISS</span><span class="tag">LangChain</span><span class="tag">YouTube API</span>
+</div>
+<p><a aria-label="운동 자세 추천 시스템(RAG) 시연 영상 보기" class="btn btn-ghost" data-video="rag-demo" href="#">▶ 시연 영상 보기</a></p>
+<!-- TODO: 위 href="#"를 실제 시연 영상 URL로 교체하세요. -->
+</article>
+<article class="card project reveal">
+<span class="badge">LLM · CBT · 제품</span>
+<h3>스쿨디움(Skuldium) · 심리 회복 동행 앱</h3>
+<p><span class="nowrap">인지왜곡 실시간 탐지</span>와 <span class="nowrap">CBT 기반 대화</span>로 개인 맞춤 회복 경로를 설계하고, 장기 추적 리포트를 제공하는 LLM·RAG 서비스. FastAPI/React 기반, Oracle Cloud·Vercel 배포.</p>
+<div class="grid-auto">
+<span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">CBT</span><span class="tag">FastAPI</span><span class="tag">React</span>
+</div>
+<p><a class="btn btn-ghost" href="https://skuldium.xyz/" rel="noreferrer" target="_blank">프로젝트 소개 →</a></p>
+</article>
+</div>
+</div>
+</section>
+<!-- ===== Achievements ===== -->
+<section id="achievements">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title">Achievements &amp; Education</h2>
+<p class="section-desc">Kaggle 상위권 · 학위/교육/자격</p>
+</div>
+<div class="grid-2">
+<div class="card reveal">
+<h3 style="margin-top:0">Kaggle Highlights</h3>
+<ul class="list" style="margin-top:10px">
+<li><span class="tick">🏆</span>Predicting Optimal Fertilizers · Top 4%</li>
+<li><span class="tick">🏆</span>Calorie Expenditure · Top 8%</li>
+<li><span class="tick">🏆</span>House Price PI II · Top 7%</li>
+<li><span class="tick">🏆</span>Introverts vs Extroverts · Top 7%</li>
+</ul>
+<p style="margin-top:10px"><a class="btn btn-ghost" href="https://www.kaggle.com/obok127" rel="noreferrer" target="_blank">Kaggle 프로필 →</a></p>
+</div>
+<div class="card reveal">
+<h3 style="margin-top:0">Education &amp; Certs</h3>
+<ul class="list" style="margin-top:10px">
+<li><span class="tick">🎓</span>세종대학교 행정/융합창업학사 (우등 졸업)</li>
+<li><span class="tick">📚</span>SeSAC 데이터 AI 개발자 과정</li>
+<li style="display:block">
+<details id="certsDetails">
+<summary class="btn btn-ghost" style="list-style:none; cursor:pointer;">
+      🧾 Certificate 목록 보기
+    </summary>
+<div class="card" style="padding:16px;margin-top:12px;">
+<strong>Certificates / Courses</strong>
+<ul class="list" style="margin-top:10px">
+<li><span class="tick">✔</span>Coursera — Google AI Essentials <span class="tag">완료</span></li>
+<li><span class="tick">✔</span>Kaggle — Data Visualization <span class="tag">완료</span></li>
+<li><span class="tick">✔</span>Kaggle — Feature Engineering <span class="tag">완료</span></li>
+<li><span class="tick">✔</span>Kaggle — Time Series <span class="tag">완료</span></li>
+<li><span class="tick">✔</span>Kaggle — Computer Vision <span class="tag">완료</span></li>
+<li><span class="tick">✔</span>Hugging Face — Agents <span class="tag">완료</span></li>
+<li><span class="tick">✔</span>Hugging Face — Audio <span class="tag">진행 중</span></li>
+<li><span class="tick">✔</span>Hugging Face — Community Computer Vision <span class="tag">진행 중</span></li>
+<li><span class="tick">✔</span>Hugging Face — Deep RL <span class="tag">진행 중</span></li>
+<li><span class="tick">✔</span>Hugging Face — Diffusion <span class="tag">진행 중</span></li>
+<li><span class="tick">✔</span>Hugging Face — LLM <span class="tag">진행 중</span></li>
+<li><span class="tick">✔</span>Hugging Face — MCP <span class="tag">완료</span></li>
+</ul>
+</div>
+</details>
+<li style="display:block">
+<details id="krCertsDetails">
+<summary class="btn btn-ghost" style="list-style:none; cursor:pointer;">
+      🧾 자격증 목록 보기
+    </summary>
+<div class="card" style="padding:16px;margin-top:12px;">
+<strong>자격증</strong>
+<ul class="list" style="margin-top:10px">
+<li><span class="tick">✔</span>파이썬프로그래밍 1급 — 한국정보인재개발원 <span class="tag">2024.12</span></li>
+<li><span class="tick">✔</span>ADSP — 한국데이터산업진흥원 <span class="tag">2024.11</span></li>
+<li><span class="tick">✔</span>빅데이터분석 실무 2급(R) — 한국정보인재개발원 <span class="tag">2024.07</span></li>
+<li><span class="tick">✔</span>ITQ 한글 — 한국생산성본부 <span class="tag">2013.03</span></li>
+</ul>
+<strong style="display:block;margin-top:12px">외국어</strong>
+<ul class="list" style="margin-top:10px">
+<li><span class="tick">✔</span>영어 비즈니스 레벨</li>
+<li><span class="tick">✔</span>TOEIC Speaking IH <span class="tag">2024.07.06</span></li>
+<li><span class="tick">✔</span>TOEIC Writing AL <span class="tag">2024.08.18</span></li>
+<li><span class="tick">✔</span>OPIc IH <span class="tag">2024.11.21</span></li>
+</ul>
+</div>
+</details>
+</li>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== Contact ===== -->
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-head">
+<h2 class="section-title" style="color:#fff">Let's Connect</h2>
+</div><div aria-hidden="true" class="bg-plate bg-left"></div><div aria-hidden="true" class="bg-plate bg-right"></div>
+<div class="grid-2">
+<!-- LEFT: Links + 연락처 + 최근 공부 내용 -->
+<div class="card reveal">
+<h3 style="margin-top:0;color:#fff">Links</h3>
+<ul class="list" style="margin-top:10px;color:#e5e7eb">
+<li>
+            최근 진행하고 있는 프로젝트나 참여하는 행사가 궁금하다면
+            <a href="https://velog.io/@obok127/posts" rel="noreferrer" style="text-decoration:underline" target="_blank">Velog</a>
+</li>
+<li>
+            어떤 대회에 참가하고 있는지 궁금하다면
+            <a href="https://www.kaggle.com/obok127" rel="noreferrer" style="text-decoration:underline" target="_blank">Kaggle</a>
+</li>
+<li>
+            어떤 사업 아이템을 준비하는지 궁금하다면 
+            <a href="https://skuldium.xyz/" rel="noreferrer" style="text-decoration:underline" target="_blank">Skuldium</a>
+</li>
+<li>
+            링크드인 1촌 맺기는
+            <a href="https://www.linkedin.com/in/%EC%98%88%EC%9D%80-%EC%9E%A5-385578374/" rel="noreferrer" style="text-decoration:underline" target="_blank">LinkedIn</a>
+</li>
+</ul>
+<p class="section-desc" style="color:#cbd5e1;margin:12px 0 14px">
+          그외 궁금하신 점은 아래 연락처로 직접 문의하시거나,<br/>
+          오른쪽 Contact 창에 정보를 남겨주세요!
+        </p>
+<!-- 연락처 + 복사 버튼 -->
+<div class="profile-meta" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff; padding:14px 16px; border-radius:12px;">
+<strong>연락처</strong>
+<div style="margin-top:8px; display:flex; flex-direction:column; gap:8px;">
+<div style="display:flex; align-items:center; gap:10px;">
+<a href="mailto:jangyeeun330@gmail.com" style="color:#fff;text-decoration:underline">jangyeeun330@gmail.com</a>
+<button aria-label="이메일 복사" class="copy-btn" data-copy="jangyeeun330@gmail.com" style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:8px;font-size:12px;cursor:pointer;position:relative;" title="이메일 복사" type="button">
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14">
+<path d="M8 8h10v12H8z" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M6 16H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+                복사
+                <span class="copy-toast" style="position:absolute;top:-28px;right:0;background:#014BB7;color:#fff;padding:4px 8px;border-radius:8px;font-size:12px;opacity:0;transform:translateY(4px);transition:opacity .18s, transform .18s;pointer-events:none;">복사됨!</span>
+</button>
+</div>
+<div style="display:flex; align-items:center; gap:10px;">
+<a href="tel:+821054174594" style="color:#fff;text-decoration:underline">+82 10-5417-4594</a>
+<button aria-label="전화번호 복사" class="copy-btn" data-copy="+82 10-5417-4594" style="display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:8px;font-size:12px;cursor:pointer;position:relative;" title="전화번호 복사" type="button">
+<svg aria-hidden="true" fill="none" height="14" viewbox="0 0 24 24" width="14">
+<path d="M8 8h10v12H8z" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M6 16H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v1" stroke="currentColor" stroke-width="1.5"></path>
+</svg>
+                복사
+                <span class="copy-toast" style="position:absolute;top:-28px;right:0;background:#014BB7;color:#fff;padding:4px 8px;border-radius:8px;font-size:12px;opacity:0;transform:translateY(4px);transition:opacity .18s, transform .18s;pointer-events:none;">복사됨!</span>
+</button>
+</div>
+</div>
+</div>
+<h4 style="margin:18px 0 6px;color:#fff">최근 공부 내용 보러가기</h4>
+<ul class="list" style="color:#e5e7eb">
+<li>→ <a href="https://velog.io/@obok127/%EB%94%A5%EB%9F%AC%EB%8B%9D-Gradient-%ED%9D%90%EB%A6%84%EA%B3%BC-%ED%95%99%EC%8A%B5-%EC%95%88%EC%A0%95%ED%99%94-%EA%B8%B0%EB%B2%95" rel="noreferrer" style="text-decoration:underline" target="_blank">딥러닝 Gradient 흐름과 학습 안정화 기법</a></li>
+<li>→ <a href="https://velog.io/@obok127/%EC%84%A0%ED%98%95-%ED%9A%8C%EA%B7%80%EC%99%80-%EA%B3%BC%EC%A0%81%ED%95%A9" rel="noreferrer" style="text-decoration:underline" target="_blank">선형 회귀와 과적합</a></li>
+</ul>
+</div>
+<!-- RIGHT: Contact Form -->
+<div class="card reveal">
+<h3 style="margin-top:0;color:#fff">궁금하신 사항이 있으신가요?</h3>
+<p class="section-desc" style="color:#cbd5e1;margin:6px 0 12px">
+          직접 연락이 어려우시다면 연락처를 남겨주세요!<br/>빠른 시일 내로 연락드리겠습니다!
+        </p>
+<form class="form" id="contactForm" novalidate="">
+<label class="label" for="org">소속</label>
+<input class="input" id="org" name="org" placeholder="학교/기업/소속"/>
+<label class="label" for="name">이름 <span class="req">필수</span></label>
+<input class="input" id="name" name="name" placeholder="이름" required=""/>
+<label class="label" for="email">이메일 <span class="req">필수</span></label>
+<input class="input" id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+<label class="label" for="phone">연락처 <span class="req">필수</span></label>
+<input class="input" id="phone" name="phone" placeholder="010-1234-5678" required=""/>
+<label class="label" for="message">문의 내용 <span class="req">필수</span></label>
+<textarea class="textarea" id="message" name="message" placeholder="문의 내용을 입력해 주세요" required="" rows="6"></textarea>
+<button class="btn btn-accent" style="align-self:start" type="submit">확인</button>
+</form>
+</div>
+</div>
+</div>
+<!-- Copy button script (섹션 내부에 두면 범위가 깔끔합니다) -->
+<script>
+    (function () {
+      const onCopyClick = async (btn) => {
+        const text = btn.getAttribute('data-copy') || '';
+        if (!text) return;
+
+        // Try modern API, fallback to execCommand
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(text);
+          } else {
+            const temp = document.createElement('textarea');
+            temp.value = text;
+            temp.style.position = 'fixed';
+            temp.style.opacity = '0';
+            document.body.appendChild(temp);
+            temp.focus();
+            temp.select();
+            document.execCommand('copy');
+            document.body.removeChild(temp);
+          }
+          showToast(btn);
+        } catch (e) {
+          console.error('Copy failed:', e);
+          showToast(btn, '실패');
+        }
+      };
+
+      const showToast = (btn, msg = '복사됨!') => {
+        const toast = btn.querySelector('.copy-toast');
+        if (!toast) return;
+        toast.textContent = msg;
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(4px)';
+        }, 1200);
+      };
+
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.copy-btn');
+        if (btn) onCopyClick(btn);
+      }, { passive: true });
+    })();
+  </script>
+</section>
+<footer>
+<div class="container" style="text-align:center"><span>© 2025 Jang Yeeun. All rights reserved.</span></div>
+</footer>
+<!-- ===== Scripts ===== -->
+<script>
+    // 현재 연도
+    var y=document.getElementById('year'); if(y){ y.textContent=new Date().getFullYear(); }
+
+    // 섹션 모션
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); })
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // 이메일 복사 (Hero 버튼)
+    const email = 'jangyeeun330@gmail.com';
+    const copyBtn = document.getElementById('copyMail');
+    if(copyBtn){
+      copyBtn.addEventListener('click', async () => {
+        try{ await navigator.clipboard.writeText(email); 
+          const t=document.getElementById('toast'); if(t){ t.textContent='클립보드에 복사됨'; t.style.visibility='visible'; t.style.opacity='1'; setTimeout(()=>{t.style.opacity='0'; t.style.visibility='hidden';},1200);} 
+        }catch(err){ alert('복사에 실패했습니다: '+err); }
+      });
+    }
+  </script>
+<script>
+    // 전역 복사 위임(a[href^="mailto:"], a[href^="tel:"], .copyable)
+    (function(){
+      function showToast(msg){
+        const t = document.getElementById('toast');
+        if(!t) return; t.textContent = msg; t.style.visibility='visible'; t.style.opacity='1';
+        clearTimeout(window.__toastTimer); window.__toastTimer = setTimeout(()=>{t.style.opacity='0'; t.style.visibility='hidden';}, 1200);
+      }
+      document.addEventListener('click', function(e){
+        const el = e.target.closest('.copyable, a[href^="mailto:"], a[href^="tel:"]');
+        if(!el) return;
+        e.preventDefault();
+        const text = (el.dataset && el.dataset.copy) ? el.dataset.copy : (el.textContent || '').trim();
+        if(!text) return;
+        navigator.clipboard.writeText(text).then(function(){
+          showToast('클립보드에 복사됨');
+        }).catch(function(err){
+          alert('복사에 실패했습니다: ' + err);
+        });
+      }, {capture:true});
+    })();
+  </script>
+<div aria-live="polite" class="toast" id="toast" role="status">클립보드에 복사됨</div>
+<script>
+    // Contact 버튼 스크롤 + 폼 mailto 제출
+    (function(){
+      // Smooth scroll to contact
+      const btn = document.getElementById('goContact');
+      if(btn){
+        btn.addEventListener('click', function(ev){
+          ev.preventDefault();
+          const section = document.getElementById('contact');
+          if(section && section.scrollIntoView){ section.scrollIntoView({behavior:'smooth'}); }
+          setTimeout(()=>{
+            const first = document.querySelector('#contactForm #name');
+            if(first) first.focus();
+          }, 450);
+        });
+      }
+
+      // Form submit via mailto
+      function showToast2(msg){
+        const t = document.getElementById('toast');
+        if(!t) return; t.textContent = msg; t.style.visibility='visible'; t.style.opacity='1';
+        clearTimeout(window.__toastTimer2); window.__toastTimer2 = setTimeout(()=>{t.style.opacity='0'; t.style.visibility='hidden';}, 1500);
+      }
+      const form = document.getElementById('contactForm');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          const org = (form.org.value||'').trim();
+          const name = (form.name.value||'').trim();
+          const email = (form.email.value||'').trim();
+          const phone = (form.phone.value||'').trim();
+          const msg = (form.message.value||'').trim();
+          if(!name || !email || !phone || !msg){ showToast2('필수 항목을 입력해 주세요.'); return; }
+          const subject = encodeURIComponent('[포트폴리오 문의] ' + (org? org+' / ' : '') + name);
+          const body = encodeURIComponent(
+            '소속: ' + (org||'-') + '
+' +
+            '이름: ' + name + '
+' +
+            '이메일: ' + email + '
+' +
+            '연락처: ' + phone + '
+
+' +
+            '문의 내용:
+' + msg + '
+
+' +
+            '(보낸 페이지: ' + location.href + ')'
+          );
+          window.location.href = 'mailto:jangyeeun330@gmail.com?subject=' + subject + '&body=' + body;
+          showToast2('메일 작성 창을 열었어요!');
+          form.reset();
+        });
+      }
+
+      // Certificates toggle
+      const toggleBtn = document.getElementById('toggleCerts');
+      const panel = document.getElementById('certsPanel');
+      if (toggleBtn && panel){
+        toggleBtn.addEventListener('click', () => {
+          const isHidden = panel.hasAttribute('hidden');
+          if(isHidden){
+            panel.removeAttribute('hidden');
+            toggleBtn.setAttribute('aria-expanded','true');
+            toggleBtn.textContent = '🔽 Certificate 목록 닫기';
+          }else{
+            panel.setAttribute('hidden','');
+            toggleBtn.setAttribute('aria-expanded','false');
+            toggleBtn.textContent = '🧾 Certificate 목록 보기';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
