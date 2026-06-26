@@ -4,150 +4,245 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ye Eun Jang | Product Data Scientist</title>
-<meta name="description" content="Product Data Scientist focused on measurement reliability, behavioral data systems, conversion metrics, and AI analytics automation.">
+<meta name="description" content="Product Data Scientist focused on behavioral data measurement, analytics automation, AI transformation, conversion metrics, and measurement reliability.">
 <meta name="author" content="Ye Eun Jang">
-<meta name="theme-color" content="#0b1f3a">
+<meta name="theme-color" content="#07172d">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ye Eun Jang | Product Data Scientist">
-<meta property="og:description" content="Measurement reliability, behavioral product metrics, and AI automation under privacy and telemetry constraints.">
+<meta property="og:description" content="Behavioral data measurement, analytics automation, AI transformation, and decision-grade product metrics under telemetry constraints.">
 <meta property="og:url" content="https://github.obok127.io">
 <style>
-:root { --navy:#07172d; --navy2:#0b1f3a; --blue:#1267d8; --sky:#e8f2ff; --mint:#dff8ef; --cream:#fffaf0; --gold:#ffd84d; --ink:#111827; --muted:#5b6474; --line:#dbe3ef; --card:#ffffff; --shadow:0 22px 70px rgba(7,23,45,.10); --radius:24px; }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; font-family:Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; color:var(--ink); background:#fbfcff; line-height:1.6; }
-a { color:inherit; text-decoration:none; }
-.container { max-width:1180px; margin:0 auto; padding:0 22px; }
-.header { position:sticky; top:0; z-index:50; background:rgba(251,252,255,.82); backdrop-filter:blur(16px); border-bottom:1px solid rgba(219,227,239,.78); }
-.nav { height:70px; display:flex; align-items:center; justify-content:space-between; }
-.logo { display:flex; align-items:center; gap:11px; font-weight:950; letter-spacing:-.04em; color:var(--navy); }
-.logo-mark { width:34px; height:34px; border-radius:13px; background:linear-gradient(135deg,var(--navy),var(--blue)); position:relative; box-shadow:0 12px 30px rgba(18,103,216,.26); }
-.logo-mark:after { content:""; position:absolute; right:6px; top:6px; width:10px; height:10px; background:var(--gold); border-radius:50%; }
-.nav-links { display:flex; gap:8px; align-items:center; }
-.nav-links a { padding:9px 12px; border-radius:999px; color:#4b5563; font-weight:800; font-size:14px; }
-.nav-links a:hover { background:var(--sky); color:var(--blue); }
-.hero { padding:88px 0 72px; background:radial-gradient(circle at top right,#dbeafe 0,#fbfcff 38%,#fff 72%); }
-.hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:34px; align-items:center; }
-.kicker { display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border-radius:999px; background:white; border:1px solid var(--line); color:var(--blue); font-weight:900; box-shadow:0 12px 35px rgba(7,23,45,.06); }
-h1 { margin:18px 0 14px; font-size:clamp(44px,7vw,78px); line-height:.97; letter-spacing:-.075em; color:var(--navy); }
-.hero-sub { max-width:740px; font-size:20px; color:#39465a; line-height:1.58; }
-.hero-sub strong { color:var(--navy); }
-.cta { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 17px; border-radius:16px; border:1px solid var(--line); background:white; font-weight:900; transition:.18s ease; }
-.btn:hover { transform:translateY(-2px); box-shadow:var(--shadow); }
-.btn.primary { background:var(--navy); color:white; border-color:transparent; }
-.btn.blue { background:var(--blue); color:white; border-color:transparent; }
-.hero-card { background:linear-gradient(135deg,var(--navy),#12356e); color:white; border-radius:32px; padding:28px; box-shadow:0 32px 80px rgba(7,23,45,.26); position:relative; overflow:hidden; }
-.hero-card:before { content:""; position:absolute; width:210px; height:210px; background:rgba(255,216,77,.18); border-radius:50%; right:-70px; top:-70px; }
-.hero-card h2 { margin:0 0 12px; font-size:24px; letter-spacing:-.03em; position:relative; }
-.hero-card p { color:#dbeafe; position:relative; }
-.metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:20px; position:relative; }
-.metric { background:rgba(255,255,255,.11); border:1px solid rgba(255,255,255,.16); border-radius:18px; padding:14px; }
-.metric b { display:block; font-size:26px; line-height:1; }
-.metric span { color:#cbd5e1; font-size:13px; }
-section { padding:76px 0; }
-.section-head { display:flex; justify-content:space-between; align-items:end; gap:22px; margin-bottom:28px; }
-.eyebrow { font-size:13px; color:var(--blue); text-transform:uppercase; letter-spacing:.12em; font-weight:950; }
-h2.section-title { margin:4px 0 0; font-size:36px; line-height:1.08; letter-spacing:-.055em; color:var(--navy); }
-.section-desc { color:var(--muted); max-width:590px; }
-.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-.card { background:white; border:1px solid var(--line); border-radius:var(--radius); padding:24px; box-shadow:0 12px 42px rgba(7,23,45,.055); }
-.card.dark { background:var(--navy); color:white; border-color:transparent; }
-.card.blue { background:linear-gradient(135deg,#0d47a1,#1677ff); color:white; border-color:transparent; }
-.card.soft { background:linear-gradient(180deg,#fff,#f8fbff); }
-.card h3 { margin:0 0 8px; font-size:21px; letter-spacing:-.035em; color:var(--navy); }
-.card.dark h3,.card.blue h3 { color:white; }
-.card p { margin:0 0 12px; color:var(--muted); }
-.card.dark p,.card.blue p { color:#e5efff; }
-.badge { display:inline-flex; margin-bottom:12px; padding:6px 10px; border-radius:999px; background:var(--sky); color:var(--blue); font-size:12px; font-weight:950; }
-.tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:14px; }
-.tag { padding:5px 9px; border:1px solid #cbd8ea; background:#f8fbff; color:#28364a; border-radius:999px; font-size:12px; font-weight:800; }
-.card.dark .tag,.card.blue .tag { background:rgba(255,255,255,.12); color:white; border-color:rgba(255,255,255,.22); }
-.project-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-.project-card { min-height:240px; display:flex; flex-direction:column; justify-content:space-between; }
-.project-card:hover { transform:translateY(-3px); box-shadow:0 24px 70px rgba(7,23,45,.12); }
-.project-card { transition:.18s ease; }
-.link-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
-.small-link { color:var(--blue); font-weight:900; }
-.timeline { display:grid; gap:14px; }
-.timeline-item { display:grid; grid-template-columns:190px 1fr; gap:18px; padding:20px; border:1px solid var(--line); border-radius:22px; background:white; }
-.timeline-item .time { color:var(--blue); font-weight:950; }
-.timeline-item h3 { margin:0 0 6px; color:var(--navy); letter-spacing:-.03em; }
-ul.clean { list-style:none; padding:0; margin:10px 0 0; }
-ul.clean li { margin:8px 0; padding-left:22px; position:relative; }
-ul.clean li:before { content:""; position:absolute; left:0; top:.6em; width:8px; height:8px; background:var(--gold); border-radius:50%; }
-.contact { background:var(--navy); color:white; }
-.contact .section-title { color:white; }
-.contact .section-desc { color:#cbd5e1; }
-.contact-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:28px; padding:30px; }
-.footer { padding:34px 0; border-top:1px solid var(--line); color:var(--muted); text-align:center; }
-@media (max-width:920px) { .hero-grid,.grid-3,.grid-2,.project-grid,.timeline-item { grid-template-columns:1fr; } .nav-links { display:none; } h1 { font-size:48px; } }
+:root{
+  --navy:#07172d; --navy2:#0b1f3a; --blue:#1267d8; --blue2:#0d47a1;
+  --sky:#e8f2ff; --mint:#dff8ef; --cream:#fffaf0; --gold:#ffd84d;
+  --ink:#111827; --muted:#5b6474; --muted2:#7b8494; --line:#dbe3ef;
+  --card:#ffffff; --shadow:0 22px 70px rgba(7,23,45,.10); --radius:24px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--ink);background:#fbfcff;line-height:1.6;}
+strong,b,h1,h2,h3,.btn,.small-link{font-kerning:normal;text-rendering:optimizeLegibility;overflow-wrap:break-word;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 22px;}
+.header{position:sticky;top:0;z-index:50;background:rgba(251,252,255,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(219,227,239,.78);}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:-.012em;color:var(--navy);}
+.logo-mark{width:34px;height:34px;border-radius:13px;background:linear-gradient(135deg,var(--navy),var(--blue));position:relative;box-shadow:0 12px 30px rgba(18,103,216,.26);}
+.logo-mark:after{content:"";position:absolute;right:6px;top:6px;width:10px;height:10px;background:var(--gold);border-radius:50%;}
+.nav-links{display:flex;gap:8px;align-items:center;}
+.nav-links a{padding:9px 12px;border-radius:999px;color:#4b5563;font-weight:850;font-size:14px;}
+.nav-links a:hover{background:var(--sky);color:var(--blue);}
+.hero{padding:88px 0 62px;background:radial-gradient(circle at top right,#dbeafe 0,#fbfcff 38%,#fff 72%);}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:34px;align-items:center;}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:white;border:1px solid var(--line);color:var(--blue);font-weight:950;box-shadow:0 12px 35px rgba(7,23,45,.06);}
+h1{margin:18px 0 14px;font-size:clamp(44px,7vw,76px);line-height:1.05;letter-spacing:-.026em;color:var(--navy);text-wrap:balance;}
+.hero-sub{max-width:760px;font-size:20px;color:#39465a;line-height:1.6;}
+.hero-sub strong{color:var(--navy);}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 17px;border-radius:16px;border:1px solid var(--line);background:white;font-weight:950;letter-spacing:.004em;transition:.18s ease;}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.btn.primary{background:var(--navy);color:white;border-color:transparent;}
+.btn.blue{background:var(--blue);color:white;border-color:transparent;}
+.hero-card{background:linear-gradient(135deg,var(--navy),#12356e);color:white;border-radius:32px;padding:28px;box-shadow:0 32px 80px rgba(7,23,45,.26);position:relative;overflow:hidden;}
+.hero-card:before{content:"";position:absolute;width:210px;height:210px;background:rgba(255,216,77,.18);border-radius:50%;right:-70px;top:-70px;}
+.hero-card h2{margin:0 0 12px;font-size:24px;letter-spacing:-.004em;line-height:1.2;position:relative;}
+.hero-card p{color:#dbeafe;position:relative;margin:0 0 16px;}
+.signal-list{display:grid;gap:10px;position:relative;}
+.signal{display:grid;grid-template-columns:98px 1fr;gap:12px;align-items:start;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:17px;padding:12px;}
+.signal b{font-size:13px;line-height:1.1;color:white;}
+.signal span{font-size:13px;line-height:1.35;color:#cbd5e1;}
+.proof-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+.proof-pill{background:white;border:1px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:0 12px 35px rgba(7,23,45,.055);}
+.proof-pill b{display:block;color:var(--navy);font-size:14px;line-height:1.25;}
+.proof-pill span{display:block;color:var(--muted);font-size:12px;line-height:1.35;margin-top:3px;}
+section{padding:76px 0;}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:28px;}
+.eyebrow{font-size:13px;color:var(--blue);text-transform:uppercase;letter-spacing:.12em;font-weight:950;}
+h2.section-title{margin:4px 0 0;font-size:36px;line-height:1.16;letter-spacing:-.016em;color:var(--navy);text-wrap:balance;}
+.section-desc{color:var(--muted);max-width:620px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 12px 42px rgba(7,23,45,.055);}
+.card.dark{background:var(--navy);color:white;border-color:transparent;}
+.card.blue{background:linear-gradient(135deg,#0d47a1,#1677ff);color:white;border-color:transparent;}
+.card.soft{background:linear-gradient(180deg,#fff,#f8fbff);}
+.card h3{margin:0 0 8px;font-size:21px;line-height:1.26;letter-spacing:-.004em;color:var(--navy);text-wrap:balance;}
+.card.dark h3,.card.blue h3{color:white;}
+.card p{margin:0 0 12px;color:var(--muted);}
+.card.dark p,.card.blue p{color:#e5efff;}
+.badge{display:inline-flex;margin-bottom:12px;padding:6px 10px;border-radius:999px;background:var(--sky);color:var(--blue);font-size:12px;font-weight:950;}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+.tag{padding:5px 9px;border:1px solid #cbd8ea;background:#f8fbff;color:#28364a;border-radius:999px;font-size:12px;font-weight:850;}
+.card.dark .tag,.card.blue .tag{background:rgba(255,255,255,.12);color:white;border-color:rgba(255,255,255,.22);}
+ul.clean{list-style:none;padding:0;margin:10px 0 0;}
+ul.clean li{margin:8px 0;padding-left:22px;position:relative;}
+ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;background:var(--gold);border-radius:50%;}
+.dense-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:9px;}
+.dense-list li{display:grid;grid-template-columns:92px 1fr;gap:10px;border-top:1px solid #edf2f8;padding-top:9px;color:#39465a;font-size:14px;line-height:1.45;}
+.dense-list b{color:var(--navy);font-size:13px;}
+.readiness-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch;}
+.matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.matrix-item{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;}
+.matrix-item b{display:block;color:var(--navy);font-size:15px;margin-bottom:4px;}
+.matrix-item span{display:block;color:var(--muted);font-size:13px;line-height:1.42;}
+.research-roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.report-card{min-height:340px;display:flex;flex-direction:column;justify-content:space-between;}
+.report-axis{display:inline-flex;width:max-content;max-width:100%;margin-bottom:12px;padding:6px 10px;border-radius:999px;background:#eef6ff;color:var(--blue);font-size:11px;font-weight:950;letter-spacing:.02em;}
+.report-card h3{margin:0 0 9px;font-size:19px;line-height:1.31;letter-spacing:0;color:var(--navy);text-wrap:balance;}
+.report-card p{font-size:14px;line-height:1.55;}
+.report-meta{display:grid;gap:7px;margin-top:12px;border-top:1px solid #edf2f8;padding-top:12px;}
+.report-meta div{font-size:12.5px;color:#46556b;line-height:1.38;}
+.report-meta b{color:var(--navy);}
+.report-action{display:flex;align-items:center;justify-content:center;min-height:46px;margin-top:18px;padding:12px 14px;border-radius:14px;border:1px dashed #bfd0e8;background:#f8fbff;color:#5b6474;font-weight:950;font-size:13px;}
+.report-action.placeholder{opacity:.9;}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.project-card{min-height:330px;display:flex;flex-direction:column;justify-content:space-between;transition:.18s ease;}
+.project-card:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(7,23,45,.12);}
+.case-rows{display:grid;gap:8px;margin-top:14px;}
+.case-row{display:grid;grid-template-columns:86px 1fr;gap:10px;padding-top:8px;border-top:1px solid #edf2f8;font-size:13.5px;line-height:1.42;color:#44536a;}
+.case-row b{color:var(--navy);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;}
+.module-table{display:grid;gap:8px;margin-top:14px;}
+.module-row{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-top:1px solid #edf2f8;font-size:13.5px;line-height:1.45;color:#44536a;}
+.module-row b{color:var(--navy);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;}
+.demo-link.secondary{background:white;color:var(--navy);border:1px solid var(--line);}
+.demo-link.secondary .demo-label{color:var(--navy);}
+.demo-link.secondary .demo-sub{color:#4b5563;}
+.link-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.small-link{color:var(--blue);font-weight:950;letter-spacing:.004em;}
+.demo-link{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;padding:14px 16px;border-radius:16px;background:var(--navy);color:white;font-weight:950;box-shadow:0 14px 34px rgba(7,23,45,.14);transition:.18s ease;}
+.demo-link:hover{transform:translateY(-2px);box-shadow:0 22px 54px rgba(7,23,45,.20);}
+.demo-link .demo-copy{display:flex;flex-direction:column;gap:2px;}
+.demo-link .demo-label{font-size:15px;line-height:1.12;color:white;}
+.demo-link .demo-sub{font-size:12px;line-height:1.25;color:#dbeafe;font-weight:800;}
+.demo-link .demo-arrow{font-size:20px;line-height:1;}
+.timeline{display:grid;gap:14px;}
+.timeline-item{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:20px;border:1px solid var(--line);border-radius:22px;background:white;}
+.timeline-item .time{color:var(--blue);font-weight:950;}
+.timeline-item h3{margin:0 0 6px;color:var(--navy);line-height:1.24;letter-spacing:-.006em;text-wrap:balance;}
+.contact{background:var(--navy);color:white;}
+.contact .section-title{color:white;}
+.contact .section-desc{color:#cbd5e1;}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:30px;}
+.contact .btn{background:white;color:var(--navy);border-color:rgba(255,255,255,.24);}
+.contact .btn:hover{box-shadow:0 22px 54px rgba(0,0,0,.22);}
+.contact .btn.blue,.contact .btn.primary{background:#93c5fd;color:#07172d;border-color:transparent;}
+.footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center;}
+@media(max-width:920px){.hero-grid,.grid-3,.grid-2,.project-grid,.research-roadmap,.timeline-item,.readiness-grid,.proof-strip{grid-template-columns:1fr}.matrix{grid-template-columns:1fr}.nav-links{display:none}h1{font-size:48px}.dense-list li,.case-row,.module-row,.signal{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
 </style>
 </head>
 <body>
-<header class="header"><div class="container"><nav class="nav"><a href="#top" class="logo"><span class="logo-mark"></span><span>Ye Eun Jang</span></a><div class="nav-links"><a href="#focus">Focus</a><a href="#research">Research</a><a href="#pocs">PoCs</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav></div></header>
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#top" class="logo"><span class="logo-mark"></span><span>Ye Eun Jang</span></a>
+      <div class="nav-links"><a href="#fit">Positioning</a><a href="#research">Research</a><a href="#pocs">Case Studies</a><a href="#evidence">Evidence</a><a href="#contact">Contact</a></div>
+    </nav>
+  </div>
+</header>
 <main id="top">
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="kicker">Product Data Scientist · Measurement Reliability</span>
-      <h1>I design reliable metrics for messy behavioral data.</h1>
-      <p class="hero-sub">I work where product analytics usually gets fragile: <strong>consent, identity, telemetry, event taxonomy, visit/user mismatch, and conversion measurement.</strong> My edge is turning those constraints into decision-grade data systems and AI-assisted analytics workflows.</p>
-      <div class="cta"><a class="btn primary" href="#research">View flagship research</a><a class="btn" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">Visit YouTube channel</a><a class="btn blue" href="mailto:jangyeeun330@gmail.com">Email me</a></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker">Product Data Scientist · Behavioral Measurement · AI Transformation</span>
+        <h1>I build decision-grade measurement systems for messy behavioral data.</h1>
+        <p class="hero-sub">I bring <strong>hands-on experience in behavioral data measurement, analytics automation, and AI transformation initiatives</strong>. Most analytics failures are not model failures. They start earlier: ambiguous event definitions, inconsistent variable mappings, broken telemetry, missing consent signals, and unmanaged rule drift. My work focuses on this upstream layer where product metrics become either decision-grade or misleading.</p>
+        <div class="cta">
+          <a class="btn primary" href="#pocs">View case studies</a>
+          <a class="btn" href="#research">Research roadmap</a>
+          <a class="btn blue" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">Visit YouTube channel</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h2>Evidence base</h2>
+        <p>I focus on the upstream measurement layer: event definitions, telemetry integrity, metric governance, analytics automation, and decision traceability.</p>
+        <div class="signal-list">
+          <div class="signal"><b>Measure</b><span>Event taxonomy, telemetry QA, conversion metrics, visit/user unit logic, Adobe Analytics implementation context.</span></div>
+          <div class="signal"><b>Automate</b><span>Implemented a FastAPI/React analytics QA tool that turns Processing Rule and variable audits into a repeatable UI-driven workflow; extending the same pattern into QA alerts, guide automation, and decision intelligence.</span></div>
+          <div class="signal"><b>Decide</b><span>CVR methodology, aggregated labels, attribution, quasi-experimentation, reliability-weighted measurement.</span></div>
+          <div class="signal"><b>Transform</b><span>ADI AX Transformation TF · internal AI/analytics level test ranked #1.</span></div>
+        </div>
+      </aside>
     </div>
-    <aside class="hero-card">
-      <h2>Positioning</h2>
-      <p>Behavioral Data Reliability & Product Decision Systems Data Scientist</p>
-      <div class="metrics"><div class="metric"><b>114</b><span>markets compared</span></div><div class="metric"><b>Top 4-8%</b><span>Kaggle range</span></div><div class="metric"><b>AI</b><span>Champion / PoCs</span></div></div>
-    </aside>
+    <div class="proof-strip">
+      <div class="proof-pill"><b>Product telemetry</b><span>Web/App behavioral events, funnel, CTA, impression, campaign, checkout, order context.</span></div>
+      <div class="proof-pill"><b>Measurement reliability</b><span>Missing events, variable drift, rule mismatch, false positives, consent/identity constraints.</span></div>
+      <div class="proof-pill"><b>Implemented automation</b><span>Processing Rule diff, variable matrix, drift report, Excel/CSV export, and demo walkthrough.</span></div>
+      <div class="proof-pill"><b>Research roadmap</b><span>9-part technical report pipeline connecting metric integrity, causal inference, taxonomy governance, and reproducible evaluation.</span></div>
+    </div>
   </div>
 </section>
 
-<section id="focus">
+<section id="fit">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Core Focus</div><h2 class="section-title">Not just analytics. Measurement you can trust.</h2></div><p class="section-desc">My work connects event design, telemetry QA, conversion metrics, AI automation, and product decision quality.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Positioning</div><h2 class="section-title">Measurement infrastructure for product decisions.</h2></div><p class="section-desc">The portfolio is organized as an evidence map: problem context, system build, validation logic, operational impact, and reproducible artifacts.</p></div>
+    <div class="readiness-grid">
+      <div class="card blue"><span class="badge">Positioning Thesis</span><h3>Behavioral Data Reliability & Product Decision Systems</h3><p>I work on the layer between raw product telemetry and business decisions: event design, tracking integrity, metric definition, automation, and causal interpretation. That layer is where product data science becomes valuable at scale.</p><ul class="clean"><li>Translate product journeys into measurable events and metrics.</li><li>Diagnose why dashboards disagree with real user behavior.</li><li>Automate repeated QA and investigation workflows, with an implemented Processing Rule / variable alignment tool as the primary proof.</li><li>Turn ambiguous tagging history into source-grounded decisions.</li></ul></div>
+      <div class="matrix">
+        <div class="matrix-item"><b>Product DS</b><span>Metric design, funnel logic, segmentation, conversion analysis, stakeholder-facing decision support.</span></div>
+        <div class="matrix-item"><b>Measurement Scientist</b><span>Unit mismatch, telemetry bias, consent loss, data reliability, taxonomy governance.</span></div>
+        <div class="matrix-item"><b>Analytics Engineer</b><span>API workflows, metadata extraction, SQL/Python checks, reusable QA reports.</span></div>
+        <div class="matrix-item"><b>AI Transformation</b><span>LLM/RAG workflows for analytics operations, issue history retrieval, and decision traceability.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="focus" style="background:linear-gradient(180deg,#f8fbff,#fff)">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Core Focus</div><h2 class="section-title">Decision-grade measurement systems for behavioral data.</h2></div><p class="section-desc">The work is organized around evidence tracks that connect metric integrity, systematic QA workflow, automation, and product decision systems.</p></div>
     <div class="grid-3">
-      <div class="card"><span class="badge">01</span><h3>Measurement Reliability</h3><p>Event taxonomy, variable mapping, user/session/visit unit checks, missing-event diagnosis, and conversion metric sanity checks.</p><div class="tags"><span class="tag">Adobe Analytics</span><span class="tag">AEP concepts</span><span class="tag">Telemetry QA</span></div></div>
-      <div class="card"><span class="badge">02</span><h3>AI Analytics Automation</h3><p>LLM assistants, image-embedding QA, metadata comparison, issue retrieval, and anomaly monitoring for analytics workflows.</p><div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">FastAPI</span></div></div>
-      <div class="card"><span class="badge">03</span><h3>Product Metric Research</h3><p>SV2U-CVR research on estimating user-equivalent conversion from observed consented visit-level aggregates.</p><div class="tags"><span class="tag">CVR</span><span class="tag">Privacy constraints</span><span class="tag">Simulation</span></div></div>
+      <div class="card"><span class="badge">01</span><h3>Measurement Reliability</h3><p>Event taxonomy, variable mapping, user/session/visit unit checks, missing-event diagnosis, and conversion metric sanity checks.</p><ul class="dense-list"><li><b>Tools</b><span>Adobe Analytics, AEP concepts, SDK telemetry, Launch/Rules, Jira/Zeplin/FRD review.</span></li><li><b>Proof</b><span>Country rule comparison, checkout/order issues, search/app campaign diagnostics.</span></li></ul></div>
+      <div class="card"><span class="badge">02</span><h3>Analytics Automation Engineering</h3><p>Internal tools that reduce manual QA and investigation cost across analytics operations.</p><ul class="dense-list"><li><b>Stack</b><span>Python, FastAPI, React/TypeScript, PostgreSQL, OAuth/WSSE API clients, Excel/CSV exports.</span></li><li><b>Proof</b><span>Implemented Processing Rules & Variables Alignment Tool: rule diff, variable matrix, drift report, Excel/CSV export.</span></li></ul></div>
+      <div class="card"><span class="badge">03</span><h3>Decision Science Research</h3><p>A nine-report roadmap connecting behavioral measurement, CVR methodology, aggregated labels, attribution, and taxonomy contracts.</p><ul class="dense-list"><li><b>Methods</b><span>Simulation, robustness checks, causal inference, LLP, quasi-experimentation.</span></li><li><b>Output</b><span>Technical report, GitHub implementation, dataset, notebook, 5-minute talk, LinkedIn summary.</span></li></ul></div>
     </div>
   </div>
 </section>
 
-<section id="research" style="background:linear-gradient(180deg,#f8fbff,#fff)">
+<section id="research">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Flagship Research</div><h2 class="section-title">SV2U-CVR: from visit-level CVR to user-equivalent CVR.</h2></div><p class="section-desc">A technical report and reproducible experiment package in progress.</p></div>
-    <div class="grid-2">
-      <div class="card blue"><span class="badge">Research in Progress</span><h3>SV2U-CVR / RQ-SV2U-CVR</h3><p>User-level conversion labels are often unavailable or unreliable in consented analytics environments. SV2U estimates user-equivalent period CVR from aggregate users, visits, and converted visits.</p><div class="tags"><span class="tag">arXiv planned</span><span class="tag">GitHub repo planned</span><span class="tag">English talk planned</span></div></div>
-      <div class="card"><h3>Core estimator</h3><p><strong>V2U-CVR</strong> converts visit conversion probability into user-equivalent conversion probability using visits-per-user exposure.</p><p style="font-family:Georgia,serif;font-size:22px;color:#0b1f3a;background:#f8fbff;border:1px solid var(--line);border-radius:16px;padding:16px;">p = 1 - (1 - C/V)<sup>V/U</sup></p><p>SV2U applies the transform by segment. RQ-SV2U adds reliability weights for telemetry-risk environments.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Technical Report Pipeline</div><h2 class="section-title">Trustworthy Behavioral Measurement and Causal Decision Systems.</h2></div><p class="section-desc">A nine-part roadmap. Each card has reserved CTA space for a future redirect to the full technical report, repo, or notebook.</p></div>
+    <div class="research-roadmap">
+      <article class="card report-card"><div><span class="report-axis">Metric / CVR Methodology</span><h3>01. V2U: Visit-to-User Conversion Measurement</h3><p>Defines conversion metrics under visit/user mismatch, consent loss, and telemetry constraints.</p><div class="report-meta"><div><b>Question:</b> When user-level labels are unreliable, how should CVR be estimated?</div><div><b>Artifact:</b> estimator, simulation notebook, metric validation checklist.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">Metric / CVR Methodology</span><h3>02. PGF-CMI: Conversion Metric Inference</h3><p>Extends CVR calculation into a probabilistic inference framework for noisy behavioral data.</p><div class="report-meta"><div><b>Question:</b> How can metric uncertainty be represented instead of hidden?</div><div><b>Artifact:</b> probabilistic model, synthetic data, robustness tests.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>03. LLP Level 1: Workspace-Level Bags</h3><p>Estimates effects when only aggregated workspace-level labels are available.</p><div class="report-meta"><div><b>Question:</b> Can workspace aggregates support useful effect estimates?</div><div><b>Artifact:</b> bag construction, baseline estimator, evaluation notebook.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>04. LLP Level 2: Taxonomy-Level Bags</h3><p>Moves from report segments to event taxonomy units and connects aggregation with product analytics design.</p><div class="report-meta"><div><b>Question:</b> How does taxonomy design affect learnability from aggregate labels?</div><div><b>Artifact:</b> taxonomy simulator, feature design, contamination stress test.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>05. LLP Level 3: Identifiability under Contamination</h3><p>Studies when aggregated behavioral labels can or cannot identify causal effects under mutual contamination.</p><div class="report-meta"><div><b>Question:</b> What assumptions make aggregate causal learning identifiable?</div><div><b>Artifact:</b> assumptions table, counterexamples, sensitivity analysis.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">Attribution / Quasi-Experimentation</span><h3>06. Causal Marketing Attribution</h3><p>Builds attribution logic robust to campaign mapping, channel rules, and imperfect tracking.</p><div class="report-meta"><div><b>Question:</b> When tracking is biased, which attribution claims are still defensible?</div><div><b>Artifact:</b> channel rules audit, DAG, scenario-based estimator comparison.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">Attribution / Quasi-Experimentation</span><h3>07. Product Impact without Clean A/B Tests</h3><p>Uses quasi-experimental thinking to estimate product impact when controlled experiments are unavailable.</p><div class="report-meta"><div><b>Question:</b> How can product impact be estimated without a clean randomized test?</div><div><b>Artifact:</b> DiD/matching/synthetic-control notebook and diagnostics.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">Unified Measurement Infrastructure</span><h3>08. Unified Behavioral Measurement</h3><p>Connects web, app, telemetry, taxonomy, identity, and metric layers into one decision-grade system.</p><div class="report-meta"><div><b>Question:</b> What architecture turns behavioral logs into trustworthy product decisions?</div><div><b>Artifact:</b> reference architecture, data contracts, QA workflow.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+      <article class="card report-card"><div><span class="report-axis">Unified Measurement Infrastructure</span><h3>09. Reliable Event Taxonomy & Data Contracts</h3><p>Defines taxonomy design, QA checks, drift detection, and data contracts for trustworthy analytics systems.</p><div class="report-meta"><div><b>Question:</b> How should events be governed so metrics remain stable over time?</div><div><b>Artifact:</b> taxonomy schema, drift tests, data contract template.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
     </div>
+    <!-- Future CTA pattern: <a class="report-action" href="TECH_REPORT_URL" target="_blank" rel="noreferrer">Read technical report →</a> -->
   </div>
 </section>
 
-<section id="pocs">
+<section id="pocs" style="background:linear-gradient(180deg,#f8fbff,#fff)">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">AI / Analytics PoCs</div><h2 class="section-title">Automation for analytics QA and decision traceability.</h2></div><p class="section-desc">These projects are about reducing investigation cost, not just making prettier summaries.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Case Studies</div><h2 class="section-title">Automation for analytics QA, decision traceability, and measurement reliability.</h2></div><p class="section-desc">Completed implementation work is shown first. Each card separates the operational problem, system build, validation path, and artifact evidence.</p></div>
     <div class="project-grid">
-      <article class="card project-card"><div><span class="badge">LLM Analytics</span><h3>LLM Analytics Assistant</h3><p>Retrieves analytics data through API workflows, answers metric questions, supports segment definitions, explains anomalies, and drafts first-pass dashboard summaries.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">LLM</span></div></div></article>
-      <article class="card project-card"><div><span class="badge">Demo Video</span><h3>Tagging QA Automation</h3><p>Image-embedding QA that matches UI/CTA elements with tagging specs, built to reduce manual visual checking in analytics implementation review.</p><div class="tags"><span class="tag">Image embeddings</span><span class="tag">QA automation</span><span class="tag">Spec matching</span></div></div><div class="link-row"><a class="small-link" href="https://youtu.be/k-ZrhyRDVnc" target="_blank" rel="noreferrer">Watch demo →</a></div></article>
-      <article class="card project-card"><div><span class="badge">Governance</span><h3>Country Comparison Dataset</h3><p>Compared processing rules and variable metadata across 114 country implementations to expose configuration drift and reduce manual audit work.</p><div class="tags"><span class="tag">114 markets</span><span class="tag">Metadata</span><span class="tag">Drift detection</span></div></div><div class="link-row"><a class="small-link" href="https://youtu.be/CaWidy86peo" target="_blank" rel="noreferrer">Watch video →</a></div></article>
-      <article class="card project-card"><div><span class="badge">Migration QA</span><h3>SEA to MST Rule Simulation</h3><p>Simulated marketing-channel processing rules before migration to reduce legacy CID traffic misclassification risk.</p><div class="tags"><span class="tag">Rule simulation</span><span class="tag">Attribution</span><span class="tag">QA</span></div></div></article>
-      <article class="card project-card"><div><span class="badge">RAG</span><h3>Historical Decision Intelligence</h3><p>Retrieval concept across Jira, Confluence, email, and collaboration threads to surface prior tagging decisions, QA history, and similar issue resolutions.</p><div class="tags"><span class="tag">RAG</span><span class="tag">Decision traceability</span><span class="tag">Knowledge retrieval</span></div></div></article>
-      <article class="card project-card"><div><span class="badge">Monitoring</span><h3>Measurement Reliability Monitor</h3><p>Expected-vs-actual tracking checks, daily anomaly reports, and false-positive feedback loops for continuous analytics QA.</p><div class="tags"><span class="tag">Anomaly detection</span><span class="tag">Data quality</span><span class="tag">Feedback loop</span></div></div></article>
+      <article class="card project-card"><div><span class="badge">Implemented · Analytics QA Automation</span><h3>Processing Rules & Variables Alignment Tool</h3><p>API-based comparison tool for Processing Rules and variable metadata, built to replace slow manual audits with repeatable configuration-drift analysis.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Manual audits required multiple people to compare country RSIDs, rules, and hundreds of metrics/dimensions; fixes were also hard to re-check consistently.</span></div><div class="case-row"><b>Scale</b><span>RSID lookup, Processing Rule extraction, eVar/prop/event metadata extraction, country-level variable matrix, and drift analysis reports.</span></div><div class="case-row"><b>Build</b><span>FastAPI backend, React/TypeScript UI, Adobe Analytics API clients, OAuth/WSSE auth handling, Excel/CSV export, and field-level diffs for left-only, right-only, and changed-same-title cases.</span></div><div class="case-row"><b>Impact</b><span>Reduced an audit flow previously estimated at 3 people over 2–3 weeks into a repeatable workflow executable by one person in under 30 minutes.</span></div><div class="case-row"><b>Evidence</b><span>Demo walkthrough, runnable app structure, generated Excel outputs, and drift report sheets for summary, missing, extra, and changed configurations.</span></div></div><div class="tags"><span class="tag">Implemented</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React/TS</span><span class="tag">Adobe API</span><span class="tag">Metadata diff</span><span class="tag">Audit automation</span></div></div><div class="link-row"><a class="demo-link" href="https://youtu.be/CaWidy86peo" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">Watch the rules comparison walkthrough</span><span class="demo-sub">See the implemented workflow for metadata extraction, diffing, and drift reporting</span></span><span class="demo-arrow">→</span></a></div></article>
+
+      <article class="card project-card"><div><span class="badge">ADI AX Transformation TF</span><h3>Historical Decision Intelligence</h3><p>Issue intelligence system for tagging decisions, ownership, timeline reconstruction, and source-grounded answers across Jira, email, Confluence-like documents, and collaboration history.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Tagging issues rarely live in one ticket. Decisions are spread across comments, emails, specs, old QA evidence, and follow-up discussions, so analysts spend time reconstructing context before they can act.</span></div><div class="case-row"><b>Design</b><span>Not a plain document chatbot. The system models issue history as a decision timeline with entities such as country, platform, page, variable, event, owner, status, latest decision, and source evidence.</span></div><div class="case-row"><b>Build</b><span>Periodic ingestion, entity extraction, issue-thread linking, temporal ranking, decision-state resolution, and answer templates that return latest decision, key history, related owners, and original source links.</span></div><div class="case-row"><b>Guardrail</b><span>Separate source evidence from generated synthesis, expose unresolved conflicts, and keep final operational decisions in a human review loop.</span></div></div><div class="tags"><span class="tag">Decision intelligence</span><span class="tag">Issue graph</span><span class="tag">Temporal retrieval</span><span class="tag">Owner resolution</span><span class="tag">Source grounding</span></div></div></article>
+
+      <article class="card project-card"><div><span class="badge">Computer Vision QA</span><h3>Tagging QA Automation Tool</h3><p>AI-assisted QA workflow that compares UI/CTA evidence against tagging specifications and turns exhaustive page-by-page manual checks into alert-based review.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>For each page, reviewers often need to open planning documents, tagging guides, UI references, and QA evidence manually. A single page can take at least half a day of one person’s time when every CTA and expected event must be checked line by line.</span></div><div class="case-row"><b>Build</b><span>Use UI screenshots or design references, tagging guide entries, CTA labels, expected variables/events, and image/text embeddings to match visible components with expected tracking rules.</span></div><div class="case-row"><b>Output</b><span>Alert report for likely missing tags, mismatched CTA naming, wrong variable mapping, duplicate coverage, or low-confidence UI/spec matches, so the reviewer investigates exceptions instead of re-checking every element.</span></div><div class="case-row"><b>Value</b><span>Reframes tagging QA from exhaustive manual inspection into AI-assisted triage while keeping final approval with a human reviewer.</span></div></div><div class="tags"><span class="tag">Image embeddings</span><span class="tag">Spec matching</span><span class="tag">CTA coverage</span><span class="tag">Alert triage</span><span class="tag">Human review</span></div></div><div class="link-row"><a class="demo-link" href="https://youtu.be/k-ZrhyRDVnc" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">Watch the Tagging QA demo</span><span class="demo-sub">See how UI elements are matched to tagging specs and converted into QA alerts</span></span><span class="demo-arrow">→</span></a></div></article>
+
+      <article class="card project-card"><div><span class="badge">Measurement Operations</span><h3>Measurement Reliability Monitor & Tagging Design Guide Automation</h3><p>A system concept for monitoring expected-vs-actual analytics behavior and automating tagging design guide creation, revision, and review workflows from FRD, Zeplin, Jira, QA feedback, and existing event taxonomy.</p><div class="module-table"><div class="module-row"><b>Spec Intake</b><span>Parse FRD, Zeplin, Jira requirements, existing tagging guides, and QA feedback into structured requirement candidates.</span></div><div class="module-row"><b>Guide Generation</b><span>Draft event names, variables, CTA naming, required context fields, and page-level tracking conditions.</span></div><div class="module-row"><b>Guide Diff</b><span>Compare new requirements against the existing taxonomy and detect conflicts, duplicates, missing context, or naming-rule drift.</span></div><div class="module-row"><b>Monitoring</b><span>Run checks for event volume, variable completeness, funnel consistency, expected-vs-actual coverage, and rule drift signals.</span></div><div class="module-row"><b>Anomaly Triage</b><span>Return severity, suspected cause, affected metric, related page/journey, and recommended owner for follow-up.</span></div><div class="module-row"><b>Review Loop</b><span>Keep human approval, false-positive feedback, final guide revision, and decision history as part of the workflow.</span></div></div><div class="tags"><span class="tag">Measurement governance</span><span class="tag">Tagging guide automation</span><span class="tag">Metric integrity</span><span class="tag">Systematic QA workflow</span><span class="tag">Human-in-the-loop review</span></div></div></article>
+
+      <article class="card project-card"><div><span class="badge">Product Attribution QA</span><h3>SEA to MST Rule Simulation</h3><p>Implemented marketing-processing-rule simulation for migration QA, designed to prevent attribution drift before migrated campaign traffic is trusted by business reporting.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>During SEA to MST migration, marketing-channel processing rules must classify legacy tracking codes and CIDs correctly. If the migration rules are wrong, campaign performance measurement can become unusable or misleading.</span></div><div class="case-row"><b>Build</b><span>Extracted one year of historical tracking-code/CID data, attached SEA migration parameter scenarios, simulated the rule logic, and verified whether each pattern would be classified into the expected marketing channel.</span></div><div class="case-row"><b>Validation</b><span>Checked rule precedence, parameter coverage, expected outputs, mismatch cases, and high-risk tracking-code patterns before the migration was treated as report-ready.</span></div><div class="case-row"><b>Impact</b><span>Prevented business-facing marketing measurement issues before launch. The migration validation relied on this simulation as the primary check, while source code remains internal due to security constraints.</span></div></div><div class="tags"><span class="tag">Attribution QA</span><span class="tag">Processing rules</span><span class="tag">Migration simulation</span><span class="tag">CID validation</span><span class="tag">Business risk prevention</span></div></div></article>
+
+      <article class="card project-card"><div><span class="badge">LLM Analytics</span><h3>LLM Analytics Assistant</h3><p>Internal analytics assistant for metric questions, segment definitions, anomaly explanations, and first-pass dashboard narratives, designed around source evidence and analyst review.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Analysts repeatedly translate metric definitions, segment logic, dashboard changes, and anomaly context for different stakeholders, which creates duplicated explanation work and inconsistent interpretation.</span></div><div class="case-row"><b>Build</b><span>FastAPI/PostgreSQL workflow with API-backed data retrieval, metadata-aware prompts, structured answer templates, SQL/Python support, and reusable dashboard-summary patterns.</span></div><div class="case-row"><b>Output</b><span>Metric Q&A, segment interpretation, anomaly explanation draft, dashboard narrative, and follow-up investigation prompts that separate source evidence from generated interpretation.</span></div><div class="case-row"><b>Guardrail</b><span>Keep generated explanations reviewable by the analyst, avoid treating LLM output as source data, and preserve traceability to the underlying metric definition or API result.</span></div></div><div class="tags"><span class="tag">LLM</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Analytics API</span><span class="tag">Source-grounded QA</span></div></div><div class="link-row"><a class="demo-link secondary" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">LLM Analytics Assistant video</span><span class="demo-sub">YouTube CTA reserved for the demo upload</span></span><span class="demo-arrow">→</span></a></div></article>
     </div>
   </div>
 </section>
 
 <section id="projects" style="background:var(--cream)">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Additional Projects</div><h2 class="section-title">Earlier projects kept, but reframed.</h2></div><p class="section-desc">The older projects still matter. They show breadth across NLP, RAG, agents, service design, and competitive modeling.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Supporting Archive</div><h2 class="section-title">Supporting work and earlier systems.</h2></div><p class="section-desc">These projects show additional implementation breadth across NLP, retrieval, agents, and service concepts while keeping the main story focused on product measurement reliability and AI analytics automation.</p></div>
     <div class="project-grid">
-      <article class="card"><span class="badge">NLP</span><h3>TVING Review Sentiment & Topic Analysis</h3><p>Collected and analyzed large-scale user comments with sentiment analysis and LDA topic modeling to connect user feedback with product insight hypotheses.</p><div class="tags"><span class="tag">Python</span><span class="tag">LDA</span><span class="tag">Sentiment</span></div></article>
+      <article class="card"><span class="badge">NLP</span><h3>TVING Review Sentiment & Topic Analysis</h3><p>Analyzed large-scale user comments with sentiment analysis and LDA topic modeling to connect user feedback with product insight hypotheses.</p><div class="tags"><span class="tag">Python</span><span class="tag">LDA</span><span class="tag">Sentiment</span></div></article>
       <article class="card"><span class="badge">RAG Service</span><h3>Senior AI Playground “Nolmung”</h3><p>Senior-friendly AI service concept with legal, exercise, travel, and community modules built around clear UX and practical AI assistance.</p><div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">React/TS</span></div></article>
-      <article class="card"><span class="badge">RAG</span><h3>Exercise Posture Recommendation</h3><p>Mapped user needs and body-part constraints to exercise recommendations using embeddings, FAISS retrieval, and YouTube API post-processing.</p><div class="tags"><span class="tag">bge-m3</span><span class="tag">FAISS</span><span class="tag">YouTube API</span></div><div class="link-row"><a class="small-link" href="https://youtu.be/4JtC5eUrYwo" target="_blank" rel="noreferrer">Watch demo →</a></div></article>
-      <article class="card"><span class="badge">Mental Health AI</span><h3>Skuldium</h3><p>CBT-inspired recovery companion concept with cognitive distortion detection, reflective dialogue, and long-term progress reports.</p><div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">Flutter</span></div><div class="link-row"><a class="small-link" href="https://skuldium.xyz/" target="_blank" rel="noreferrer">Project site →</a></div></article>
-      <article class="card"><span class="badge">Agents</span><h3>Multi-Agent Creative Service</h3><p>FastAPI and Google ADK-based service concept for image generation, editing, emoticon generation, and motion-graphic support.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">Google ADK</span><span class="tag">Azure</span></div><div class="link-row"><a class="small-link" href="https://github.com/obok127/multi-agent-project.git" target="_blank" rel="noreferrer">GitHub →</a></div></article>
+      <article class="card"><span class="badge">RAG</span><h3>Exercise Posture Recommendation</h3><p>Mapped user needs and body-part constraints to exercise recommendations using embeddings, FAISS retrieval, and YouTube API post-processing.</p><div class="tags"><span class="tag">bge-m3</span><span class="tag">FAISS</span><span class="tag">YouTube API</span></div><div class="link-row"><a class="demo-link" href="https://youtu.be/4JtC5eUrYwo" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">Watch the recommendation demo</span><span class="demo-sub">See the retrieval flow and YouTube result matching</span></span><span class="demo-arrow">→</span></a></div></article>
       <article class="card"><span class="badge">FAQ Bot</span><h3>Naver Smart Store FAQ Chatbot</h3><p>Built a retrieval chatbot from 2,717 FAQ items using BM25, BGE-M3, ChromaDB, LLM response generation, and SQLite logging.</p><div class="tags"><span class="tag">BM25</span><span class="tag">BGE-M3</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span></div><div class="link-row"><a class="small-link" href="https://github.com/obok127/smartstore-chatbot.git" target="_blank" rel="noreferrer">GitHub →</a></div></article>
     </div>
   </div>
@@ -155,22 +250,22 @@ ul.clean li:before { content:""; position:absolute; left:0; top:.6em; width:8px;
 
 <section id="evidence">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Evidence Layer</div><h2 class="section-title">Research, code, writing, and talks.</h2></div><p class="section-desc">The goal is to make the work easy to verify: paper, repo, post, and presentation.</p></div>
+    <div class="section-head"><div><div class="eyebrow">Evidence Layer</div><h2 class="section-title">Make the work easy to verify.</h2></div><p class="section-desc">Each major claim should eventually point to a repo, notebook, video, report, or reproducible artifact.</p></div>
     <div class="grid-3">
-      <div class="card"><h3>Kaggle</h3><p>Top 4-8% range across selected competitions, with modeling, feature engineering, validation, and iteration experience.</p><a class="small-link" href="https://www.kaggle.com/obok127" target="_blank" rel="noreferrer">Kaggle profile →</a></div>
-      <div class="card"><h3>LinkedIn Writing</h3><p>Technical posts on measurement reliability, product metrics, behavioral data, and AI automation for analytics workflows.</p><a class="small-link" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn →</a></div>
-      <div class="card"><h3>GitHub</h3><p>Public repositories for RAG, ML, data mining, model implementation, and portfolio projects.</p><a class="small-link" href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub →</a></div>
+      <div class="card"><h3>GitHub</h3><p>Public repositories for RAG, ML, data mining, model implementation, analytics automation, and portfolio projects.</p><ul class="dense-list"><li><b>Next</b><span>Add README architecture diagrams, test data, setup scripts, and result screenshots to every flagship repo.</span></li></ul><a class="small-link" href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub →</a></div>
+      <div class="card"><h3>Technical Writing</h3><p>Technical posts on measurement reliability, product metrics, behavioral data, and AI automation for analytics workflows.</p><ul class="dense-list"><li><b>Next</b><span>Publish each report as a short executive summary + technical appendix + implementation link.</span></li></ul><a class="small-link" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn →</a></div>
+      <div class="card"><h3>Modeling / Competitions</h3><p>Kaggle experience across selected competitions, with modeling, feature engineering, validation, and iteration practice.</p><ul class="dense-list"><li><b>Next</b><span>Move from ranking statement to one polished postmortem: validation design, leakage checks, feature logic, and error analysis.</span></li></ul><a class="small-link" href="https://www.kaggle.com/obok127" target="_blank" rel="noreferrer">Kaggle profile →</a></div>
     </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow" style="color:#93c5fd">Contact</div><h2 class="section-title">Let’s talk about product data, measurement reliability, or AI analytics automation.</h2></div><p class="section-desc">Open to Singapore-based Product Data Scientist, Measurement Scientist, Experimentation DS, and AI analytics automation roles.</p></div>
+    <div class="section-head"><div><div class="eyebrow" style="color:#93c5fd">Contact</div><h2 class="section-title">Let’s talk about product data, measurement reliability, or AI analytics automation.</h2></div><p class="section-desc">Open to Product Data Scientist, Measurement Scientist, Experimentation DS, Analytics Engineer, and AI analytics automation roles.</p></div>
     <div class="contact-card">
       <div class="grid-2">
-        <div><h3 style="margin-top:0;color:white">Links</h3><ul class="clean"><li><a href="mailto:jangyeeun330@gmail.com">jangyeeun330@gmail.com</a></li><li><a href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn</a></li><li><a href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub</a></li><li><a href="https://github.obok127.io" target="_blank" rel="noreferrer">Portfolio</a></li></ul></div>
-        <div><h3 style="margin-top:0;color:white">Quick line</h3><p style="color:#dbeafe">I build reliable product metrics and AI-assisted analytics workflows for behavioral data under privacy, identity, and telemetry constraints.</p><div class="cta"><a class="btn" href="mailto:jangyeeun330@gmail.com">Email</a><a class="btn" href="https://youtu.be/k-ZrhyRDVnc" target="_blank" rel="noreferrer">Tagging QA Demo</a></div></div>
+        <div><h3 style="margin-top:0;color:white">Links</h3><ul class="clean"><li><a href="mailto:jangyeeun330@gmail.com">jangyeeun330@gmail.com</a></li><li><a href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn</a></li><li><a href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub</a></li><li><a href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">YouTube</a></li><li><a href="https://github.obok127.io" target="_blank" rel="noreferrer">Portfolio</a></li></ul></div>
+        <div><h3 style="margin-top:0;color:white">Quick line</h3><p style="color:#dbeafe">I work on decision-grade measurement, behavioral data reliability, analytics automation, measurement governance, telemetry risk, metric integrity, and product decision systems.</p><div class="cta"><a class="btn" href="mailto:jangyeeun330@gmail.com">Email</a><a class="btn" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">Visit YouTube Channel</a></div></div>
       </div>
     </div>
   </div>
