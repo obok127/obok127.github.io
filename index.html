@@ -51,7 +51,7 @@ h1{margin:18px 0 14px;font-size:clamp(44px,7vw,76px);line-height:1.05;letter-spa
 .signal{display:grid;grid-template-columns:98px 1fr;gap:12px;align-items:start;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:17px;padding:12px;}
 .signal b{font-size:13px;line-height:1.1;color:white;}
 .signal span{font-size:13px;line-height:1.35;color:#cbd5e1;}
-.proof-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+.proof-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px;}
 .proof-pill{background:white;border:1px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:0 12px 35px rgba(7,23,45,.055);}
 .proof-pill b{display:block;color:var(--navy);font-size:14px;line-height:1.25;}
 .proof-pill span{display:block;color:var(--muted);font-size:12px;line-height:1.35;margin-top:3px;}
@@ -85,6 +85,15 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
 .matrix-item{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;}
 .matrix-item b{display:block;color:var(--navy);font-size:15px;margin-bottom:4px;}
 .matrix-item span{display:block;color:var(--muted);font-size:13px;line-height:1.42;}
+
+.kaggle-proof{grid-column:1 / -1;}
+.kaggle-summary{margin:0 0 16px;color:var(--muted);max-width:980px;}
+.kaggle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;}
+.kaggle-item{border:1px solid #edf2f8;border-radius:18px;padding:14px;background:#fbfdff;}
+.kaggle-item b{display:block;color:var(--navy);font-size:14px;line-height:1.25;margin-bottom:4px;}
+.kaggle-item span{display:block;color:#44536a;font-size:13px;line-height:1.42;}
+.kaggle-item strong{color:var(--blue);}
+@media (max-width:920px){.kaggle-grid{grid-template-columns:1fr;}}
 .research-roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .report-card{min-height:340px;display:flex;flex-direction:column;justify-content:space-between;}
 .report-axis{display:inline-flex;width:max-content;max-width:100%;margin-bottom:12px;padding:6px 10px;border-radius:999px;background:#eef6ff;color:var(--blue);font-size:11px;font-weight:950;letter-spacing:.02em;}
@@ -168,6 +177,7 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
       <div class="proof-pill"><b>Product telemetry</b><span>Web/App behavioral events, funnel, CTA, impression, campaign, checkout, order context.</span></div>
       <div class="proof-pill"><b>Measurement reliability</b><span>Missing events, variable drift, rule mismatch, false positives, consent/identity constraints.</span></div>
       <div class="proof-pill"><b>Implemented automation</b><span>Processing Rule diff, variable matrix, drift report, Excel/CSV export, and demo walkthrough.</span></div>
+      <div class="proof-pill"><b>Tabular ML evidence</b><span>Kaggle Top 4–8% across classification, ranking, regression, and uncertainty estimation.</span></div>
       <div class="proof-pill"><b>Research roadmap</b><span>9-part technical report pipeline connecting metric integrity, causal inference, taxonomy governance, and reproducible evaluation.</span></div>
     </div>
   </div>
@@ -251,10 +261,19 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
 <section id="evidence">
   <div class="container">
     <div class="section-head"><div><div class="eyebrow">Evidence Layer</div><h2 class="section-title">Make the work easy to verify.</h2></div><p class="section-desc">Each major claim should eventually point to a repo, notebook, video, report, or reproducible artifact.</p></div>
-    <div class="grid-3">
+    <div class="grid-2">
       <div class="card"><h3>GitHub</h3><p>Public repositories for RAG, ML, data mining, model implementation, analytics automation, and portfolio projects.</p><ul class="dense-list"><li><b>Next</b><span>Add README architecture diagrams, test data, setup scripts, and result screenshots to every flagship repo.</span></li></ul><a class="small-link" href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub →</a></div>
       <div class="card"><h3>Technical Writing</h3><p>Technical posts on measurement reliability, product metrics, behavioral data, and AI automation for analytics workflows.</p><ul class="dense-list"><li><b>Next</b><span>Publish each report as a short executive summary + technical appendix + implementation link.</span></li></ul><a class="small-link" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn →</a></div>
-      <div class="card"><h3>Modeling / Competitions</h3><p>Kaggle experience across selected competitions, with modeling, feature engineering, validation, and iteration practice.</p><ul class="dense-list"><li><b>Next</b><span>Move from ranking statement to one polished postmortem: validation design, leakage checks, feature logic, and error analysis.</span></li></ul><a class="small-link" href="https://www.kaggle.com/obok127" target="_blank" rel="noreferrer">Kaggle profile →</a></div>
+      <div class="card kaggle-proof"><h3>Modeling / Competitions</h3><p class="kaggle-summary">Top 4–8% Kaggle results across tabular ML, ranking, regression, uncertainty estimation, and classification. This supports practical ML strength in metric-aligned validation, feature engineering, probability scoring, ranking robustness, and uncertainty-aware modeling.</p>
+        <div class="kaggle-grid">
+          <div class="kaggle-item"><b><strong>Top 4%</strong> · Bank marketing classification</b><span>ROC-AUC, probability scoring, stratified validation, campaign-contact feature handling, and deployable prioritization logic.</span></div>
+          <div class="kaggle-item"><b><strong>Top 4%</strong> · Fertilizer recommendation</b><span>MAP@3 top-k ranking, stable probability ordering, interaction features, gradient boosting, and probability-level blending.</span></div>
+          <div class="kaggle-item"><b><strong>Top 7%</strong> · House price prediction intervals</b><span>Uncertainty estimation, quantile regression, conformal calibration, and coverage–sharpness trade-off management.</span></div>
+          <div class="kaggle-item"><b><strong>Top 7%</strong> · Synthetic tabular classification</b><span>Robust validation under synthetic artifacts, feature generalization, and leaderboard-overfit control.</span></div>
+          <div class="kaggle-item"><b><strong>Top 8%</strong> · Calorie expenditure regression</b><span>RMSLE-aligned validation, scale-aware error control, heteroskedasticity handling, and ensemble stability.</span></div>
+        </div>
+        <div class="link-row"><a class="small-link" href="https://www.kaggle.com/obok127" target="_blank" rel="noreferrer">Kaggle profile →</a></div>
+      </div>
     </div>
   </div>
 </section>
