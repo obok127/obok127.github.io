@@ -1,22 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Ye Eun Jang | Product Data Scientist</title>
-<meta name="description" content="Product Data Scientist focused on behavioral data measurement, analytics automation, AI transformation, conversion metrics, and measurement reliability.">
-<meta name="author" content="Ye Eun Jang">
-<meta name="theme-color" content="#07172d">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ye Eun Jang | Product Data Scientist">
-<meta property="og:description" content="Behavioral data measurement, analytics automation, AI transformation, and decision-grade product metrics under telemetry constraints.">
-<meta property="og:url" content="https://github.obok127.io">
+<meta content="Product Data Scientist focused on behavioral data measurement, analytics automation, AI transformation, conversion metrics, and measurement reliability." name="description"/>
+<meta content="Ye Eun Jang" name="author"/>
+<meta content="#07172d" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Ye Eun Jang | Product Data Scientist" property="og:title"/>
+<meta content="Behavioral data measurement, analytics automation, AI transformation, and decision-grade product metrics under telemetry constraints." property="og:description"/>
+<meta content="https://github.obok127.io" property="og:url"/>
+
+&lt;!-- Analytics placeholders: replace these IDs before publishing. --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-47YTBKS84C"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-47YTBKS84C', {
+    page_title: document.title,
+    page_location: window.location.href
+  });
+&lt;/script&gt;
+
 <style>
 :root{
   --navy:#07172d; --navy2:#0b1f3a; --blue:#1267d8; --blue2:#0d47a1;
   --sky:#e8f2ff; --mint:#dff8ef; --cream:#fffaf0; --gold:#ffd84d;
   --ink:#111827; --muted:#5b6474; --muted2:#7b8494; --line:#dbe3ef;
-  --card:#ffffff; --shadow:0 22px 70px rgba(7,23,45,.10); --radius:24px;
+  --card:#ffffff; --shadow:0 22px 70px rgba(87, 95, 106, 0.1); --radius:24px;
 }
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -141,155 +155,218 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
 </head>
 <body>
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a href="#top" class="logo"><span class="logo-mark"></span><span>Ye Eun Jang</span></a>
-      <div class="nav-links"><a href="#fit">Positioning</a><a href="#research">Research</a><a href="#pocs">Case Studies</a><a href="#evidence">Evidence</a><a href="#contact">Contact</a></div>
-    </nav>
-  </div>
+<div class="container">
+<nav class="nav">
+<a class="logo" data-link-text="Ye Eun Jang" data-section="top" data-track="nav_home_click" href="#top"><span class="logo-mark"></span><span>Ye Eun Jang</span></a>
+<div class="nav-links"><a data-link-text="Positioning" data-section="fit" data-track="nav_positioning_click" href="#fit">Positioning</a><a data-link-text="Research" data-section="research" data-track="nav_research_click" href="#research">Research</a><a data-link-text="Case Studies" data-section="pocs" data-track="nav_case_studies_click" href="#pocs">Case Studies</a><a data-link-text="Evidence" data-section="evidence" data-track="nav_evidence_click" href="#evidence">Evidence</a><a data-link-text="Contact" data-section="contact" data-track="nav_contact_click" href="#contact">Contact</a></div>
+</nav>
+</div>
 </header>
 <main id="top">
 <section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <span class="kicker">Product Data Scientist · Behavioral Measurement · AI Transformation</span>
-        <h1>I build decision-grade measurement systems for messy behavioral data.</h1>
-        <p class="hero-sub">I bring <strong>hands-on experience in behavioral data measurement, analytics automation, and AI transformation initiatives</strong>. Most analytics failures are not model failures. They start earlier: ambiguous event definitions, inconsistent variable mappings, broken telemetry, missing consent signals, and unmanaged rule drift. My work focuses on this upstream layer where product metrics become either decision-grade or misleading.</p>
-        <div class="cta">
-          <a class="btn primary" href="#pocs">View case studies</a>
-          <a class="btn" href="#research">Research roadmap</a>
-          <a class="btn blue" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">Visit YouTube channel</a>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <h2>Evidence base</h2>
-        <p>I focus on the upstream measurement layer: event definitions, telemetry integrity, metric governance, analytics automation, and decision traceability.</p>
-        <div class="signal-list">
-          <div class="signal"><b>Measure</b><span>Event taxonomy, telemetry QA, conversion metrics, visit/user unit logic, Adobe Analytics implementation context.</span></div>
-          <div class="signal"><b>Automate</b><span>Implemented a FastAPI/React analytics QA tool that turns Processing Rule and variable audits into a repeatable UI-driven workflow; extending the same pattern into QA alerts, guide automation, and decision intelligence.</span></div>
-          <div class="signal"><b>Decide</b><span>CVR methodology, aggregated labels, attribution, quasi-experimentation, reliability-weighted measurement.</span></div>
-          <div class="signal"><b>Transform</b><span>ADI AX Transformation TF · internal AI/analytics level test ranked #1.</span></div>
-        </div>
-      </aside>
-    </div>
-    <div class="proof-strip">
-      <div class="proof-pill"><b>Product telemetry</b><span>Web/App behavioral events, funnel, CTA, impression, campaign, checkout, order context.</span></div>
-      <div class="proof-pill"><b>Measurement reliability</b><span>Missing events, variable drift, rule mismatch, false positives, consent/identity constraints.</span></div>
-      <div class="proof-pill"><b>Implemented automation</b><span>Processing Rule diff, variable matrix, drift report, Excel/CSV export, and demo walkthrough.</span></div>
-      <div class="proof-pill"><b>Tabular ML evidence</b><span>Kaggle Top 4–8% across classification, ranking, regression, and uncertainty estimation.</span></div>
-      <div class="proof-pill"><b>Research roadmap</b><span>9-part technical report pipeline connecting metric integrity, causal inference, taxonomy governance, and reproducible evaluation.</span></div>
-    </div>
-  </div>
+<div class="container">
+<div class="hero-grid">
+<div>
+<span class="kicker">Product Data Scientist · Behavioral Measurement · AI Transformation</span>
+<h1>I build decision-grade measurement systems for messy behavioral data.</h1>
+<p class="hero-sub">I bring <strong>hands-on experience in behavioral data measurement, analytics automation, and AI transformation initiatives</strong>. Most analytics failures are not model failures. They start earlier: ambiguous event definitions, inconsistent variable mappings, broken telemetry, missing consent signals, and unmanaged rule drift. My work focuses on this upstream layer where product metrics become either decision-grade or misleading.</p>
+<div class="cta">
+<a class="btn primary" data-link-text="View case studies" data-section="hero" data-track="hero_case_study_click" href="#pocs">View case studies</a>
+<a class="btn" data-link-text="Research roadmap" data-section="hero" data-track="hero_research_click" href="#research">Research roadmap</a>
+<a class="btn blue" data-link-text="Visit YouTube channel" data-link-type="youtube" data-section="hero" data-track="hero_youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank">Visit YouTube channel</a>
+</div>
+</div>
+<aside class="hero-card">
+<h2>Evidence base</h2>
+<p>I focus on the upstream measurement layer: event definitions, telemetry integrity, metric governance, analytics automation, and decision traceability.</p>
+<div class="signal-list">
+<div class="signal"><b>Measure</b><span>Event taxonomy, telemetry QA, conversion metrics, visit/user unit logic, Adobe Analytics implementation context.</span></div>
+<div class="signal"><b>Automate</b><span>Implemented a FastAPI/React analytics QA tool that turns Processing Rule and variable audits into a repeatable UI-driven workflow; extending the same pattern into QA alerts, guide automation, and decision intelligence.</span></div>
+<div class="signal"><b>Decide</b><span>CVR methodology, aggregated labels, attribution, quasi-experimentation, reliability-weighted measurement.</span></div>
+<div class="signal"><b>Transform</b><span>ADI AX Transformation TF · internal AI/analytics level test ranked #1.</span></div>
+</div>
+</aside>
+</div>
+<div class="proof-strip">
+<div class="proof-pill"><b>Product telemetry</b><span>Web/App behavioral events, funnel, CTA, impression, campaign, checkout, order context.</span></div>
+<div class="proof-pill"><b>Measurement reliability</b><span>Missing events, variable drift, rule mismatch, false positives, consent/identity constraints.</span></div>
+<div class="proof-pill"><b>Implemented automation</b><span>Processing Rule diff, variable matrix, drift report, Excel/CSV export, and demo walkthrough.</span></div>
+<div class="proof-pill"><b>Tabular ML evidence</b><span>Kaggle Top 4–8% across classification, ranking, regression, and uncertainty estimation.</span></div>
+<div class="proof-pill"><b>Research roadmap</b><span>9-part technical report pipeline connecting metric integrity, causal inference, taxonomy governance, and reproducible evaluation.</span></div>
+</div>
+</div>
 </section>
-
 <section id="fit">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Positioning</div><h2 class="section-title">Measurement infrastructure for product decisions.</h2></div><p class="section-desc">The portfolio is organized as an evidence map: problem context, system build, validation logic, operational impact, and reproducible artifacts.</p></div>
-    <div class="readiness-grid">
-      <div class="card blue"><span class="badge">Positioning Thesis</span><h3>Behavioral Data Reliability & Product Decision Systems</h3><p>I work on the layer between raw product telemetry and business decisions: event design, tracking integrity, metric definition, automation, and causal interpretation. That layer is where product data science becomes valuable at scale.</p><ul class="clean"><li>Translate product journeys into measurable events and metrics.</li><li>Diagnose why dashboards disagree with real user behavior.</li><li>Automate repeated QA and investigation workflows, with an implemented Processing Rule / variable alignment tool as the primary proof.</li><li>Turn ambiguous tagging history into source-grounded decisions.</li></ul></div>
-      <div class="matrix">
-        <div class="matrix-item"><b>Product DS</b><span>Metric design, funnel logic, segmentation, conversion analysis, stakeholder-facing decision support.</span></div>
-        <div class="matrix-item"><b>Measurement Scientist</b><span>Unit mismatch, telemetry bias, consent loss, data reliability, taxonomy governance.</span></div>
-        <div class="matrix-item"><b>Analytics Engineer</b><span>API workflows, metadata extraction, SQL/Python checks, reusable QA reports.</span></div>
-        <div class="matrix-item"><b>AI Transformation</b><span>LLM/RAG workflows for analytics operations, issue history retrieval, and decision traceability.</span></div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Positioning</div><h2 class="section-title">Measurement infrastructure for product decisions.</h2></div><p class="section-desc">The portfolio is organized as an evidence map: problem context, system build, validation logic, operational impact, and reproducible artifacts.</p></div>
+<div class="readiness-grid">
+<div class="card blue"><span class="badge">Positioning Thesis</span><h3>Behavioral Data Reliability &amp; Product Decision Systems</h3><p>I work on the layer between raw product telemetry and business decisions: event design, tracking integrity, metric definition, automation, and causal interpretation. That layer is where product data science becomes valuable at scale.</p><ul class="clean"><li>Translate product journeys into measurable events and metrics.</li><li>Diagnose why dashboards disagree with real user behavior.</li><li>Automate repeated QA and investigation workflows, with an implemented Processing Rule / variable alignment tool as the primary proof.</li><li>Turn ambiguous tagging history into source-grounded decisions.</li></ul></div>
+<div class="matrix">
+<div class="matrix-item"><b>Product DS</b><span>Metric design, funnel logic, segmentation, conversion analysis, stakeholder-facing decision support.</span></div>
+<div class="matrix-item"><b>Measurement Scientist</b><span>Unit mismatch, telemetry bias, consent loss, data reliability, taxonomy governance.</span></div>
+<div class="matrix-item"><b>Analytics Engineer</b><span>API workflows, metadata extraction, SQL/Python checks, reusable QA reports.</span></div>
+<div class="matrix-item"><b>AI Transformation</b><span>LLM/RAG workflows for analytics operations, issue history retrieval, and decision traceability.</span></div>
+</div>
+</div>
+</div>
 </section>
-
 <section id="focus" style="background:linear-gradient(180deg,#f8fbff,#fff)">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Core Focus</div><h2 class="section-title">Decision-grade measurement systems for behavioral data.</h2></div><p class="section-desc">The work is organized around evidence tracks that connect metric integrity, systematic QA workflow, automation, and product decision systems.</p></div>
-    <div class="grid-3">
-      <div class="card"><span class="badge">01</span><h3>Measurement Reliability</h3><p>Event taxonomy, variable mapping, user/session/visit unit checks, missing-event diagnosis, and conversion metric sanity checks.</p><ul class="dense-list"><li><b>Tools</b><span>Adobe Analytics, AEP concepts, SDK telemetry, Launch/Rules, Jira/Zeplin/FRD review.</span></li><li><b>Proof</b><span>Country rule comparison, checkout/order issues, search/app campaign diagnostics.</span></li></ul></div>
-      <div class="card"><span class="badge">02</span><h3>Analytics Automation Engineering</h3><p>Internal tools that reduce manual QA and investigation cost across analytics operations.</p><ul class="dense-list"><li><b>Stack</b><span>Python, FastAPI, React/TypeScript, PostgreSQL, OAuth/WSSE API clients, Excel/CSV exports.</span></li><li><b>Proof</b><span>Implemented Processing Rules & Variables Alignment Tool: rule diff, variable matrix, drift report, Excel/CSV export.</span></li></ul></div>
-      <div class="card"><span class="badge">03</span><h3>Decision Science Research</h3><p>A nine-report roadmap connecting behavioral measurement, CVR methodology, aggregated labels, attribution, and taxonomy contracts.</p><ul class="dense-list"><li><b>Methods</b><span>Simulation, robustness checks, causal inference, LLP, quasi-experimentation.</span></li><li><b>Output</b><span>Technical report, GitHub implementation, dataset, notebook, 5-minute talk, LinkedIn summary.</span></li></ul></div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Core Focus</div><h2 class="section-title">Decision-grade measurement systems for behavioral data.</h2></div><p class="section-desc">The work is organized around evidence tracks that connect metric integrity, systematic QA workflow, automation, and product decision systems.</p></div>
+<div class="grid-3">
+<div class="card"><span class="badge">01</span><h3>Measurement Reliability</h3><p>Event taxonomy, variable mapping, user/session/visit unit checks, missing-event diagnosis, and conversion metric sanity checks.</p><ul class="dense-list"><li><b>Tools</b><span>Adobe Analytics, AEP concepts, SDK telemetry, Launch/Rules, Jira/Zeplin/FRD review.</span></li><li><b>Proof</b><span>Country rule comparison, checkout/order issues, search/app campaign diagnostics.</span></li></ul></div>
+<div class="card"><span class="badge">02</span><h3>Analytics Automation Engineering</h3><p>Internal tools that reduce manual QA and investigation cost across analytics operations.</p><ul class="dense-list"><li><b>Stack</b><span>Python, FastAPI, React/TypeScript, PostgreSQL, OAuth/WSSE API clients, Excel/CSV exports.</span></li><li><b>Proof</b><span>Implemented Processing Rules &amp; Variables Alignment Tool: rule diff, variable matrix, drift report, Excel/CSV export.</span></li></ul></div>
+<div class="card"><span class="badge">03</span><h3>Decision Science Research</h3><p>A nine-report roadmap connecting behavioral measurement, CVR methodology, aggregated labels, attribution, and taxonomy contracts.</p><ul class="dense-list"><li><b>Methods</b><span>Simulation, robustness checks, causal inference, LLP, quasi-experimentation.</span></li><li><b>Output</b><span>Technical report, GitHub implementation, dataset, notebook, 5-minute talk, LinkedIn summary.</span></li></ul></div>
+</div>
+</div>
 </section>
-
 <section id="research">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Technical Report Pipeline</div><h2 class="section-title">Trustworthy Behavioral Measurement and Causal Decision Systems.</h2></div><p class="section-desc">A nine-part roadmap. Each card has reserved CTA space for a future redirect to the full technical report, repo, or notebook.</p></div>
-    <div class="research-roadmap">
-      <article class="card report-card"><div><span class="report-axis">Metric / CVR Methodology</span><h3>01. V2U: Visit-to-User Conversion Measurement</h3><p>Defines conversion metrics under visit/user mismatch, consent loss, and telemetry constraints.</p><div class="report-meta"><div><b>Question:</b> When user-level labels are unreliable, how should CVR be estimated?</div><div><b>Artifact:</b> estimator, simulation notebook, metric validation checklist.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">Metric / CVR Methodology</span><h3>02. PGF-CMI: Conversion Metric Inference</h3><p>Extends CVR calculation into a probabilistic inference framework for noisy behavioral data.</p><div class="report-meta"><div><b>Question:</b> How can metric uncertainty be represented instead of hidden?</div><div><b>Artifact:</b> probabilistic model, synthetic data, robustness tests.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>03. LLP Level 1: Workspace-Level Bags</h3><p>Estimates effects when only aggregated workspace-level labels are available.</p><div class="report-meta"><div><b>Question:</b> Can workspace aggregates support useful effect estimates?</div><div><b>Artifact:</b> bag construction, baseline estimator, evaluation notebook.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>04. LLP Level 2: Taxonomy-Level Bags</h3><p>Moves from report segments to event taxonomy units and connects aggregation with product analytics design.</p><div class="report-meta"><div><b>Question:</b> How does taxonomy design affect learnability from aggregate labels?</div><div><b>Artifact:</b> taxonomy simulator, feature design, contamination stress test.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>05. LLP Level 3: Identifiability under Contamination</h3><p>Studies when aggregated behavioral labels can or cannot identify causal effects under mutual contamination.</p><div class="report-meta"><div><b>Question:</b> What assumptions make aggregate causal learning identifiable?</div><div><b>Artifact:</b> assumptions table, counterexamples, sensitivity analysis.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">Attribution / Quasi-Experimentation</span><h3>06. Causal Marketing Attribution</h3><p>Builds attribution logic robust to campaign mapping, channel rules, and imperfect tracking.</p><div class="report-meta"><div><b>Question:</b> When tracking is biased, which attribution claims are still defensible?</div><div><b>Artifact:</b> channel rules audit, DAG, scenario-based estimator comparison.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">Attribution / Quasi-Experimentation</span><h3>07. Product Impact without Clean A/B Tests</h3><p>Uses quasi-experimental thinking to estimate product impact when controlled experiments are unavailable.</p><div class="report-meta"><div><b>Question:</b> How can product impact be estimated without a clean randomized test?</div><div><b>Artifact:</b> DiD/matching/synthetic-control notebook and diagnostics.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">Unified Measurement Infrastructure</span><h3>08. Unified Behavioral Measurement</h3><p>Connects web, app, telemetry, taxonomy, identity, and metric layers into one decision-grade system.</p><div class="report-meta"><div><b>Question:</b> What architecture turns behavioral logs into trustworthy product decisions?</div><div><b>Artifact:</b> reference architecture, data contracts, QA workflow.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-      <article class="card report-card"><div><span class="report-axis">Unified Measurement Infrastructure</span><h3>09. Reliable Event Taxonomy & Data Contracts</h3><p>Defines taxonomy design, QA checks, drift detection, and data contracts for trustworthy analytics systems.</p><div class="report-meta"><div><b>Question:</b> How should events be governed so metrics remain stable over time?</div><div><b>Artifact:</b> taxonomy schema, drift tests, data contract template.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
-    </div>
-    <!-- Future CTA pattern: <a class="report-action" href="TECH_REPORT_URL" target="_blank" rel="noreferrer">Read technical report →</a> -->
-  </div>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Technical Report Pipeline</div><h2 class="section-title">Trustworthy Behavioral Measurement and Causal Decision Systems.</h2></div><p class="section-desc">A nine-part roadmap. Each card has reserved CTA space for a future redirect to the full technical report, repo, or notebook.</p></div>
+<div class="research-roadmap">
+<article class="card report-card"><div><span class="report-axis">Metric / CVR Methodology</span><h3>01. V2U: Visit-to-User Conversion Measurement</h3><p>Defines conversion metrics under visit/user mismatch, consent loss, and telemetry constraints.</p><div class="report-meta"><div><b>Question:</b> When user-level labels are unreliable, how should CVR be estimated?</div><div><b>Artifact:</b> estimator, simulation notebook, metric validation checklist.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">Metric / CVR Methodology</span><h3>02. PGF-CMI: Conversion Metric Inference</h3><p>Extends CVR calculation into a probabilistic inference framework for noisy behavioral data.</p><div class="report-meta"><div><b>Question:</b> How can metric uncertainty be represented instead of hidden?</div><div><b>Artifact:</b> probabilistic model, synthetic data, robustness tests.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>03. LLP Level 1: Workspace-Level Bags</h3><p>Estimates effects when only aggregated workspace-level labels are available.</p><div class="report-meta"><div><b>Question:</b> Can workspace aggregates support useful effect estimates?</div><div><b>Artifact:</b> bag construction, baseline estimator, evaluation notebook.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>04. LLP Level 2: Taxonomy-Level Bags</h3><p>Moves from report segments to event taxonomy units and connects aggregation with product analytics design.</p><div class="report-meta"><div><b>Question:</b> How does taxonomy design affect learnability from aggregate labels?</div><div><b>Artifact:</b> taxonomy simulator, feature design, contamination stress test.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">LLP / Aggregated Causal Inference</span><h3>05. LLP Level 3: Identifiability under Contamination</h3><p>Studies when aggregated behavioral labels can or cannot identify causal effects under mutual contamination.</p><div class="report-meta"><div><b>Question:</b> What assumptions make aggregate causal learning identifiable?</div><div><b>Artifact:</b> assumptions table, counterexamples, sensitivity analysis.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">Attribution / Quasi-Experimentation</span><h3>06. Causal Marketing Attribution</h3><p>Builds attribution logic robust to campaign mapping, channel rules, and imperfect tracking.</p><div class="report-meta"><div><b>Question:</b> When tracking is biased, which attribution claims are still defensible?</div><div><b>Artifact:</b> channel rules audit, DAG, scenario-based estimator comparison.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">Attribution / Quasi-Experimentation</span><h3>07. Product Impact without Clean A/B Tests</h3><p>Uses quasi-experimental thinking to estimate product impact when controlled experiments are unavailable.</p><div class="report-meta"><div><b>Question:</b> How can product impact be estimated without a clean randomized test?</div><div><b>Artifact:</b> DiD/matching/synthetic-control notebook and diagnostics.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">Unified Measurement Infrastructure</span><h3>08. Unified Behavioral Measurement</h3><p>Connects web, app, telemetry, taxonomy, identity, and metric layers into one decision-grade system.</p><div class="report-meta"><div><b>Question:</b> What architecture turns behavioral logs into trustworthy product decisions?</div><div><b>Artifact:</b> reference architecture, data contracts, QA workflow.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+<article class="card report-card"><div><span class="report-axis">Unified Measurement Infrastructure</span><h3>09. Reliable Event Taxonomy &amp; Data Contracts</h3><p>Defines taxonomy design, QA checks, drift detection, and data contracts for trustworthy analytics systems.</p><div class="report-meta"><div><b>Question:</b> How should events be governed so metrics remain stable over time?</div><div><b>Artifact:</b> taxonomy schema, drift tests, data contract template.</div></div></div><span class="report-action placeholder">Tech report CTA reserved</span></article>
+</div>
+<!-- Future CTA pattern: <a class="report-action" href="TECH_REPORT_URL" target="_blank" rel="noreferrer">Read technical report →</a> -->
+</div>
 </section>
-
 <section id="pocs" style="background:linear-gradient(180deg,#f8fbff,#fff)">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Case Studies</div><h2 class="section-title">Automation for analytics QA, decision traceability, and measurement reliability.</h2></div><p class="section-desc">Completed implementation work is shown first. Each card separates the operational problem, system build, validation path, and artifact evidence.</p></div>
-    <div class="project-grid">
-      <article class="card project-card"><div><span class="badge">Implemented · Analytics QA Automation</span><h3>Processing Rules & Variables Alignment Tool</h3><p>API-based comparison tool for Processing Rules and variable metadata, built to replace slow manual audits with repeatable configuration-drift analysis.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Manual audits required multiple people to compare country RSIDs, rules, and hundreds of metrics/dimensions; fixes were also hard to re-check consistently.</span></div><div class="case-row"><b>Scale</b><span>RSID lookup, Processing Rule extraction, eVar/prop/event metadata extraction, country-level variable matrix, and drift analysis reports.</span></div><div class="case-row"><b>Build</b><span>FastAPI backend, React/TypeScript UI, Adobe Analytics API clients, OAuth/WSSE auth handling, Excel/CSV export, and field-level diffs for left-only, right-only, and changed-same-title cases.</span></div><div class="case-row"><b>Impact</b><span>Reduced an audit flow previously estimated at 3 people over 2–3 weeks into a repeatable workflow executable by one person in under 30 minutes.</span></div><div class="case-row"><b>Evidence</b><span>Demo walkthrough, runnable app structure, generated Excel outputs, and drift report sheets for summary, missing, extra, and changed configurations.</span></div></div><div class="tags"><span class="tag">Implemented</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React/TS</span><span class="tag">Adobe API</span><span class="tag">Metadata diff</span><span class="tag">Audit automation</span></div></div><div class="link-row"><a class="demo-link" href="https://youtu.be/CaWidy86peo" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">Watch the rules comparison walkthrough</span><span class="demo-sub">See the implemented workflow for metadata extraction, diffing, and drift reporting</span></span><span class="demo-arrow">→</span></a></div></article>
-
-      <article class="card project-card"><div><span class="badge">ADI AX Transformation TF</span><h3>Historical Decision Intelligence</h3><p>Issue intelligence system for data issues, ownership, timeline reconstruction, and source-grounded answers across Jira, email, Confluence-like documents, and collaboration history.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Data issues rarely live in one ticket. Decisions are spread across comments, emails, specs, old QA evidence, and follow-up discussions, so analysts spend time reconstructing context before they can act.</span></div><div class="case-row"><b>Design</b><span>Not a plain document chatbot. The system models data-issue history as a decision timeline with entities such as country, platform, page, variable, event, metric, owner, status, latest decision, and source evidence.</span></div><div class="case-row"><b>Build</b><span>Periodic ingestion, entity extraction, issue-thread linking, temporal ranking, decision-state resolution, and answer templates that return latest decision, key history, related owners, and original source links.</span></div><div class="case-row"><b>Guardrail</b><span>Separate source evidence from generated synthesis, expose unresolved conflicts, and keep final operational decisions in a human review loop.</span></div></div><div class="tags"><span class="tag">Decision intelligence</span><span class="tag">Issue graph</span><span class="tag">Temporal retrieval</span><span class="tag">Owner resolution</span><span class="tag">Source grounding</span></div></div></article>
-
-      <article class="card project-card"><div><span class="badge">Computer Vision QA</span><h3>Tagging QA Automation Tool</h3><p>AI-assisted QA workflow that compares UI/CTA evidence against tagging specifications and turns exhaustive page-by-page manual checks into alert-based review.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>For each page, reviewers often need to open planning documents, tagging guides, UI references, and QA evidence manually. A single page can take at least half a day of one person’s time when every CTA and expected event must be checked line by line.</span></div><div class="case-row"><b>Build</b><span>Use UI screenshots or design references, tagging guide entries, CTA labels, expected variables/events, and image/text embeddings to match visible components with expected tracking rules.</span></div><div class="case-row"><b>Output</b><span>Alert report for likely missing tags, mismatched CTA naming, wrong variable mapping, duplicate coverage, or low-confidence UI/spec matches, so the reviewer investigates exceptions instead of re-checking every element.</span></div><div class="case-row"><b>Value</b><span>Reframes tagging QA from exhaustive manual inspection into AI-assisted triage while keeping final approval with a human reviewer.</span></div></div><div class="tags"><span class="tag">Image embeddings</span><span class="tag">Spec matching</span><span class="tag">CTA coverage</span><span class="tag">Alert triage</span><span class="tag">Human review</span></div></div><div class="link-row"><a class="demo-link" href="https://youtu.be/k-ZrhyRDVnc" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">Watch the Tagging QA demo</span><span class="demo-sub">See how UI elements are matched to tagging specs and converted into QA alerts</span></span><span class="demo-arrow">→</span></a></div></article>
-
-      <article class="card project-card"><div><span class="badge">Measurement Operations</span><h3>Measurement Reliability Monitor & Tagging Design Guide Automation</h3><p>A system concept for monitoring expected-vs-actual analytics behavior and automating tagging design guide creation, revision, and review workflows from FRD, Zeplin, Jira, QA feedback, and existing event taxonomy.</p><div class="module-table"><div class="module-row"><b>Spec Intake</b><span>Parse FRD, Zeplin, Jira requirements, existing tagging guides, and QA feedback into structured requirement candidates.</span></div><div class="module-row"><b>Guide Generation</b><span>Draft event names, variables, CTA naming, required context fields, and page-level tracking conditions.</span></div><div class="module-row"><b>Guide Diff</b><span>Compare new requirements against the existing taxonomy and detect conflicts, duplicates, missing context, or naming-rule drift.</span></div><div class="module-row"><b>Monitoring</b><span>Run checks for event volume, variable completeness, funnel consistency, expected-vs-actual coverage, and rule drift signals.</span></div><div class="module-row"><b>Anomaly Triage</b><span>Return severity, suspected cause, affected metric, related page/journey, and recommended owner for follow-up.</span></div><div class="module-row"><b>Review Loop</b><span>Keep human approval, false-positive feedback, final guide revision, and decision history as part of the workflow.</span></div></div><div class="tags"><span class="tag">Measurement governance</span><span class="tag">Tagging guide automation</span><span class="tag">Metric integrity</span><span class="tag">Systematic QA workflow</span><span class="tag">Human-in-the-loop review</span></div></div></article>
-
-      <article class="card project-card"><div><span class="badge">Product Attribution QA</span><h3>SEA to MST Rule Simulation</h3><p>Implemented marketing-processing-rule simulation for migration QA, designed to prevent attribution drift before migrated campaign traffic is trusted by business reporting.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>During SEA to MST migration, marketing-channel processing rules must classify legacy tracking codes and CIDs correctly. If the migration rules are wrong, campaign performance measurement can become unusable or misleading.</span></div><div class="case-row"><b>Build</b><span>Extracted one year of historical tracking-code/CID data, attached SEA migration parameter scenarios, simulated the rule logic, and verified whether each pattern would be classified into the expected marketing channel.</span></div><div class="case-row"><b>Validation</b><span>Checked rule precedence, parameter coverage, expected outputs, mismatch cases, and high-risk tracking-code patterns before the migration was treated as report-ready.</span></div><div class="case-row"><b>Impact</b><span>Prevented business-facing marketing measurement issues before launch. The migration validation relied on this simulation as the primary check, while source code remains internal due to security constraints.</span></div></div><div class="tags"><span class="tag">Attribution QA</span><span class="tag">Processing rules</span><span class="tag">Migration simulation</span><span class="tag">CID validation</span><span class="tag">Business risk prevention</span></div></div></article>
-
-      <article class="card project-card"><div><span class="badge">LLM Analytics</span><h3>LLM Analytics Assistant</h3><p>Internal analytics assistant for metric questions, segment definitions, anomaly explanations, and first-pass dashboard narratives, designed around source evidence and analyst review.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Analysts repeatedly translate metric definitions, segment logic, dashboard changes, and anomaly context for different stakeholders, which creates duplicated explanation work and inconsistent interpretation.</span></div><div class="case-row"><b>Build</b><span>FastAPI/PostgreSQL workflow with API-backed data retrieval, metadata-aware prompts, structured answer templates, SQL/Python support, and reusable dashboard-summary patterns.</span></div><div class="case-row"><b>Output</b><span>Metric Q&A, segment interpretation, anomaly explanation draft, dashboard narrative, and follow-up investigation prompts that separate source evidence from generated interpretation.</span></div><div class="case-row"><b>Guardrail</b><span>Keep generated explanations reviewable by the analyst, avoid treating LLM output as source data, and preserve traceability to the underlying metric definition or API result.</span></div></div><div class="tags"><span class="tag">LLM</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Analytics API</span><span class="tag">Source-grounded QA</span></div></div><div class="link-row"><a class="demo-link secondary" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">LLM Analytics Assistant video</span><span class="demo-sub">YouTube CTA reserved for the demo upload</span></span><span class="demo-arrow">→</span></a></div></article>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Case Studies</div><h2 class="section-title">Automation for analytics QA, decision traceability, and measurement reliability.</h2></div><p class="section-desc">Completed implementation work is shown first. Each card separates the operational problem, system build, validation path, and artifact evidence.</p></div>
+<div class="project-grid">
+<article class="card project-card"><div><span class="badge">Implemented · Analytics QA Automation</span><h3>Processing Rules &amp; Variables Alignment Tool</h3><p>API-based comparison tool for Processing Rules and variable metadata, built to replace slow manual audits with repeatable configuration-drift analysis.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Manual audits required multiple people to compare country RSIDs, rules, and hundreds of metrics/dimensions; fixes were also hard to re-check consistently.</span></div><div class="case-row"><b>Scale</b><span>RSID lookup, Processing Rule extraction, eVar/prop/event metadata extraction, country-level variable matrix, and drift analysis reports.</span></div><div class="case-row"><b>Build</b><span>FastAPI backend, React/TypeScript UI, Adobe Analytics API clients, OAuth/WSSE auth handling, Excel/CSV export, and field-level diffs for left-only, right-only, and changed-same-title cases.</span></div><div class="case-row"><b>Impact</b><span>Reduced an audit flow previously estimated at 3 people over 2–3 weeks into a repeatable workflow executable by one person in under 30 minutes.</span></div><div class="case-row"><b>Evidence</b><span>Demo walkthrough, runnable app structure, generated Excel outputs, and drift report sheets for summary, missing, extra, and changed configurations.</span></div></div><div class="tags"><span class="tag">Implemented</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React/TS</span><span class="tag">Adobe API</span><span class="tag">Metadata diff</span><span class="tag">Audit automation</span></div></div><div class="link-row"><a class="demo-link" data-demo="processing_rules_walkthrough" data-link-text="Processing Rules demo" data-link-type="youtube" data-project="processing_rules_variables_alignment_tool" data-section="case_studies" data-track="demo_click" href="https://youtu.be/CaWidy86peo" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the rules comparison walkthrough</span><span class="demo-sub">See the implemented workflow for metadata extraction, diffing, and drift reporting</span></span><span class="demo-arrow">→</span></a></div></article>
+<article class="card project-card"><div><span class="badge">ADI AX Transformation TF</span><h3>Historical Decision Intelligence</h3><p>Issue intelligence system for data issues, ownership, timeline reconstruction, and source-grounded answers across Jira, email, Confluence-like documents, and collaboration history.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Data issues rarely live in one ticket. Decisions are spread across comments, emails, specs, old QA evidence, and follow-up discussions, so analysts spend time reconstructing context before they can act.</span></div><div class="case-row"><b>Design</b><span>Not a plain document chatbot. The system models data-issue history as a decision timeline with entities such as country, platform, page, variable, event, metric, owner, status, latest decision, and source evidence.</span></div><div class="case-row"><b>Build</b><span>Periodic ingestion, entity extraction, issue-thread linking, temporal ranking, decision-state resolution, and answer templates that return latest decision, key history, related owners, and original source links.</span></div><div class="case-row"><b>Guardrail</b><span>Separate source evidence from generated synthesis, expose unresolved conflicts, and keep final operational decisions in a human review loop.</span></div></div><div class="tags"><span class="tag">Decision intelligence</span><span class="tag">Issue graph</span><span class="tag">Temporal retrieval</span><span class="tag">Owner resolution</span><span class="tag">Source grounding</span></div></div></article>
+<article class="card project-card"><div><span class="badge">Computer Vision QA</span><h3>Tagging QA Automation Tool</h3><p>AI-assisted QA workflow that compares UI/CTA evidence against tagging specifications and turns exhaustive page-by-page manual checks into alert-based review.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>For each page, reviewers often need to open planning documents, tagging guides, UI references, and QA evidence manually. A single page can take at least half a day of one person’s time when every CTA and expected event must be checked line by line.</span></div><div class="case-row"><b>Build</b><span>Use UI screenshots or design references, tagging guide entries, CTA labels, expected variables/events, and image/text embeddings to match visible components with expected tracking rules.</span></div><div class="case-row"><b>Output</b><span>Alert report for likely missing tags, mismatched CTA naming, wrong variable mapping, duplicate coverage, or low-confidence UI/spec matches, so the reviewer investigates exceptions instead of re-checking every element.</span></div><div class="case-row"><b>Value</b><span>Reframes tagging QA from exhaustive manual inspection into AI-assisted triage while keeping final approval with a human reviewer.</span></div></div><div class="tags"><span class="tag">Image embeddings</span><span class="tag">Spec matching</span><span class="tag">CTA coverage</span><span class="tag">Alert triage</span><span class="tag">Human review</span></div></div><div class="link-row"><a class="demo-link" data-demo="tagging_qa_demo" data-link-text="Tagging QA demo" data-link-type="youtube" data-project="tagging_qa_automation_tool" data-section="case_studies" data-track="demo_click" href="https://youtu.be/k-ZrhyRDVnc" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the Tagging QA demo</span><span class="demo-sub">See how UI elements are matched to tagging specs and converted into QA alerts</span></span><span class="demo-arrow">→</span></a></div></article>
+<article class="card project-card"><div><span class="badge">Measurement Operations</span><h3>Measurement Reliability Monitor &amp; Tagging Design Guide Automation</h3><p>A system concept for monitoring expected-vs-actual analytics behavior and automating tagging design guide creation, revision, and review workflows from FRD, Zeplin, Jira, QA feedback, and existing event taxonomy.</p><div class="module-table"><div class="module-row"><b>Spec Intake</b><span>Parse FRD, Zeplin, Jira requirements, existing tagging guides, and QA feedback into structured requirement candidates.</span></div><div class="module-row"><b>Guide Generation</b><span>Draft event names, variables, CTA naming, required context fields, and page-level tracking conditions.</span></div><div class="module-row"><b>Guide Diff</b><span>Compare new requirements against the existing taxonomy and detect conflicts, duplicates, missing context, or naming-rule drift.</span></div><div class="module-row"><b>Monitoring</b><span>Run checks for event volume, variable completeness, funnel consistency, expected-vs-actual coverage, and rule drift signals.</span></div><div class="module-row"><b>Anomaly Triage</b><span>Return severity, suspected cause, affected metric, related page/journey, and recommended owner for follow-up.</span></div><div class="module-row"><b>Review Loop</b><span>Keep human approval, false-positive feedback, final guide revision, and decision history as part of the workflow.</span></div></div><div class="tags"><span class="tag">Measurement governance</span><span class="tag">Tagging guide automation</span><span class="tag">Metric integrity</span><span class="tag">Systematic QA workflow</span><span class="tag">Human-in-the-loop review</span></div></div></article>
+<article class="card project-card"><div><span class="badge">Product Attribution QA</span><h3>SEA to MST Rule Simulation</h3><p>Implemented marketing-processing-rule simulation for migration QA, designed to prevent attribution drift before migrated campaign traffic is trusted by business reporting.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>During SEA to MST migration, marketing-channel processing rules must classify legacy tracking codes and CIDs correctly. If the migration rules are wrong, campaign performance measurement can become unusable or misleading.</span></div><div class="case-row"><b>Build</b><span>Extracted one year of historical tracking-code/CID data, attached SEA migration parameter scenarios, simulated the rule logic, and verified whether each pattern would be classified into the expected marketing channel.</span></div><div class="case-row"><b>Validation</b><span>Checked rule precedence, parameter coverage, expected outputs, mismatch cases, and high-risk tracking-code patterns before the migration was treated as report-ready.</span></div><div class="case-row"><b>Impact</b><span>Prevented business-facing marketing measurement issues before launch. The migration validation relied on this simulation as the primary check, while source code remains internal due to security constraints.</span></div></div><div class="tags"><span class="tag">Attribution QA</span><span class="tag">Processing rules</span><span class="tag">Migration simulation</span><span class="tag">CID validation</span><span class="tag">Business risk prevention</span></div></div></article>
+<article class="card project-card"><div><span class="badge">LLM Analytics</span><h3>LLM Analytics Assistant</h3><p>Internal analytics assistant for metric questions, segment definitions, anomaly explanations, and first-pass dashboard narratives, designed around source evidence and analyst review.</p><div class="case-rows"><div class="case-row"><b>Problem</b><span>Analysts repeatedly translate metric definitions, segment logic, dashboard changes, and anomaly context for different stakeholders, which creates duplicated explanation work and inconsistent interpretation.</span></div><div class="case-row"><b>Build</b><span>FastAPI/PostgreSQL workflow with API-backed data retrieval, metadata-aware prompts, structured answer templates, SQL/Python support, and reusable dashboard-summary patterns.</span></div><div class="case-row"><b>Output</b><span>Metric Q&amp;A, segment interpretation, anomaly explanation draft, dashboard narrative, and follow-up investigation prompts that separate source evidence from generated interpretation.</span></div><div class="case-row"><b>Guardrail</b><span>Keep generated explanations reviewable by the analyst, avoid treating LLM output as source data, and preserve traceability to the underlying metric definition or API result.</span></div></div><div class="tags"><span class="tag">LLM</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Analytics API</span><span class="tag">Source-grounded QA</span></div></div><div class="link-row"><a class="demo-link secondary" data-link-text="LLM Analytics Assistant video YouTube CTA reserved for the demo upload →" data-link-type="youtube" data-section="external_links" data-track="youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">LLM Analytics Assistant video</span><span class="demo-sub">YouTube CTA reserved for the demo upload</span></span><span class="demo-arrow">→</span></a></div></article>
+</div>
+</div>
 </section>
-
 <section id="projects" style="background:var(--cream)">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Supporting Archive</div><h2 class="section-title">Supporting work and earlier systems.</h2></div><p class="section-desc">These projects show additional implementation breadth across NLP, retrieval, agents, and service concepts while keeping the main story focused on product measurement reliability and AI analytics automation.</p></div>
-    <div class="project-grid">
-      <article class="card"><span class="badge">NLP</span><h3>TVING Review Sentiment & Topic Analysis</h3><p>Analyzed large-scale user comments with sentiment analysis and LDA topic modeling to connect user feedback with product insight hypotheses.</p><div class="tags"><span class="tag">Python</span><span class="tag">LDA</span><span class="tag">Sentiment</span></div></article>
-      <article class="card"><span class="badge">RAG Service</span><h3>Senior AI Playground “Nolmung”</h3><p>Senior-friendly AI service concept with legal, exercise, travel, and community modules built around clear UX and practical AI assistance.</p><div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">React/TS</span></div></article>
-      <article class="card"><span class="badge">RAG</span><h3>Exercise Posture Recommendation</h3><p>Mapped user needs and body-part constraints to exercise recommendations using embeddings, FAISS retrieval, and YouTube API post-processing.</p><div class="tags"><span class="tag">bge-m3</span><span class="tag">FAISS</span><span class="tag">YouTube API</span></div><div class="link-row"><a class="demo-link" href="https://youtu.be/4JtC5eUrYwo" target="_blank" rel="noreferrer"><span class="demo-copy"><span class="demo-label">Watch the recommendation demo</span><span class="demo-sub">See the retrieval flow and YouTube result matching</span></span><span class="demo-arrow">→</span></a></div></article>
-      <article class="card"><span class="badge">FAQ Bot</span><h3>Naver Smart Store FAQ Chatbot</h3><p>Built a retrieval chatbot from 2,717 FAQ items using BM25, BGE-M3, ChromaDB, LLM response generation, and SQLite logging.</p><div class="tags"><span class="tag">BM25</span><span class="tag">BGE-M3</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span></div><div class="link-row"><a class="small-link" href="https://github.com/obok127/smartstore-chatbot.git" target="_blank" rel="noreferrer">GitHub →</a></div></article>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Supporting Archive</div><h2 class="section-title">Supporting work and earlier systems.</h2></div><p class="section-desc">These projects show additional implementation breadth across NLP, retrieval, agents, and service concepts while keeping the main story focused on product measurement reliability and AI analytics automation.</p></div>
+<div class="project-grid">
+<article class="card"><span class="badge">NLP</span><h3>TVING Review Sentiment &amp; Topic Analysis</h3><p>Analyzed large-scale user comments with sentiment analysis and LDA topic modeling to connect user feedback with product insight hypotheses.</p><div class="tags"><span class="tag">Python</span><span class="tag">LDA</span><span class="tag">Sentiment</span></div></article>
+<article class="card"><span class="badge">RAG Service</span><h3>Senior AI Playground “Nolmung”</h3><p>Senior-friendly AI service concept with legal, exercise, travel, and community modules built around clear UX and practical AI assistance.</p><div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">React/TS</span></div></article>
+<article class="card"><span class="badge">RAG</span><h3>Exercise Posture Recommendation</h3><p>Mapped user needs and body-part constraints to exercise recommendations using embeddings, FAISS retrieval, and YouTube API post-processing.</p><div class="tags"><span class="tag">bge-m3</span><span class="tag">FAISS</span><span class="tag">YouTube API</span></div><div class="link-row"><a class="demo-link" data-demo="recommendation_demo" data-link-text="Recommendation demo" data-link-type="youtube" data-project="exercise_posture_recommendation" data-section="supporting_archive" data-track="demo_click" href="https://youtu.be/4JtC5eUrYwo" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the recommendation demo</span><span class="demo-sub">See the retrieval flow and YouTube result matching</span></span><span class="demo-arrow">→</span></a></div></article>
+<article class="card"><span class="badge">FAQ Bot</span><h3>Naver Smart Store FAQ Chatbot</h3><p>Built a retrieval chatbot from 2,717 FAQ items using BM25, BGE-M3, ChromaDB, LLM response generation, and SQLite logging.</p><div class="tags"><span class="tag">BM25</span><span class="tag">BGE-M3</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span></div><div class="link-row"><a class="small-link" data-link-text="Smart Store Chatbot GitHub" data-link-type="github" data-project="smartstore_chatbot" data-section="supporting_archive" data-track="github_project_click" href="https://github.com/obok127/smartstore-chatbot.git" rel="noreferrer" target="_blank">GitHub →</a></div></article>
+</div>
+</div>
 </section>
-
 <section id="evidence">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Evidence Layer</div><h2 class="section-title">Make the work easy to verify.</h2></div><p class="section-desc">Each major claim should eventually point to a repo, notebook, video, report, or reproducible artifact.</p></div>
-    <div class="grid-2">
-      <div class="card"><h3>GitHub</h3><p>Public repositories for RAG, ML, data mining, model implementation, analytics automation, and portfolio projects.</p><ul class="dense-list"><li><b>Next</b><span>Add README architecture diagrams, test data, setup scripts, and result screenshots to every flagship repo.</span></li></ul><a class="small-link" href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub →</a></div>
-      <div class="card"><h3>Technical Writing</h3><p>Technical posts on measurement reliability, product metrics, behavioral data, and AI automation for analytics workflows.</p><ul class="dense-list"><li><b>Next</b><span>Publish each report as a short executive summary + technical appendix + implementation link.</span></li></ul><a class="small-link" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn →</a></div>
-      <div class="card kaggle-proof"><h3>Modeling / Competitions</h3><p class="kaggle-summary">Top 4–8% Kaggle results across tabular ML, ranking, regression, uncertainty estimation, and classification. This supports practical ML strength in metric-aligned validation, feature engineering, probability scoring, ranking robustness, and uncertainty-aware modeling.</p>
-        <div class="kaggle-grid">
-          <div class="kaggle-item"><b><strong>Top 4%</strong> · Bank marketing classification</b><span>ROC-AUC, probability scoring, stratified validation, campaign-contact feature handling, and deployable prioritization logic.</span></div>
-          <div class="kaggle-item"><b><strong>Top 4%</strong> · Fertilizer recommendation</b><span>MAP@3 top-k ranking, stable probability ordering, interaction features, gradient boosting, and probability-level blending.</span></div>
-          <div class="kaggle-item"><b><strong>Top 7%</strong> · House price prediction intervals</b><span>Uncertainty estimation, quantile regression, conformal calibration, and coverage–sharpness trade-off management.</span></div>
-          <div class="kaggle-item"><b><strong>Top 7%</strong> · Synthetic tabular classification</b><span>Robust validation under synthetic artifacts, feature generalization, and leaderboard-overfit control.</span></div>
-          <div class="kaggle-item"><b><strong>Top 8%</strong> · Calorie expenditure regression</b><span>RMSLE-aligned validation, scale-aware error control, heteroskedasticity handling, and ensemble stability.</span></div>
-        </div>
-        <div class="link-row"><a class="small-link" href="https://www.kaggle.com/obok127" target="_blank" rel="noreferrer">Kaggle profile →</a></div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Evidence Layer</div><h2 class="section-title">Make the work easy to verify.</h2></div><p class="section-desc">Each major claim should eventually point to a repo, notebook, video, report, or reproducible artifact.</p></div>
+<div class="grid-2">
+<div class="card"><h3>GitHub</h3><p>Public repositories for RAG, ML, data mining, model implementation, analytics automation, and portfolio projects.</p><ul class="dense-list"><li><b>Next</b><span>Add README architecture diagrams, test data, setup scripts, and result screenshots to every flagship repo.</span></li></ul><a class="small-link" data-link-text="GitHub →" data-link-type="github" data-section="evidence" data-track="github_click" href="https://github.com/obok127" rel="noreferrer" target="_blank">GitHub →</a></div>
+<div class="card"><h3>Technical Writing</h3><p>Technical posts on measurement reliability, product metrics, behavioral data, and AI automation for analytics workflows.</p><ul class="dense-list"><li><b>Next</b><span>Publish each report as a short executive summary + technical appendix + implementation link.</span></li></ul><a class="small-link" data-link-text="LinkedIn →" data-link-type="linkedin" data-section="evidence" data-track="linkedin_click" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" rel="noreferrer" target="_blank">LinkedIn →</a></div>
+<div class="card kaggle-proof"><h3>Modeling / Competitions</h3><p class="kaggle-summary">Top 4–8% Kaggle results across tabular ML, ranking, regression, uncertainty estimation, and classification. This supports practical ML strength in metric-aligned validation, feature engineering, probability scoring, ranking robustness, and uncertainty-aware modeling.</p>
+<div class="kaggle-grid">
+<div class="kaggle-item"><b><strong>Top 4%</strong> · Bank marketing classification</b><span>ROC-AUC, probability scoring, stratified validation, campaign-contact feature handling, and deployable prioritization logic.</span></div>
+<div class="kaggle-item"><b><strong>Top 4%</strong> · Fertilizer recommendation</b><span>MAP@3 top-k ranking, stable probability ordering, interaction features, gradient boosting, and probability-level blending.</span></div>
+<div class="kaggle-item"><b><strong>Top 7%</strong> · House price prediction intervals</b><span>Uncertainty estimation, quantile regression, conformal calibration, and coverage–sharpness trade-off management.</span></div>
+<div class="kaggle-item"><b><strong>Top 7%</strong> · Synthetic tabular classification</b><span>Robust validation under synthetic artifacts, feature generalization, and leaderboard-overfit control.</span></div>
+<div class="kaggle-item"><b><strong>Top 8%</strong> · Calorie expenditure regression</b><span>RMSLE-aligned validation, scale-aware error control, heteroskedasticity handling, and ensemble stability.</span></div>
+</div>
+<div class="link-row"><a class="small-link" href="https://www.kaggle.com/obok127" rel="noreferrer" target="_blank">Kaggle profile →</a></div>
+</div>
+</div>
+</div>
 </section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="section-head"><div><div class="eyebrow" style="color:#93c5fd">Contact</div><h2 class="section-title">Let’s talk about product data, measurement reliability, or AI analytics automation.</h2></div><p class="section-desc">Open to Product Data Scientist, Measurement Scientist, Experimentation DS, Analytics Engineer, and AI analytics automation roles.</p></div>
-    <div class="contact-card">
-      <div class="grid-2">
-        <div><h3 style="margin-top:0;color:white">Links</h3><ul class="clean"><li><a href="mailto:jangyeeun330@gmail.com">jangyeeun330@gmail.com</a></li><li><a href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" target="_blank" rel="noreferrer">LinkedIn</a></li><li><a href="https://github.com/obok127" target="_blank" rel="noreferrer">GitHub</a></li><li><a href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">YouTube</a></li><li><a href="https://github.obok127.io" target="_blank" rel="noreferrer">Portfolio</a></li></ul></div>
-        <div><h3 style="margin-top:0;color:white">Quick line</h3><p style="color:#dbeafe">I work on decision-grade measurement, behavioral data reliability, analytics automation, measurement governance, telemetry risk, metric integrity, and product decision systems.</p><div class="cta"><a class="btn" href="mailto:jangyeeun330@gmail.com">Email</a><a class="btn" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" target="_blank" rel="noreferrer">Visit YouTube Channel</a></div></div>
-      </div>
-    </div>
-  </div>
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow" style="color:#93c5fd">Contact</div><h2 class="section-title">Let’s talk about product data, measurement reliability, or AI analytics automation.</h2></div><p class="section-desc">Open to Product Data Scientist, Measurement Scientist, Experimentation DS, Analytics Engineer, and AI analytics automation roles.</p></div>
+<div class="contact-card">
+<div class="grid-2">
+<div><h3 style="margin-top:0;color:white">Links</h3><ul class="clean"><li><a data-link-text="jangyeeun330@gmail.com" data-link-type="email" data-section="contact" data-track="email_click" href="mailto:jangyeeun330@gmail.com">jangyeeun330@gmail.com</a></li><li><a data-link-text="LinkedIn" data-link-type="linkedin" data-section="evidence" data-track="linkedin_click" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" rel="noreferrer" target="_blank">LinkedIn</a></li><li><a data-link-text="GitHub" data-link-type="github" data-section="evidence" data-track="github_click" href="https://github.com/obok127" rel="noreferrer" target="_blank">GitHub</a></li><li><a data-link-text="YouTube" data-link-type="youtube" data-section="external_links" data-track="youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank">YouTube</a></li><li><a data-link-text="Portfolio" data-link-type="portfolio" data-section="contact" data-track="portfolio_click" href="https://github.obok127.io" rel="noreferrer" target="_blank">Portfolio</a></li></ul></div>
+<div><h3 style="margin-top:0;color:white">Quick line</h3><p style="color:#dbeafe">I work on decision-grade measurement, behavioral data reliability, analytics automation, measurement governance, telemetry risk, metric integrity, and product decision systems.</p><div class="cta"><a class="btn" data-link-text="Email" data-link-type="email" data-section="contact" data-track="email_click" href="mailto:jangyeeun330@gmail.com">Email</a><a class="btn" data-link-text="Visit YouTube Channel" data-link-type="youtube" data-section="external_links" data-track="youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank">Visit YouTube Channel</a></div></div>
+</div>
+</div>
+</div>
 </section>
 </main>
 <footer class="footer"><div class="container">© 2026 Ye Eun Jang. Built for Product Data Science, Measurement Reliability, and AI Analytics Automation.</div></footer>
+
+<script>
+(function () {
+  const sentScrollDepths = new Set();
+
+  function getClosestTrackElement(event) {
+    if (event.composedPath) {
+      const path = event.composedPath();
+      for (const node of path) {
+        if (node && node.nodeType === 1 && node.matches && node.matches('[data-track]')) {
+          return node;
+        }
+      }
+    }
+    return event.target && event.target.closest ? event.target.closest('[data-track]') : null;
+  }
+
+  function sendGA4Event(eventName, params) {
+    const payload = Object.assign({
+      page_name: 'portfolio_home',
+      page_type: 'portfolio',
+      page_path: window.location.pathname,
+      page_url: window.location.href
+    }, params || {});
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, payload);
+    }
+
+    if (typeof window.clarity === 'function') {
+      window.clarity('event', eventName);
+    }
+  }
+
+  document.addEventListener('click', function (event) {
+    const el = getClosestTrackElement(event);
+    if (!el) return;
+
+    sendGA4Event(el.dataset.track, {
+      section_name: el.dataset.section || '',
+      project_name: el.dataset.project || '',
+      demo_name: el.dataset.demo || '',
+      paper_title: el.dataset.paper || '',
+      paper_number: el.dataset.paperNumber || '',
+      link_type: el.dataset.linkType || '',
+      link_text: el.dataset.linkText || (el.innerText || '').trim().slice(0, 100),
+      link_url: el.href || ''
+    });
+  }, true);
+
+  function trackScrollDepth() {
+    const documentHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+    const viewportBottom = window.scrollY + window.innerHeight;
+    const scrollPercent = Math.min(100, Math.round((viewportBottom / documentHeight) * 100));
+
+    [25, 50, 75, 100].forEach(function (depth) {
+      if (scrollPercent >= depth && !sentScrollDepths.has(depth)) {
+        sentScrollDepths.add(depth);
+        sendGA4Event('scroll_depth', {
+          section_name: 'page',
+          scroll_depth: depth
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', trackScrollDepth, { passive: true });
+  window.addEventListener('load', trackScrollDepth);
+})();
+</script>
 </body>
 </html>
