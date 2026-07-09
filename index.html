@@ -13,17 +13,18 @@
 <meta content="Behavioral data measurement, analytics automation, AI transformation, and decision-grade product metrics under telemetry constraints." property="og:description"/>
 <meta content="https://github.obok127.io" property="og:url"/>
 
-&lt;!-- Analytics placeholders: replace these IDs before publishing. --&gt;
-&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-47YTBKS84C"&gt;&lt;/script&gt;
-&lt;script&gt;
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-47YTBKS84C"></script>
+<script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-47YTBKS84C', {
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-47YTBKS84C', {
     page_title: document.title,
     page_location: window.location.href
   });
-&lt;/script&gt;
+</script>
 
 <style>
 :root{
