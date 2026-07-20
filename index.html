@@ -168,13 +168,12 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
 .report-result span{display:block;color:#536176;font-size:12px;line-height:1.35;}
 .report-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
 .report-actions .btn{padding:11px 14px;border-radius:14px;font-size:13px;}
-.private-note{margin-top:12px;color:#64748b;font-size:12px;line-height:1.45;}
+.registration-note{margin-top:12px;color:#64748b;font-size:12px;line-height:1.45;}
 .roadmap-compact{margin-top:18px;border:1px solid var(--line);border-radius:22px;padding:20px;background:linear-gradient(180deg,#fff,#f8fbff);}
 .roadmap-compact h3{margin:0 0 7px;color:var(--navy);}
 .roadmap-compact p{margin:0;color:var(--muted);}
 .roadmap-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
 .roadmap-chip{padding:7px 10px;border-radius:999px;background:#eef6ff;border:1px solid #cfe0f5;color:#26415f;font-size:12px;font-weight:850;}
-.private-pending{border-style:dashed!important;}
 @media(max-width:920px){.research-selected,.report-results{grid-template-columns:1fr;}}
 
 @media(max-width:920px){.hero-grid,.grid-3,.grid-2,.project-grid,.research-roadmap,.timeline-item,.readiness-grid,.proof-strip{grid-template-columns:1fr}.matrix{grid-template-columns:1fr}.nav-links{display:none}h1{font-size:48px}.dense-list li,.case-row,.module-row,.signal{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
@@ -272,10 +271,9 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
 </div>
 </div>
 <div class="report-actions">
-<a class="btn primary private-pending" data-report-link="v2uMain" data-link-text="V2U working paper" data-link-type="research_report" data-paper="V2U" data-section="research" data-track="research_report_click" href="mailto:jangyeeun330@gmail.com?subject=Request%20for%20V2U%20working%20paper">View full working paper</a>
-<a class="btn private-pending" data-report-link="v2uAppendix" data-link-text="V2U technical appendix" data-link-type="research_appendix" data-paper="V2U" data-section="research" data-track="research_report_click" href="mailto:jangyeeun330@gmail.com?subject=Request%20for%20V2U%20technical%20appendix">View technical appendix</a>
+<a class="btn primary" data-link-text="View OSF registration" data-link-type="osf_registration" data-paper="V2U" data-section="research" data-track="research_registration_click" href="https://osf.io/7e2dj/overview" rel="noreferrer" target="_blank">View OSF registration</a>
 </div>
-<p class="private-note">The buttons are configured for private view-only URLs. Until those URLs are added, they open a pre-addressed email request.</p>
+<p class="registration-note">The OSF registration includes the full working paper and technical appendix.</p>
 </article>
 <article class="card report-card">
 <div>
@@ -365,29 +363,6 @@ ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;heigh
 <footer class="footer"><div class="container">© 2026 Ye Eun Jang. Built for Product Data Science, Measurement Reliability, and AI Analytics Automation.</div></footer>
 
 
-<script>
-/* PRIVATE REPORT LINKS
-   1) Upload each PDF to Google Drive / OneDrive / Dropbox.
-   2) Set access to view-only for anyone with the link (or the intended reviewers).
-   3) Paste the two view URLs below. Leave blank to keep the email-request fallback. */
-window.PRIVATE_REPORT_LINKS = {
-  v2uMain: "",
-  v2uAppendix: ""
-};
-
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('[data-report-link]').forEach(function (el) {
-    var key = el.dataset.reportLink;
-    var url = (window.PRIVATE_REPORT_LINKS && window.PRIVATE_REPORT_LINKS[key] || '').trim();
-    if (url) {
-      el.href = url;
-      el.target = '_blank';
-      el.rel = 'noreferrer';
-      el.classList.remove('private-pending');
-    }
-  });
-});
-</script>
 <script>
 (function () {
   const sentScrollDepths = new Set();
