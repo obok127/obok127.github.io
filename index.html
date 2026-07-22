@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Ye Eun Jang | Product Data Scientist</title>
+<meta content="Product Data Scientist focused on behavioral data measurement, analytics automation, AI transformation, conversion metrics, and measurement reliability." name="description"/>
+<meta content="Ye Eun Jang" name="author"/>
+<meta content="#07172d" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Ye Eun Jang | Product Data Scientist" property="og:title"/>
+<meta content="Behavioral data measurement, analytics automation, AI transformation, and decision-grade product metrics under telemetry constraints." property="og:description"/>
+<meta content="https://obok127.github.io/" property="og:url"/>
+<!-- Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-47YTBKS84C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-47YTBKS84C', {
+    page_title: document.title,
+    page_location: window.location.href
+  });
+</script>
+<style>
+:root{
+  --navy:#07172d; --navy2:#0b1f3a; --blue:#1267d8; --blue2:#0d47a1;
+  --sky:#e8f2ff; --mint:#dff8ef; --cream:#fffaf0; --gold:#ffd84d;
+  --ink:#111827; --muted:#5b6474; --muted2:#7b8494; --line:#dbe3ef;
+  --card:#ffffff; --shadow:0 22px 70px rgba(87, 95, 106, 0.1); --radius:24px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;color:var(--ink);background:#fbfcff;line-height:1.6;}
+strong,b,h1,h2,h3,.btn,.small-link{font-kerning:normal;text-rendering:optimizeLegibility;overflow-wrap:break-word;}
+a{color:inherit;text-decoration:none;}
+.container{max-width:1180px;margin:0 auto;padding:0 22px;}
+.header{position:sticky;top:0;z-index:50;background:rgba(251,252,255,.84);backdrop-filter:blur(16px);border-bottom:1px solid rgba(219,227,239,.78);}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:11px;font-weight:950;letter-spacing:-.012em;color:var(--navy);}
+.logo-mark{width:34px;height:34px;border-radius:13px;background:linear-gradient(135deg,var(--navy),var(--blue));position:relative;box-shadow:0 12px 30px rgba(18,103,216,.26);}
+.logo-mark:after{content:"";position:absolute;right:6px;top:6px;width:10px;height:10px;background:var(--gold);border-radius:50%;}
+.nav-links{display:flex;gap:8px;align-items:center;}
+.nav-links a{padding:9px 12px;border-radius:999px;color:#4b5563;font-weight:850;font-size:14px;}
+.nav-links a:hover{background:var(--sky);color:var(--blue);}
+.hero{padding:88px 0 62px;background:radial-gradient(circle at top right,#dbeafe 0,#fbfcff 38%,#fff 72%);}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:34px;align-items:center;}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:white;border:1px solid var(--line);color:var(--blue);font-weight:950;box-shadow:0 12px 35px rgba(7,23,45,.06);}
+h1{margin:18px 0 14px;font-size:clamp(44px,7vw,76px);line-height:1.05;letter-spacing:-.026em;color:var(--navy);text-wrap:balance;}
+.hero-sub{max-width:760px;font-size:20px;color:#39465a;line-height:1.6;}
+.hero-sub strong{color:var(--navy);}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 17px;border-radius:16px;border:1px solid var(--line);background:white;font-weight:950;letter-spacing:.004em;transition:.18s ease;}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.btn.primary{background:var(--navy);color:white;border-color:transparent;}
+.btn.blue{background:var(--blue);color:white;border-color:transparent;}
+.hero-card{background:linear-gradient(135deg,var(--navy),#12356e);color:white;border-radius:32px;padding:28px;box-shadow:0 32px 80px rgba(7,23,45,.26);position:relative;overflow:hidden;}
+.hero-card:before{content:"";position:absolute;width:210px;height:210px;background:rgba(255,216,77,.18);border-radius:50%;right:-70px;top:-70px;}
+.hero-card h2{margin:0 0 12px;font-size:24px;letter-spacing:-.004em;line-height:1.2;position:relative;}
+.hero-card p{color:#dbeafe;position:relative;margin:0 0 16px;}
+.signal-list{display:grid;gap:10px;position:relative;}
+.signal{display:grid;grid-template-columns:98px 1fr;gap:12px;align-items:start;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:17px;padding:12px;}
+.signal b{font-size:13px;line-height:1.1;color:white;}
+.signal span{font-size:13px;line-height:1.35;color:#cbd5e1;}
+.proof-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px;}
+.proof-pill{background:white;border:1px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:0 12px 35px rgba(7,23,45,.055);}
+.proof-pill b{display:block;color:var(--navy);font-size:14px;line-height:1.25;}
+.proof-pill span{display:block;color:var(--muted);font-size:12px;line-height:1.35;margin-top:3px;}
+section{padding:76px 0;}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:28px;}
+.eyebrow{font-size:13px;color:var(--blue);text-transform:uppercase;letter-spacing:.12em;font-weight:950;}
+h2.section-title{margin:4px 0 0;font-size:36px;line-height:1.16;letter-spacing:-.016em;color:var(--navy);text-wrap:balance;}
+.section-desc{color:var(--muted);max-width:620px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 12px 42px rgba(7,23,45,.055);}
+.card.dark{background:var(--navy);color:white;border-color:transparent;}
+.card.blue{background:linear-gradient(135deg,#0d47a1,#1677ff);color:white;border-color:transparent;}
+.card.soft{background:linear-gradient(180deg,#fff,#f8fbff);}
+.card h3{margin:0 0 8px;font-size:21px;line-height:1.26;letter-spacing:-.004em;color:var(--navy);text-wrap:balance;}
+.card.dark h3,.card.blue h3{color:white;}
+.card p{margin:0 0 12px;color:var(--muted);}
+.card.dark p,.card.blue p{color:#e5efff;}
+.badge{display:inline-flex;margin-bottom:12px;padding:6px 10px;border-radius:999px;background:var(--sky);color:var(--blue);font-size:12px;font-weight:950;}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+.tag{padding:5px 9px;border:1px solid #cbd8ea;background:#f8fbff;color:#28364a;border-radius:999px;font-size:12px;font-weight:850;}
+.card.dark .tag,.card.blue .tag{background:rgba(255,255,255,.12);color:white;border-color:rgba(255,255,255,.22);}
+ul.clean{list-style:none;padding:0;margin:10px 0 0;}
+ul.clean li{margin:8px 0;padding-left:22px;position:relative;}
+ul.clean li:before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;background:var(--gold);border-radius:50%;}
+.dense-list{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:9px;}
+.dense-list li{display:grid;grid-template-columns:92px 1fr;gap:10px;border-top:1px solid #edf2f8;padding-top:9px;color:#39465a;font-size:14px;line-height:1.45;}
+.dense-list b{color:var(--navy);font-size:13px;}
+.readiness-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch;}
+.matrix{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.matrix-item{border:1px solid var(--line);border-radius:18px;padding:16px;background:#fff;}
+.matrix-item b{display:block;color:var(--navy);font-size:15px;margin-bottom:4px;}
+.matrix-item span{display:block;color:var(--muted);font-size:13px;line-height:1.42;}
+
+.kaggle-proof{grid-column:1 / -1;}
+.kaggle-summary{margin:0 0 16px;color:var(--muted);max-width:980px;}
+.kaggle-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px;}
+.kaggle-item{border:1px solid #edf2f8;border-radius:18px;padding:14px;background:#fbfdff;}
+.kaggle-item b{display:block;color:var(--navy);font-size:14px;line-height:1.25;margin-bottom:4px;}
+.kaggle-item span{display:block;color:#44536a;font-size:13px;line-height:1.42;}
+.kaggle-item strong{color:var(--blue);}
+@media (max-width:920px){.kaggle-grid{grid-template-columns:1fr;}}
+.research-roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.report-card{min-height:340px;display:flex;flex-direction:column;justify-content:space-between;}
+.report-axis{display:inline-flex;width:max-content;max-width:100%;margin-bottom:12px;padding:6px 10px;border-radius:999px;background:#eef6ff;color:var(--blue);font-size:11px;font-weight:950;letter-spacing:.02em;}
+.report-card h3{margin:0 0 9px;font-size:19px;line-height:1.31;letter-spacing:0;color:var(--navy);text-wrap:balance;}
+.report-card p{font-size:14px;line-height:1.55;}
+.report-meta{display:grid;gap:7px;margin-top:12px;border-top:1px solid #edf2f8;padding-top:12px;}
+.report-meta div{font-size:12.5px;color:#46556b;line-height:1.38;}
+.report-meta b{color:var(--navy);}
+.report-action{display:flex;align-items:center;justify-content:center;min-height:46px;margin-top:18px;padding:12px 14px;border-radius:14px;border:1px dashed #bfd0e8;background:#f8fbff;color:#5b6474;font-weight:950;font-size:13px;}
+.report-action.placeholder{opacity:.9;}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.project-card{min-height:330px;display:flex;flex-direction:column;justify-content:space-between;transition:.18s ease;}
+.project-card:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(7,23,45,.12);}
+.case-rows{display:grid;gap:8px;margin-top:14px;}
+.case-row{display:grid;grid-template-columns:86px 1fr;gap:10px;padding-top:8px;border-top:1px solid #edf2f8;font-size:13.5px;line-height:1.42;color:#44536a;}
+.case-row b{color:var(--navy);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;}
+.module-table{display:grid;gap:8px;margin-top:14px;}
+.module-row{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-top:1px solid #edf2f8;font-size:13.5px;line-height:1.45;color:#44536a;}
+.module-row b{color:var(--navy);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;}
+.demo-link.secondary{background:white;color:var(--navy);border:1px solid var(--line);}
+.demo-link.secondary .demo-label{color:var(--navy);}
+.demo-link.secondary .demo-sub{color:#4b5563;}
+.link-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+.small-link{color:var(--blue);font-weight:950;letter-spacing:.004em;}
+.demo-link{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;padding:14px 16px;border-radius:16px;background:var(--navy);color:white;font-weight:950;box-shadow:0 14px 34px rgba(7,23,45,.14);transition:.18s ease;}
+.demo-link:hover{transform:translateY(-2px);box-shadow:0 22px 54px rgba(7,23,45,.20);}
+.demo-link .demo-copy{display:flex;flex-direction:column;gap:2px;}
+.demo-link .demo-label{font-size:15px;line-height:1.12;color:white;}
+.demo-link .demo-sub{font-size:12px;line-height:1.25;color:#dbeafe;font-weight:800;}
+.demo-link .demo-arrow{font-size:20px;line-height:1;}
+.timeline{display:grid;gap:14px;}
+.timeline-item{display:grid;grid-template-columns:190px 1fr;gap:18px;padding:20px;border:1px solid var(--line);border-radius:22px;background:white;}
+.timeline-item .time{color:var(--blue);font-weight:950;}
+.timeline-item h3{margin:0 0 6px;color:var(--navy);line-height:1.24;letter-spacing:-.006em;text-wrap:balance;}
+.contact{background:var(--navy);color:white;}
+.contact .section-title{color:white;}
+.contact .section-desc{color:#cbd5e1;}
+.contact-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:28px;padding:30px;}
+.contact .btn{background:white;color:var(--navy);border-color:rgba(255,255,255,.24);}
+.contact .btn:hover{box-shadow:0 22px 54px rgba(0,0,0,.22);}
+.contact .btn.blue,.contact .btn.primary{background:#93c5fd;color:#07172d;border-color:transparent;}
+.footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center;}
+
+.impact-banner{margin:20px 0 0;padding:16px 18px;border-radius:18px;background:linear-gradient(135deg,#fff7cf,#fffdf4);border:1px solid #f1d86b;color:var(--navy);font-weight:950;line-height:1.45;box-shadow:0 12px 32px rgba(7,23,45,.06);}
+.impact-banner span{display:block;margin-top:4px;color:#5b6474;font-size:13px;font-weight:800;}
+.status-badge{display:inline-flex;width:max-content;max-width:100%;margin-bottom:12px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:950;letter-spacing:.045em;text-transform:uppercase;}
+.status-live{background:#dcfce7;color:#166534;}
+.status-prototype{background:#e0f2fe;color:#075985;}
+.status-working{background:#ede9fe;color:#5b21b6;}
+.status-progress{background:#fff7ed;color:#9a3412;}
+.status-roadmap{background:#f1f5f9;color:#475569;}
+.research-selected{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch;}
+.research-feature{min-height:100%;}
+.report-results{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+.report-result{border:1px solid #dbe3ef;border-radius:16px;padding:13px;background:#fbfdff;}
+.report-result b{display:block;color:var(--blue);font-size:19px;line-height:1.1;margin-bottom:4px;}
+.report-result span{display:block;color:#536176;font-size:12px;line-height:1.35;}
+.report-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+.report-actions .btn{padding:11px 14px;border-radius:14px;font-size:13px;}
+.registration-note{margin-top:12px;color:#64748b;font-size:12px;line-height:1.45;}
+.roadmap-compact{margin-top:18px;border:1px solid var(--line);border-radius:22px;padding:20px;background:linear-gradient(180deg,#fff,#f8fbff);}
+.roadmap-compact h3{margin:0 0 7px;color:var(--navy);}
+.roadmap-compact p{margin:0;color:var(--muted);}
+.roadmap-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.roadmap-chip{padding:7px 10px;border-radius:999px;background:#eef6ff;border:1px solid #cfe0f5;color:#26415f;font-size:12px;font-weight:850;}
+@media(max-width:920px){.research-selected,.report-results{grid-template-columns:1fr;}}
+
+@media(max-width:920px){.hero-grid,.grid-3,.grid-2,.project-grid,.research-roadmap,.timeline-item,.readiness-grid,.proof-strip{grid-template-columns:1fr}.matrix{grid-template-columns:1fr}.nav-links{display:none}h1{font-size:48px}.dense-list li,.case-row,.module-row,.signal{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+
+/* ---------- Interactive portfolio enhancements ---------- */
+.scroll-progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:120;pointer-events:none;background:rgba(255,255,255,.3)}
+.scroll-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--gold),#60a5fa,var(--blue));box-shadow:0 0 16px rgba(18,103,216,.5)}
+.nav-links a.is-active{background:var(--sky);color:var(--blue)}
+.menu-toggle{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:white;align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer}
+.menu-toggle span{width:18px;height:2px;border-radius:999px;background:var(--navy);transition:.2s ease}
+.menu-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle.is-open span:nth-child(2){opacity:0}
+.menu-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.pipeline-controls{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 18px;position:relative}
+.pipeline-control{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#cbd5e1;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:900;cursor:pointer;transition:.2s ease}
+.pipeline-control:hover,.pipeline-control.is-active{background:white;color:var(--navy);transform:translateY(-1px)}
+.measurement-pipeline{display:grid;grid-template-columns:1fr 26px 1fr 26px 1fr 26px 1fr;align-items:stretch;position:relative}
+.pipeline-node{min-width:0;display:flex;flex-direction:column;gap:3px;padding:12px 10px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);position:relative;transition:.3s ease}
+.pipeline-node b{font-size:12px;color:white;line-height:1.2}
+.pipeline-node small{font-size:10px;color:#cbd5e1;line-height:1.25}
+.pipeline-index{font-size:10px;color:#93c5fd;font-weight:950;letter-spacing:.08em}
+.node-status{display:inline-flex;width:max-content;margin-top:6px;padding:3px 6px;border-radius:999px;background:rgba(34,197,94,.18);color:#bbf7d0;font-size:9px;font-weight:950;text-transform:uppercase;letter-spacing:.06em}
+.pipeline-connector{display:flex;align-items:center;position:relative}
+.pipeline-connector:before{content:"";width:100%;height:2px;background:rgba(255,255,255,.20)}
+.flow-dot{position:absolute;left:0;width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px rgba(255,216,77,.9);animation:flowAcross 2s linear infinite}
+.pipeline-connector:nth-of-type(4) .flow-dot{animation-delay:.45s}.pipeline-connector:nth-of-type(6) .flow-dot{animation-delay:.9s}
+@keyframes flowAcross{0%{transform:translateX(0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translateX(20px);opacity:0}}
+.measurement-pipeline[data-state="telemetry"] .node-events,.measurement-pipeline[data-state="telemetry"] .node-validate{border-color:#fb7185;background:rgba(244,63,94,.16);animation:nodeAlert 1.15s ease infinite alternate}
+.measurement-pipeline[data-state="attribution"] .node-metrics{border-color:#fbbf24;background:rgba(245,158,11,.17);animation:nodeAlert 1.15s ease infinite alternate}
+@keyframes nodeAlert{to{box-shadow:0 0 0 4px rgba(255,255,255,.05),0 0 22px rgba(251,113,133,.18)}}
+.anomaly-feed{display:grid;gap:7px;margin-top:14px;position:relative}
+.feed-row{display:grid;grid-template-columns:34px 1fr auto;gap:8px;align-items:center;padding:8px 10px;border-radius:12px;background:rgba(0,0,0,.14);font-size:11px;color:#dbeafe;transition:.25s ease}
+.feed-code{font-size:9px;font-weight:950;letter-spacing:.08em;color:#93c5fd}.feed-status{font-size:10px;color:#86efac}.feed-row.is-alert{background:rgba(190,24,93,.25)}.feed-row.is-alert .feed-status{color:#fecdd3}.feed-row.is-warning{background:rgba(180,83,9,.24)}.feed-row.is-warning .feed-status{color:#fde68a}
+.evidence-details{margin-top:14px;position:relative}.evidence-details summary{cursor:pointer;color:#dbeafe;font-weight:900;font-size:12px;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:9px 0}.evidence-details summary::-webkit-details-marker{display:none}.evidence-details summary:after{content:"+";font-size:17px}.evidence-details[open] summary:after{content:"−"}.evidence-details .signal-list{margin-top:8px}.evidence-details .signal{grid-template-columns:78px 1fr;padding:9px}.evidence-details .signal span{font-size:11px}
+.metric-pill{position:relative;overflow:hidden;transition:.24s ease}.metric-pill:after{content:"";position:absolute;width:80px;height:80px;border-radius:50%;right:-35px;top:-45px;background:linear-gradient(135deg,rgba(18,103,216,.13),rgba(255,216,77,.18));transition:.3s ease}.metric-pill:hover{transform:translateY(-4px);box-shadow:0 22px 56px rgba(7,23,45,.11)}.metric-pill:hover:after{transform:scale(1.35)}.metric-number{font-size:26px!important;letter-spacing:-.03em;position:relative;z-index:1}.metric-pill span{position:relative;z-index:1}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}.reveal.is-visible{opacity:1;transform:none}.reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}
+.interactive-card{--mouse-x:50%;--mouse-y:50%;position:relative;overflow:hidden;transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}.interactive-card:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(340px circle at var(--mouse-x) var(--mouse-y),rgba(18,103,216,.09),transparent 48%);opacity:0;transition:.2s ease}.interactive-card:hover:before{opacity:1}.interactive-card:hover{transform:translateY(-5px);border-color:#bfd0e8;box-shadow:0 28px 74px rgba(7,23,45,.13)}
+
+.research-navigator{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 22px;padding:10px;border:1px solid var(--line);border-radius:22px;background:white;box-shadow:0 12px 42px rgba(7,23,45,.05);position:relative}.research-navigator:before{content:"";position:absolute;left:12.5%;right:12.5%;top:30px;height:2px;background:#dbe3ef}.research-stage{position:relative;z-index:1;display:flex;align-items:center;gap:10px;padding:10px;border:0;background:transparent;text-align:left;cursor:pointer;border-radius:16px;transition:.2s ease}.research-stage:hover,.research-stage.is-active{background:var(--sky)}.stage-dot{width:13px;height:13px;flex:0 0 auto;border-radius:50%;background:white;border:3px solid #9fb4cf;box-shadow:0 0 0 4px white}.research-stage.is-active .stage-dot{border-color:var(--blue);background:var(--gold)}.stage-copy{display:flex;flex-direction:column}.stage-copy small{font-size:10px;color:var(--muted);font-weight:800}.stage-copy b{font-size:13px;color:var(--navy)}
+[data-research-stage].is-filtered-out{display:none!important}.research-selected.is-single{grid-template-columns:1fr}.research-selected.is-single .report-card{min-height:auto}
+
+.project-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 20px;position:sticky;top:82px;z-index:20;padding:10px;border:1px solid rgba(219,227,239,.86);border-radius:18px;background:rgba(251,252,255,.88);backdrop-filter:blur(14px);box-shadow:0 12px 34px rgba(7,23,45,.06)}.project-filters{display:flex;gap:7px;flex-wrap:wrap}.project-filter,.expand-all{border:1px solid var(--line);background:white;color:#4b5563;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:900;cursor:pointer;transition:.2s ease}.project-filter:hover,.project-filter.is-active,.expand-all:hover{background:var(--navy);border-color:var(--navy);color:white}.project-card.is-filtered-out{display:none}.case-summary-line{display:flex;align-items:center;gap:9px;margin:15px 0 3px;padding:11px 12px;border-radius:14px;background:linear-gradient(135deg,#f6faff,#fff9dc);border:1px solid #dce8f6;color:var(--navy);position:relative}.case-summary-line b{font-size:12px;line-height:1.35}.summary-pulse{width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 0 rgba(18,103,216,.45);animation:summaryPulse 2s ease infinite}@keyframes summaryPulse{70%{box-shadow:0 0 0 8px rgba(18,103,216,0)}100%{box-shadow:0 0 0 0 rgba(18,103,216,0)}}
+.project-card .case-rows,.project-card .module-table,.project-card .tags,.project-card>.link-row,.project-card>div>.link-row,.project-card .architecture-flow{display:none}.project-card.is-open .case-rows,.project-card.is-open .module-table,.project-card.is-open .tags,.project-card.is-open>.link-row,.project-card.is-open>div>.link-row,.project-card.is-open .architecture-flow{display:grid}.project-card.is-open .tags,.project-card.is-open>.link-row,.project-card.is-open>div>.link-row{display:flex}.project-grid{align-items:start}.project-card{min-height:0}.project-card.is-open{grid-column:1 / -1}.case-toggle{margin-top:18px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#f8fbff;color:var(--navy);font-weight:950;cursor:pointer;transition:.2s ease}.case-toggle:hover{background:var(--navy);color:white}.toggle-icon{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:white;color:var(--blue);font-size:18px;transition:.25s ease}.project-card.is-open .toggle-icon{transform:rotate(45deg)}
+.architecture-flow{grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr;align-items:center;margin:16px 0;padding:14px;border:1px solid #dbe8f5;border-radius:18px;background:linear-gradient(180deg,#f8fbff,#fff)}.architecture-step{display:flex;min-width:0;flex-direction:column;gap:2px;padding:10px;border-radius:13px;background:white;border:1px solid #e5edf7;transition:.2s ease}.architecture-step:hover,.architecture-step:focus{transform:translateY(-3px);border-color:#93c5fd;box-shadow:0 12px 24px rgba(18,103,216,.10);outline:none}.architecture-step>span{font-size:10px;color:var(--blue);font-weight:950}.architecture-step b{font-size:12px;color:var(--navy)}.architecture-step small{font-size:9px;color:var(--muted);line-height:1.25}.architecture-arrow{text-align:center;color:var(--blue);font-weight:950}
+
+.video-modal{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:24px}.video-modal.is-open{display:grid}.video-backdrop{position:absolute;inset:0;border:0;background:rgba(2,8,23,.78);backdrop-filter:blur(8px);cursor:pointer}.video-panel{position:relative;width:min(980px,96vw);max-height:92vh;overflow:auto;border-radius:26px;background:white;box-shadow:0 40px 120px rgba(0,0,0,.42);animation:modalIn .25s ease}.video-modal-head,.video-modal-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 22px}.video-modal-head{border-bottom:1px solid var(--line)}.modal-eyebrow{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:950}.video-modal-head h2{margin:2px 0 0;color:var(--navy);font-size:21px}.video-close{width:42px;height:42px;border:1px solid var(--line);border-radius:14px;background:white;color:var(--navy);font-size:26px;cursor:pointer}.video-frame-wrap{aspect-ratio:16/9;background:#020617}.video-frame-wrap iframe{width:100%;height:100%;border:0}.video-modal-foot{border-top:1px solid var(--line)}.video-modal-foot p{margin:0;color:var(--muted);font-size:13px}@keyframes modalIn{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+body.modal-open{overflow:hidden}
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:80;width:46px;height:46px;border:0;border-radius:16px;background:var(--navy);color:white;font-size:20px;font-weight:950;box-shadow:0 16px 44px rgba(7,23,45,.25);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:.2s ease}.back-to-top.is-visible{opacity:1;transform:none;pointer-events:auto}.back-to-top:hover{background:var(--blue);transform:translateY(-3px)}
+
+@media(max-width:920px){
+  .menu-toggle{display:flex}.nav-links{display:none;position:absolute;left:16px;right:16px;top:64px;flex-direction:column;align-items:stretch;padding:12px;border:1px solid var(--line);border-radius:18px;background:white;box-shadow:0 24px 60px rgba(7,23,45,.16)}.nav-links.is-open{display:flex}.nav-links a{padding:12px 14px}.measurement-pipeline{grid-template-columns:1fr}.pipeline-connector{height:18px;justify-content:center}.pipeline-connector:before{width:2px;height:100%}.flow-dot{left:50%;top:0;animation:flowDown 2s linear infinite}@keyframes flowDown{0%{transform:translate(-50%,0);opacity:0}20%{opacity:1}80%{opacity:1}100%{transform:translate(-50%,13px);opacity:0}}.research-navigator{grid-template-columns:repeat(2,1fr)}.research-navigator:before{display:none}.project-toolbar{position:static;align-items:stretch;flex-direction:column}.expand-all{align-self:flex-start}.architecture-flow{grid-template-columns:1fr}.architecture-arrow{transform:rotate(90deg)}.video-modal-foot{align-items:flex-start;flex-direction:column}.metric-strip{grid-template-columns:repeat(2,1fr)!important}.metric-pill:last-child{grid-column:1/-1}
+}
+@media(max-width:560px){.metric-strip{grid-template-columns:1fr!important}.metric-pill:last-child{grid-column:auto}.research-navigator{grid-template-columns:1fr}.pipeline-controls{display:grid;grid-template-columns:1fr}.pipeline-control{text-align:left}.back-to-top{right:14px;bottom:14px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body><div aria-hidden="true" class="scroll-progress"><span></span></div>
+<header class="header">
+<div class="container">
+<nav class="nav">
+<a class="logo" data-link-text="Ye Eun Jang" data-section="top" data-track="nav_home_click" href="#top"><span class="logo-mark"></span><span>Ye Eun Jang</span></a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" data-section="navigation" data-track="mobile_menu_toggle" type="button"><span></span><span></span><span></span></button><div class="nav-links"><a data-link-text="Positioning" data-section="fit" data-track="nav_positioning_click" href="#fit">Positioning</a><a data-link-text="Research" data-section="research" data-track="nav_research_click" href="#research">Research</a><a data-link-text="Case Studies" data-section="pocs" data-track="nav_case_studies_click" href="#pocs">Case Studies</a><a data-link-text="Evidence" data-section="evidence" data-track="nav_evidence_click" href="#evidence">Evidence</a><a data-link-text="Contact" data-section="contact" data-track="nav_contact_click" href="#contact">Contact</a></div>
+</nav>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="container">
+<div class="hero-grid">
+<div>
+<span class="kicker">Product Data Scientist · Behavioral Measurement · AI Transformation</span>
+<h1>I make product data trustworthy before it becomes a metric, model, or decision.</h1>
+<p class="hero-sub"><strong>I design behavioral measurement, diagnose telemetry failures, and build analytics automation systems.</strong> My work connects product journeys, raw event data, validation logic, and scalable investigation so teams can act on evidence rather than noisy dashboards.</p>
+<div class="impact-banner">Reduced a 3-person, 2–3-week analytics audit to an approximately 30-minute workflow for one analyst across 114 country environments.<span>Flagship proof: API extraction, field-level comparison, drift detection, and review-ready evidence export.</span></div>
+<div class="cta">
+<a class="btn primary" data-link-text="View case studies" data-section="hero" data-track="hero_case_study_click" href="#pocs">View case studies</a>
+<a class="btn" data-link-text="Research roadmap" data-section="hero" data-track="hero_research_click" href="#research">Research roadmap</a>
+<a class="btn blue" data-link-text="Visit YouTube channel" data-link-type="youtube" data-section="hero" data-track="hero_youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank">Visit YouTube channel</a>
+</div>
+</div>
+<aside class="hero-card"><h2>Measurement reliability, visualized</h2><p id="pipeline-copy">Clean telemetry moves from raw events to a decision-grade metric. Switch scenarios to see where trust breaks.</p><div aria-label="Measurement scenarios" class="pipeline-controls" role="group"><button aria-pressed="true" class="pipeline-control is-active" data-link-text="Normal flow" data-scenario="normal" data-section="hero_pipeline" data-track="pipeline_scenario_click" type="button">Normal flow</button><button aria-pressed="false" class="pipeline-control" data-link-text="Missing event" data-scenario="telemetry" data-section="hero_pipeline" data-track="pipeline_scenario_click" type="button">Missing event</button><button aria-pressed="false" class="pipeline-control" data-link-text="Attribution drift" data-scenario="attribution" data-section="hero_pipeline" data-track="pipeline_scenario_click" type="button">Attribution drift</button></div><div aria-live="polite" class="measurement-pipeline" data-state="normal"><div class="pipeline-node node-events" data-node="events"><span class="pipeline-index">01</span><b>Raw events</b><small>Page · CTA · campaign</small><span class="node-status">Ready</span></div><div aria-hidden="true" class="pipeline-connector"><span class="flow-dot"></span></div><div class="pipeline-node node-validate" data-node="validate"><span class="pipeline-index">02</span><b>Validation</b><small>Schema · QA · rules</small><span class="node-status">Ready</span></div><div aria-hidden="true" class="pipeline-connector"><span class="flow-dot"></span></div><div class="pipeline-node node-metrics" data-node="metrics"><span class="pipeline-index">03</span><b>Reliable metrics</b><small>Funnel · CVR · segments</small><span class="node-status">Ready</span></div><div aria-hidden="true" class="pipeline-connector"><span class="flow-dot"></span></div><div class="pipeline-node node-decision" data-node="decision"><span class="pipeline-index">04</span><b>Decision</b><small>Investigate · act · monitor</small><span class="node-status">Ready</span></div></div><div class="anomaly-feed"><div class="feed-row" data-feed="evt"><span class="feed-code">EVT</span><span>Event completeness</span><b class="feed-status">Pass</b></div><div class="feed-row" data-feed="map"><span class="feed-code">MAP</span><span>Variable mapping</span><b class="feed-status">Pass</b></div><div class="feed-row" data-feed="atr"><span class="feed-code">ATR</span><span>Channel classification</span><b class="feed-status">Pass</b></div></div><details class="evidence-details"><summary>View the evidence behind the system</summary><div class="signal-list">
+<div class="signal"><b>Measure</b><span>Event taxonomy, telemetry QA, conversion metrics, visit/user unit logic, Adobe Analytics implementation context.</span></div>
+<div class="signal"><b>Automate</b><span>Implemented a FastAPI/React analytics QA tool that turns Processing Rule and variable audits into a repeatable UI-driven workflow; extending the same pattern into QA alerts, guide automation, and decision intelligence.</span></div>
+<div class="signal"><b>Research</b><span>Completed V2U working paper with eight stress-test scenarios, explicit failure boundaries, and a next-stage external event-data validation plan.</span></div>
+<div class="signal"><b>Transform</b><span>ADI AX Transformation TF · internal AI/analytics level test ranked #1.</span></div>
+</div></details></aside>
+</div>
+<div class="proof-strip metric-strip"><div class="proof-pill metric-pill"><b class="metric-number" data-count="90" data-suffix="+">0+</b><span>Global web/app environments</span></div><div class="proof-pill metric-pill"><b class="metric-number" data-count="114" data-suffix="">0</b><span>Country implementations audited</span></div><div class="proof-pill metric-pill"><b class="metric-number" data-count="30" data-suffix=" min">0 min</b><span>Repeatable audit workflow</span></div><div class="proof-pill metric-pill"><b class="metric-number" data-count="4" data-suffix="%">0%</b><span>Top Kaggle placement</span></div><div class="proof-pill metric-pill"><b class="metric-number" data-count="8" data-suffix="">0</b><span>V2U simulation scenarios</span></div></div>
+</div>
+</section>
+<section id="fit">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Positioning</div><h2 class="section-title">From raw telemetry to reliable product evidence.</h2></div><p class="section-desc">The portfolio follows one evidence pattern: problem, build, validation, impact, and artifact.</p></div>
+<div class="readiness-grid">
+<div class="card blue"><span class="badge">Positioning Thesis</span><h3>Behavioral Data Reliability &amp; Product Decision Systems</h3><p>I work on the layer between raw product telemetry and business decisions: event design, tracking integrity, metric definition, automation, and causal interpretation. That layer is where product data science becomes valuable at scale.</p><ul class="clean"><li>Translate product journeys into measurable events and metrics.</li><li>Diagnose why dashboards disagree with real user behavior.</li><li>Automate repeated QA and investigation workflows, with an implemented Processing Rule / variable alignment tool as the primary proof.</li><li>Turn ambiguous tagging history into source-grounded decisions.</li></ul></div>
+<div class="matrix">
+<div class="matrix-item"><b>Product DS</b><span>Metric design, funnel logic, segmentation, conversion analysis, stakeholder-facing decision support.</span></div>
+<div class="matrix-item"><b>Measurement Scientist</b><span>Unit mismatch, telemetry bias, consent loss, data reliability, taxonomy governance.</span></div>
+<div class="matrix-item"><b>Analytics Engineer</b><span>API workflows, metadata extraction, SQL/Python checks, reusable QA reports.</span></div>
+<div class="matrix-item"><b>AI Transformation</b><span>LLM/RAG workflows for analytics operations, issue history retrieval, and decision traceability.</span></div>
+</div>
+</div>
+</div>
+</section>
+<section id="focus" style="background:linear-gradient(180deg,#f8fbff,#fff)">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Core Focus</div><h2 class="section-title">Reliable behavioral measurement, practical automation, and product decisions.</h2></div><p class="section-desc">Three tracks connect measurement integrity, repeatable QA, and better product decisions.</p></div>
+<div class="grid-3">
+<div class="card"><span class="badge">01</span><h3>Measurement Reliability</h3><p>Event taxonomy, variable mapping, user/session/visit unit checks, missing-event diagnosis, and conversion metric sanity checks.</p><ul class="dense-list"><li><b>Tools</b><span>Adobe Analytics, AEP concepts, SDK telemetry, Launch/Rules, Jira/Zeplin/FRD review.</span></li><li><b>Proof</b><span>Country rule comparison, checkout/order issues, search/app campaign diagnostics.</span></li></ul></div>
+<div class="card"><span class="badge">02</span><h3>Analytics Automation Engineering</h3><p>Internal tools that reduce manual QA and investigation cost across analytics operations.</p><ul class="dense-list"><li><b>Stack</b><span>Python, FastAPI, React/TypeScript, PostgreSQL, OAuth/WSSE API clients, Excel/CSV exports.</span></li><li><b>Proof</b><span>Implemented Processing Rules &amp; Variables Alignment Tool: rule diff, variable matrix, drift report, Excel/CSV export.</span></li></ul></div>
+<div class="card"><span class="badge">03</span><h3>Decision Science Research</h3><p>Completed and in-progress research on conversion measurement when user identity, telemetry, or labels are incomplete.</p><ul class="dense-list"><li><b>Completed</b><span>V2U working paper with eight simulation scenarios, reproducibility appendix, and documented failure conditions.</span></li><li><b>Next</b><span>External event-level validation, operational capture-rate estimation, and a private probabilistic metric-inference draft.</span></li></ul></div>
+</div>
+</div>
+</section>
+<section id="research">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Selected Research</div><h2 class="section-title">Completed evidence first. Future directions second.</h2></div><p class="section-desc">Research is shown by maturity: one completed working paper, one active draft, and a compact roadmap rather than nine unfinished report cards.</p></div>
+<div aria-label="Research maturity filter" class="research-navigator" role="group"><button aria-pressed="true" class="research-stage is-active" data-link-text="All evidence" data-section="research" data-stage-filter="all" data-track="research_stage_filter" type="button"><span class="stage-dot"></span><span class="stage-copy"><small>All evidence</small><b>All</b></span></button><button aria-pressed="false" class="research-stage" data-link-text="Completed" data-section="research" data-stage-filter="completed" data-track="research_stage_filter" type="button"><span class="stage-dot"></span><span class="stage-copy"><small>Completed</small><b>V2U</b></span></button><button aria-pressed="false" class="research-stage" data-link-text="In progress" data-section="research" data-stage-filter="active" data-track="research_stage_filter" type="button"><span class="stage-dot"></span><span class="stage-copy"><small>In progress</small><b>PGF-CMI</b></span></button><button aria-pressed="false" class="research-stage" data-link-text="Roadmap" data-section="research" data-stage-filter="roadmap" data-track="research_stage_filter" type="button"><span class="stage-dot"></span><span class="stage-copy"><small>Roadmap</small><b>Next</b></span></button></div><div class="research-selected">
+<article class="card report-card research-feature" data-research-stage="completed" id="v2u-working-paper">
+<div>
+<span class="status-badge status-working">Working paper · completed</span>
+<span class="report-axis">Conversion Measurement</span>
+<h3>When denominator shifts make raw conversion rate tell the wrong story</h3>
+<p><b>V2U: Visit-to-User Normalization.</b> In a 50-run direction-reversal stress test, raw visit CVR inferred the wrong direction every time, while V2U preserved the benchmark direction. The paper asks when visit-level aggregates can support a user-equivalent conversion interpretation—and explicitly identifies when they cannot.</p>
+<div class="report-meta">
+<div><b>Completed evidence:</b> Eight simulation scenarios covering visit-intensity heterogeneity, segmentation, repeated converted visits, denominator-driven direction reversal, and telemetry loss.</div>
+<div><b>Methodological contribution:</b> An explicit unit-normalization framework for aggregate product analytics, with operational decision rules and clearly documented failure boundaries.</div>
+<div><b>Validation status:</b> Simulation study completed. External event-level validation on public or privacy-safe data is the next research stage.</div>
+<div><b>Telemetry extension:</b> Capture correction is treated as a separate problem from unit normalization; practical capture-rate estimation and sensitivity analysis remain follow-up work.</div>
+<div><b>Artifact:</b> 10-page technical report and 14-page reproducibility appendix.</div>
+</div>
+<div class="report-results">
+<div class="report-result"><b>50 / 50</b><span>repetitions where raw visit CVR moved in the wrong direction under the denominator-shift stress test.</span></div>
+<div class="report-result"><b>0 / 50</b><span>direction errors for V2U in the same stress test.</span></div>
+<div class="report-result"><b>99.74%</b><span>lower absolute error than raw visit CVR in the baseline simulation.</span></div>
+</div>
+</div>
+<div class="report-actions">
+<a class="btn primary" data-link-text="View OSF registration" data-link-type="osf_registration" data-paper="V2U" data-section="research" data-track="research_registration_click" href="https://osf.io/7e2dj/overview" rel="noreferrer" target="_blank">View OSF registration</a>
+</div>
+<p class="registration-note">The OSF registration includes the full working paper and technical appendix.</p>
+</article>
+<article class="card report-card" data-research-stage="active">
+<div>
+<span class="status-badge status-progress">Research in progress</span>
+<span class="report-axis">Probabilistic Metric Inference</span>
+<h3>Representing conversion uncertainty instead of hiding it in one number</h3>
+<p><b>PGF-CMI.</b> An active draft exploring how incomplete, contaminated, or aggregate behavioral labels can be translated into probabilistic conversion estimates with explicit uncertainty.</p>
+<div class="report-meta">
+<div><b>Why it matters:</b> A point estimate can look precise even when identity loss, selection, or telemetry quality makes the metric unstable.</div>
+<div><b>Current stage:</b> Problem formulation and experiment design; full estimator details remain private while the draft is developed.</div>
+<div><b>Planned evidence:</b> Synthetic benchmark, baseline comparison, robustness analysis, and documented failure conditions.</div>
+</div>
+</div>
+<span class="report-action placeholder">Private draft · no public technical details yet</span>
+</article>
+</div>
+<div class="roadmap-compact" data-research-stage="roadmap">
+<span class="status-badge status-roadmap">Research roadmap</span>
+<h3>Additional directions</h3>
+<p>Planned work is summarized as themes rather than presented as completed reports.</p>
+<div class="roadmap-chips">
+<span class="roadmap-chip">Learning from aggregate labels</span>
+<span class="roadmap-chip">Identifiability under contamination</span>
+<span class="roadmap-chip">Causal marketing attribution</span>
+<span class="roadmap-chip">Product impact without clean A/B tests</span>
+<span class="roadmap-chip">Unified behavioral measurement</span>
+<span class="roadmap-chip">Event taxonomy &amp; data contracts</span>
+</div>
+</div>
+</div>
+</section>
+<section id="pocs" style="background:linear-gradient(180deg,#f8fbff,#fff)">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Case Studies</div><h2 class="section-title">Built systems, validated prototypes, and clearly labeled work in progress.</h2></div><p class="section-desc">Every card states its maturity and separates the problem, build, output, and evidence.</p></div>
+<div class="project-toolbar"><div aria-label="Filter case studies" class="project-filters" role="group"><button aria-pressed="true" class="project-filter is-active" data-link-text="All" data-project-filter="all" data-section="case_studies" data-track="case_study_filter" type="button">All</button><button aria-pressed="false" class="project-filter" data-link-text="Measurement" data-project-filter="measurement" data-section="case_studies" data-track="case_study_filter" type="button">Measurement</button><button aria-pressed="false" class="project-filter" data-link-text="Automation" data-project-filter="automation" data-section="case_studies" data-track="case_study_filter" type="button">Automation</button><button aria-pressed="false" class="project-filter" data-link-text="Applied AI" data-project-filter="ai" data-section="case_studies" data-track="case_study_filter" type="button">Applied AI</button></div><button class="expand-all" data-expanded="false" data-link-text="Expand all" data-section="case_studies" data-track="case_study_expand_all" type="button">Expand all</button></div><div class="project-grid">
+<article aria-expanded="false" class="card project-card interactive-card" data-category="measurement automation" tabindex="0"><div><span class="status-badge status-live">Live / implemented</span><h3>Processing Rules &amp; Variables Alignment Tool</h3><p>API-based comparison tool for Processing Rules and variable metadata, built to replace slow manual audits with repeatable configuration-drift analysis.</p><div class="case-summary-line"><span class="summary-pulse"></span><b>114 environments · 2–3 weeks → under 30 minutes</b></div><div class="case-rows"><div class="case-row"><b>Problem</b><span>Manual audits required multiple people to compare country RSIDs, rules, and hundreds of metrics/dimensions; fixes were also hard to re-check consistently.</span></div><div class="case-row"><b>Scale</b><span>RSID lookup, Processing Rule extraction, eVar/prop/event metadata extraction, country-level variable matrix, and drift analysis reports.</span></div><div class="case-row"><b>Build</b><span>FastAPI backend, React/TypeScript UI, Adobe Analytics API clients, OAuth/WSSE auth handling, Excel/CSV export, and field-level diffs for left-only, right-only, and changed-same-title cases.</span></div><div class="case-row"><b>Impact</b><span>Reduced an audit flow previously estimated at 3 people over 2–3 weeks into a repeatable workflow executable by one person in under 30 minutes.</span></div><div class="case-row"><b>Evidence</b><span>Demo walkthrough, runnable app structure, generated Excel outputs, and drift report sheets for summary, missing, extra, and changed configurations.</span></div></div><div aria-label="System architecture" class="architecture-flow"><div class="architecture-step" tabindex="0"><span>API</span><b>Extract</b><small>RSIDs · rules · variables</small></div><div aria-hidden="true" class="architecture-arrow">→</div><div class="architecture-step" tabindex="0"><span>PY</span><b>Normalize</b><small>Comparable field structure</small></div><div aria-hidden="true" class="architecture-arrow">→</div><div class="architecture-step" tabindex="0"><span>Δ</span><b>Diff</b><small>Missing · extra · changed</small></div><div aria-hidden="true" class="architecture-arrow">→</div><div class="architecture-step" tabindex="0"><span>OUT</span><b>Report</b><small>UI · Excel · evidence</small></div></div><div class="tags"><span class="tag">Implemented</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React/TS</span><span class="tag">Adobe API</span><span class="tag">Metadata diff</span><span class="tag">Audit automation</span></div></div><div class="link-row"><a class="demo-link" data-demo="processing_rules_walkthrough" data-link-text="Processing Rules demo" data-link-type="youtube" data-project="processing_rules_variables_alignment_tool" data-section="case_studies" data-track="demo_click" href="https://youtu.be/CaWidy86peo" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the rules comparison walkthrough</span><span class="demo-sub">See the implemented workflow for metadata extraction, diffing, and drift reporting</span></span><span class="demo-arrow">→</span></a></div><button aria-expanded="false" class="case-toggle" data-project="Processing Rules &amp; Variables Alignment Tool" data-section="case_studies" data-track="case_study_toggle" type="button"><span>Explore case study</span><span aria-hidden="true" class="toggle-icon">+</span></button></article>
+<article aria-expanded="false" class="card project-card interactive-card" data-category="ai automation" tabindex="0"><div><span class="status-badge status-progress">System design / in development</span><h3>Historical Decision Intelligence</h3><p>Issue intelligence system for data issues, ownership, timeline reconstruction, and source-grounded answers across Jira, email, Confluence-like documents, and collaboration history.</p><div class="case-summary-line"><span class="summary-pulse"></span><b>Decision timeline · source-grounded answers</b></div><div class="case-rows"><div class="case-row"><b>Problem</b><span>Data issues rarely live in one ticket. Decisions are spread across comments, emails, specs, old QA evidence, and follow-up discussions, so analysts spend time reconstructing context before they can act.</span></div><div class="case-row"><b>Design</b><span>Not a plain document chatbot. The system models data-issue history as a decision timeline with entities such as country, platform, page, variable, event, metric, owner, status, latest decision, and source evidence.</span></div><div class="case-row"><b>Build</b><span>Periodic ingestion, entity extraction, issue-thread linking, temporal ranking, decision-state resolution, and answer templates that return latest decision, key history, related owners, and original source links.</span></div><div class="case-row"><b>Guardrail</b><span>Separate source evidence from generated synthesis, expose unresolved conflicts, and keep final operational decisions in a human review loop.</span></div></div><div class="tags"><span class="tag">Decision intelligence</span><span class="tag">Issue graph</span><span class="tag">Temporal retrieval</span><span class="tag">Owner resolution</span><span class="tag">Source grounding</span></div></div><button aria-expanded="false" class="case-toggle" data-project="Historical Decision Intelligence" data-section="case_studies" data-track="case_study_toggle" type="button"><span>Explore case study</span><span aria-hidden="true" class="toggle-icon">+</span></button></article>
+<article aria-expanded="false" class="card project-card interactive-card" data-category="measurement ai automation" tabindex="0"><div><span class="status-badge status-prototype">Validated prototype</span><h3>Tagging QA Automation Tool</h3><p>AI-assisted QA workflow that compares UI/CTA evidence against tagging specifications and turns exhaustive page-by-page manual checks into alert-based review.</p><div class="case-summary-line"><span class="summary-pulse"></span><b>Manual inspection → alert-based review</b></div><div class="case-rows"><div class="case-row"><b>Problem</b><span>For each page, reviewers often need to open planning documents, tagging guides, UI references, and QA evidence manually. A single page can take at least half a day of one person’s time when every CTA and expected event must be checked line by line.</span></div><div class="case-row"><b>Build</b><span>Use UI screenshots or design references, tagging guide entries, CTA labels, expected variables/events, and image/text embeddings to match visible components with expected tracking rules.</span></div><div class="case-row"><b>Output</b><span>Alert report for likely missing tags, mismatched CTA naming, wrong variable mapping, duplicate coverage, or low-confidence UI/spec matches, so the reviewer investigates exceptions instead of re-checking every element.</span></div><div class="case-row"><b>Value</b><span>Reframes tagging QA from exhaustive manual inspection into AI-assisted triage while keeping final approval with a human reviewer.</span></div></div><div class="tags"><span class="tag">Image embeddings</span><span class="tag">Spec matching</span><span class="tag">CTA coverage</span><span class="tag">Alert triage</span><span class="tag">Human review</span></div></div><div class="link-row"><a class="demo-link" data-demo="tagging_qa_demo" data-link-text="Tagging QA demo" data-link-type="youtube" data-project="tagging_qa_automation_tool" data-section="case_studies" data-track="demo_click" href="https://youtu.be/k-ZrhyRDVnc" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the Tagging QA demo</span><span class="demo-sub">See how UI elements are matched to tagging specs and converted into QA alerts</span></span><span class="demo-arrow">→</span></a></div><button aria-expanded="false" class="case-toggle" data-project="Tagging QA Automation Tool" data-section="case_studies" data-track="case_study_toggle" type="button"><span>Explore case study</span><span aria-hidden="true" class="toggle-icon">+</span></button></article>
+<article aria-expanded="false" class="card project-card interactive-card" data-category="measurement ai automation" tabindex="0"><div><span class="status-badge status-progress">System design / in development</span><h3>Measurement Reliability Monitor &amp; Tagging Design Guide Automation</h3><p>A system concept for monitoring expected-vs-actual analytics behavior and automating tagging design guide creation, revision, and review workflows from FRD, Zeplin, Jira, QA feedback, and existing event taxonomy.</p><div class="case-summary-line"><span class="summary-pulse"></span><b>Expected vs. actual · anomaly triage</b></div><div class="module-table"><div class="module-row"><b>Spec Intake</b><span>Parse FRD, Zeplin, Jira requirements, existing tagging guides, and QA feedback into structured requirement candidates.</span></div><div class="module-row"><b>Guide Generation</b><span>Draft event names, variables, CTA naming, required context fields, and page-level tracking conditions.</span></div><div class="module-row"><b>Guide Diff</b><span>Compare new requirements against the existing taxonomy and detect conflicts, duplicates, missing context, or naming-rule drift.</span></div><div class="module-row"><b>Monitoring</b><span>Run checks for event volume, variable completeness, funnel consistency, expected-vs-actual coverage, and rule drift signals.</span></div><div class="module-row"><b>Anomaly Triage</b><span>Return severity, suspected cause, affected metric, related page/journey, and recommended owner for follow-up.</span></div><div class="module-row"><b>Review Loop</b><span>Keep human approval, false-positive feedback, final guide revision, and decision history as part of the workflow.</span></div></div><div class="tags"><span class="tag">Measurement governance</span><span class="tag">Tagging guide automation</span><span class="tag">Metric integrity</span><span class="tag">Systematic QA workflow</span><span class="tag">Human-in-the-loop review</span></div></div><button aria-expanded="false" class="case-toggle" data-project="Measurement Reliability Monitor &amp; Tagging Design Guide Automation" data-section="case_studies" data-track="case_study_toggle" type="button"><span>Explore case study</span><span aria-hidden="true" class="toggle-icon">+</span></button></article>
+<article aria-expanded="false" class="card project-card interactive-card" data-category="measurement" tabindex="0"><div><span class="status-badge status-live">Implemented</span><h3>SEA to MST Rule Simulation</h3><p>Implemented marketing-processing-rule simulation for migration QA, designed to prevent attribution drift before migrated campaign traffic is trusted by business reporting.</p><div class="case-summary-line"><span class="summary-pulse"></span><b>Pre-launch attribution drift prevention</b></div><div class="case-rows"><div class="case-row"><b>Problem</b><span>During SEA to MST migration, marketing-channel processing rules must classify legacy tracking codes and CIDs correctly. If the migration rules are wrong, campaign performance measurement can become unusable or misleading.</span></div><div class="case-row"><b>Build</b><span>Extracted one year of historical tracking-code/CID data, attached SEA migration parameter scenarios, simulated the rule logic, and verified whether each pattern would be classified into the expected marketing channel.</span></div><div class="case-row"><b>Validation</b><span>Checked rule precedence, parameter coverage, expected outputs, mismatch cases, and high-risk tracking-code patterns before the migration was treated as report-ready.</span></div><div class="case-row"><b>Impact</b><span>Prevented business-facing marketing measurement issues before launch. The migration validation relied on this simulation as the primary check, while source code remains internal due to security constraints.</span></div></div><div class="tags"><span class="tag">Attribution QA</span><span class="tag">Processing rules</span><span class="tag">Migration simulation</span><span class="tag">CID validation</span><span class="tag">Business risk prevention</span></div></div><button aria-expanded="false" class="case-toggle" data-project="SEA to MST Rule Simulation" data-section="case_studies" data-track="case_study_toggle" type="button"><span>Explore case study</span><span aria-hidden="true" class="toggle-icon">+</span></button></article>
+<article aria-expanded="false" class="card project-card interactive-card" data-category="ai automation" tabindex="0"><div><span class="status-badge status-prototype">Validated prototype</span><h3>LLM Analytics Assistant</h3><p>Internal analytics assistant for metric questions, segment definitions, anomaly explanations, and first-pass dashboard narratives, designed around source evidence and analyst review.</p><div class="case-summary-line"><span class="summary-pulse"></span><b>Metric Q&amp;A · anomaly explanation · analyst review</b></div><div class="case-rows"><div class="case-row"><b>Problem</b><span>Analysts repeatedly translate metric definitions, segment logic, dashboard changes, and anomaly context for different stakeholders, which creates duplicated explanation work and inconsistent interpretation.</span></div><div class="case-row"><b>Build</b><span>FastAPI/PostgreSQL workflow with API-backed data retrieval, metadata-aware prompts, structured answer templates, SQL/Python support, and reusable dashboard-summary patterns.</span></div><div class="case-row"><b>Output</b><span>Metric Q&amp;A, segment interpretation, anomaly explanation draft, dashboard narrative, and follow-up investigation prompts that separate source evidence from generated interpretation.</span></div><div class="case-row"><b>Guardrail</b><span>Keep generated explanations reviewable by the analyst, avoid treating LLM output as source data, and preserve traceability to the underlying metric definition or API result.</span></div></div><div class="tags"><span class="tag">LLM</span><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Analytics API</span><span class="tag">Source-grounded QA</span></div></div><div class="link-row"><a class="demo-link secondary" data-demo="llm_analytics_assistant_demo" data-link-text="LLM Analytics Assistant demo" data-link-type="youtube" data-project="llm_analytics_assistant" data-section="case_studies" data-track="demo_click" href="https://youtu.be/MPPqG04IWNM" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the LLM Analytics Assistant demo</span><span class="demo-sub">See the metric Q&amp;A, anomaly explanation, and dashboard narrative workflow</span></span><span class="demo-arrow">→</span></a></div><button aria-expanded="false" class="case-toggle" data-project="LLM Analytics Assistant" data-section="case_studies" data-track="case_study_toggle" type="button"><span>Explore case study</span><span aria-hidden="true" class="toggle-icon">+</span></button></article>
+</div>
+</div>
+</section>
+<section id="projects" style="background:var(--cream)">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Supporting Archive</div><h2 class="section-title">Supporting work and earlier systems.</h2></div><p class="section-desc">These projects show additional implementation breadth across NLP, retrieval, agents, and service concepts while keeping the main story focused on product measurement reliability and AI analytics automation.</p></div>
+<div class="project-grid">
+<article class="card"><span class="badge">NLP</span><h3>TVING Review Sentiment &amp; Topic Analysis</h3><p>Analyzed large-scale user comments with sentiment analysis and LDA topic modeling to connect user feedback with product insight hypotheses.</p><div class="tags"><span class="tag">Python</span><span class="tag">LDA</span><span class="tag">Sentiment</span></div></article>
+<article class="card"><span class="badge">RAG Service</span><h3>Senior AI Playground “Nolmung”</h3><p>Senior-friendly AI service concept with legal, exercise, travel, and community modules built around clear UX and practical AI assistance.</p><div class="tags"><span class="tag">LLM</span><span class="tag">RAG</span><span class="tag">React/TS</span></div></article>
+<article class="card"><span class="badge">RAG</span><h3>Exercise Posture Recommendation</h3><p>Mapped user needs and body-part constraints to exercise recommendations using embeddings, FAISS retrieval, and YouTube API post-processing.</p><div class="tags"><span class="tag">bge-m3</span><span class="tag">FAISS</span><span class="tag">YouTube API</span></div><div class="link-row"><a class="demo-link" data-demo="recommendation_demo" data-link-text="Recommendation demo" data-link-type="youtube" data-project="exercise_posture_recommendation" data-section="supporting_archive" data-track="demo_click" href="https://youtu.be/4JtC5eUrYwo" rel="noreferrer" target="_blank"><span class="demo-copy"><span class="demo-label">Watch the recommendation demo</span><span class="demo-sub">See the retrieval flow and YouTube result matching</span></span><span class="demo-arrow">→</span></a></div></article>
+<article class="card"><span class="badge">FAQ Bot</span><h3>Naver Smart Store FAQ Chatbot</h3><p>Built a retrieval chatbot from 2,717 FAQ items using BM25, BGE-M3, ChromaDB, LLM response generation, and SQLite logging.</p><div class="tags"><span class="tag">BM25</span><span class="tag">BGE-M3</span><span class="tag">ChromaDB</span><span class="tag">FastAPI</span></div><div class="link-row"><a class="small-link" data-link-text="Smart Store Chatbot GitHub" data-link-type="github" data-project="smartstore_chatbot" data-section="supporting_archive" data-track="github_project_click" href="https://github.com/obok127/smartstore-chatbot.git" rel="noreferrer" target="_blank">GitHub →</a></div></article>
+</div>
+</div>
+</section>
+<section id="evidence">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">Evidence Layer</div><h2 class="section-title">Make the work easy to verify.</h2></div><p class="section-desc">Each major claim should eventually point to a repo, notebook, video, report, or reproducible artifact.</p></div>
+<div class="grid-2">
+<div class="card"><h3>GitHub</h3><p>Public repositories for RAG, ML, data mining, model implementation, analytics automation, and portfolio projects.</p><ul class="dense-list"><li><b>Next</b><span>Add README architecture diagrams, test data, setup scripts, and result screenshots to every flagship repo.</span></li></ul><a class="small-link" data-link-text="GitHub →" data-link-type="github" data-section="evidence" data-track="github_click" href="https://github.com/obok127" rel="noreferrer" target="_blank">GitHub →</a></div>
+<div class="card"><h3>Technical Writing</h3><p>Technical posts on measurement reliability, product metrics, behavioral data, and AI automation for analytics workflows.</p><ul class="dense-list"><li><b>Next</b><span>Publish each report as a short executive summary + technical appendix + implementation link.</span></li></ul><a class="small-link" data-link-text="LinkedIn →" data-link-type="linkedin" data-section="evidence" data-track="linkedin_click" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" rel="noreferrer" target="_blank">LinkedIn →</a></div>
+<div class="card kaggle-proof"><h3>Modeling / Competitions</h3><p class="kaggle-summary">Top 4–8% Kaggle results across tabular ML, ranking, regression, uncertainty estimation, and classification. This supports practical ML strength in metric-aligned validation, feature engineering, probability scoring, ranking robustness, and uncertainty-aware modeling.</p>
+<div class="kaggle-grid">
+<div class="kaggle-item"><b><strong>Top 4%</strong> · Bank marketing classification</b><span>ROC-AUC, probability scoring, stratified validation, campaign-contact feature handling, and deployable prioritization logic.</span></div>
+<div class="kaggle-item"><b><strong>Top 4%</strong> · Fertilizer recommendation</b><span>MAP@3 top-k ranking, stable probability ordering, interaction features, gradient boosting, and probability-level blending.</span></div>
+<div class="kaggle-item"><b><strong>Top 7%</strong> · House price prediction intervals</b><span>Uncertainty estimation, quantile regression, conformal calibration, and coverage–sharpness trade-off management.</span></div>
+<div class="kaggle-item"><b><strong>Top 7%</strong> · Synthetic tabular classification</b><span>Robust validation under synthetic artifacts, feature generalization, and leaderboard-overfit control.</span></div>
+<div class="kaggle-item"><b><strong>Top 8%</strong> · Calorie expenditure regression</b><span>RMSLE-aligned validation, scale-aware error control, heteroskedasticity handling, and ensemble stability.</span></div>
+</div>
+<div class="link-row"><a class="small-link" href="https://www.kaggle.com/obok127" rel="noreferrer" target="_blank">Kaggle profile →</a></div>
+</div>
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow" style="color:#93c5fd">Contact</div><h2 class="section-title">Let’s talk about product data, trustworthy metrics, or analytics systems.</h2></div><p class="section-desc">Open to Product Data Scientist, Measurement Scientist, Experimentation DS, Analytics Engineer, and AI analytics automation roles.</p></div>
+<div class="contact-card">
+<div class="grid-2">
+<div><h3 style="margin-top:0;color:white">Links</h3><ul class="clean"><li><a data-link-text="jangyeeun330@gmail.com" data-link-type="email" data-section="contact" data-track="email_click" href="mailto:jangyeeun330@gmail.com">jangyeeun330@gmail.com</a></li><li><a data-link-text="LinkedIn" data-link-type="linkedin" data-section="evidence" data-track="linkedin_click" href="https://www.linkedin.com/in/yeeun-jang-385578374?utm_source=share" rel="noreferrer" target="_blank">LinkedIn</a></li><li><a data-link-text="GitHub" data-link-type="github" data-section="evidence" data-track="github_click" href="https://github.com/obok127" rel="noreferrer" target="_blank">GitHub</a></li><li><a data-link-text="YouTube" data-link-type="youtube" data-section="external_links" data-track="youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank">YouTube</a></li><li><a data-link-text="Portfolio" data-link-type="portfolio" data-section="contact" data-track="portfolio_click" href="https://obok127.github.io/" rel="noreferrer" target="_blank">Portfolio</a></li></ul></div>
+<div><h3 style="margin-top:0;color:white">Quick line</h3><p style="color:#dbeafe">I turn behavioral telemetry into reliable metrics, repeatable investigations, and practical analytics systems.</p><div class="cta"><a class="btn" data-link-text="Email" data-link-type="email" data-section="contact" data-track="email_click" href="mailto:jangyeeun330@gmail.com">Email</a><a class="btn" data-link-text="Visit YouTube Channel" data-link-type="youtube" data-section="external_links" data-track="youtube_click" href="https://youtube.com/@yyen-x4w?si=1aEx7sYdyA1kgYPk" rel="noreferrer" target="_blank">Visit YouTube Channel</a></div></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div aria-hidden="true" aria-labelledby="video-modal-title" aria-modal="true" class="video-modal" id="video-modal" role="dialog"><button aria-label="Close video" class="video-backdrop" type="button"></button><div class="video-panel"><div class="video-modal-head"><div><span class="modal-eyebrow">Project demo</span><h2 id="video-modal-title">Demo walkthrough</h2></div><button aria-label="Close video" class="video-close" type="button">×</button></div><div class="video-frame-wrap"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" id="video-frame" loading="lazy" src="" title="Project demo video"></iframe></div><div class="video-modal-foot"><p>Watch the evidence without leaving the portfolio.</p><a class="btn" href="#" id="video-external" rel="noreferrer" target="_blank">Open on YouTube ↗</a></div></div></div><footer class="footer"><div class="container">© 2026 Ye Eun Jang. Built for Product Data Science, Measurement Reliability, and AI Analytics Automation.</div></footer>
+<script>
+(function () {
+  const sentScrollDepths = new Set();
+
+  function getClosestTrackElement(event) {
+    if (event.composedPath) {
+      const path = event.composedPath();
+      for (const node of path) {
+        if (node && node.nodeType === 1 && node.matches && node.matches('[data-track]')) {
+          return node;
+        }
+      }
+    }
+    return event.target && event.target.closest ? event.target.closest('[data-track]') : null;
+  }
+
+  function sendGA4Event(eventName, params) {
+    const payload = Object.assign({
+      page_name: 'portfolio_home',
+      page_type: 'portfolio',
+      page_path: window.location.pathname,
+      page_url: window.location.href
+    }, params || {});
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, payload);
+    }
+
+    if (typeof window.clarity === 'function') {
+      window.clarity('event', eventName);
+    }
+  }
+
+  document.addEventListener('click', function (event) {
+    const el = getClosestTrackElement(event);
+    if (!el) return;
+
+    sendGA4Event(el.dataset.track, {
+      section_name: el.dataset.section || '',
+      project_name: el.dataset.project || '',
+      demo_name: el.dataset.demo || '',
+      paper_title: el.dataset.paper || '',
+      paper_number: el.dataset.paperNumber || '',
+      link_type: el.dataset.linkType || '',
+      link_text: el.dataset.linkText || (el.innerText || '').trim().slice(0, 100),
+      link_url: el.href || ''
+    });
+  }, true);
+
+  function trackScrollDepth() {
+    const documentHeight = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+    const viewportBottom = window.scrollY + window.innerHeight;
+    const scrollPercent = Math.min(100, Math.round((viewportBottom / documentHeight) * 100));
+
+    [25, 50, 75, 100].forEach(function (depth) {
+      if (scrollPercent >= depth && !sentScrollDepths.has(depth)) {
+        sentScrollDepths.add(depth);
+        sendGA4Event('scroll_depth', {
+          section_name: 'page',
+          scroll_depth: depth
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', trackScrollDepth, { passive: true });
+  window.addEventListener('load', trackScrollDepth);
+})();
+</script>
+<button aria-label="Back to top" class="back-to-top" data-section="floating_navigation" data-track="back_to_top_click" type="button">↑</button><script>
+(function(){
+  'use strict';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const track = (eventName, params={}) => {
+    if (typeof window.gtag === 'function') window.gtag('event', eventName, Object.assign({page_name:'portfolio_home'}, params));
+  };
+
+  // Scroll progress, active navigation, and back-to-top.
+  const progressBar = document.querySelector('.scroll-progress span');
+  const backToTop = document.querySelector('.back-to-top');
+  const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  function onScroll(){
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0;
+    progressBar.style.width = pct + '%';
+    backToTop.classList.toggle('is-visible', window.scrollY > 650);
+    let current = sections[0];
+    sections.forEach(section => { if (section.getBoundingClientRect().top <= 150) current = section; });
+    navLinks.forEach(a => a.classList.toggle('is-active', current && a.getAttribute('href') === '#' + current.id));
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('load', onScroll);
+  backToTop.addEventListener('click', () => window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
+
+  // Mobile navigation.
+  const menuBtn = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-links');
+  menuBtn.addEventListener('click', () => {
+    const open = !navMenu.classList.contains('is-open');
+    navMenu.classList.toggle('is-open', open); menuBtn.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.forEach(a => a.addEventListener('click', () => {
+    navMenu.classList.remove('is-open'); menuBtn.classList.remove('is-open'); menuBtn.setAttribute('aria-expanded','false');
+  }));
+
+  // Hero scenario simulation.
+  const pipeline = document.querySelector('.measurement-pipeline');
+  const pipelineCopy = document.querySelector('#pipeline-copy');
+  const scenarioConfig = {
+    normal:{copy:'Clean telemetry moves from raw events to a decision-grade metric. Switch scenarios to see where trust breaks.', nodes:{events:'Ready',validate:'Ready',metrics:'Ready',decision:'Ready'}, feed:{evt:['Pass',''],map:['Pass',''],atr:['Pass','']}},
+    telemetry:{copy:'A missing event breaks completeness before the metric layer. The right response is investigation—not interpretation.', nodes:{events:'Missing',validate:'Alert',metrics:'Blocked',decision:'Hold'}, feed:{evt:['Missing','alert'],map:['Unverified','alert'],atr:['Hold','alert']}},
+    attribution:{copy:'Events are present, but rule precedence changes channel classification. The metric exists while the business meaning drifts.', nodes:{events:'Ready',validate:'Warning',metrics:'Drift',decision:'Review'}, feed:{evt:['Pass',''],map:['Pass',''],atr:['Drift','warning']}}
+  };
+  document.querySelectorAll('.pipeline-control').forEach(btn => btn.addEventListener('click', () => {
+    const state = btn.dataset.scenario; const cfg = scenarioConfig[state];
+    document.querySelectorAll('.pipeline-control').forEach(x => {x.classList.toggle('is-active', x===btn); x.setAttribute('aria-pressed', String(x===btn));});
+    pipeline.dataset.state = state; pipelineCopy.textContent = cfg.copy;
+    Object.entries(cfg.nodes).forEach(([key,val]) => { const el = pipeline.querySelector(`[data-node="${key}"] .node-status`); if(el) el.textContent=val; });
+    Object.entries(cfg.feed).forEach(([key,val]) => { const row=document.querySelector(`[data-feed="${key}"]`); if(!row)return; row.classList.remove('is-alert','is-warning'); if(val[1])row.classList.add('is-'+val[1]); row.querySelector('.feed-status').textContent=val[0]; });
+    track('pipeline_scenario_change',{scenario_name:state});
+  }));
+
+  // Count-up metrics.
+  const counted = new WeakSet();
+  const countObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (!entry.isIntersecting || counted.has(entry.target)) return;
+    counted.add(entry.target); const el=entry.target; const target=Number(el.dataset.count||0); const suffix=el.dataset.suffix||'';
+    if(reduceMotion){el.textContent=target+suffix;return;}
+    const duration=900; const start=performance.now();
+    function frame(now){ const p=Math.min(1,(now-start)/duration); const eased=1-Math.pow(1-p,3); el.textContent=Math.round(target*eased)+suffix; if(p<1)requestAnimationFrame(frame); }
+    requestAnimationFrame(frame);
+  }),{threshold:.5});
+  document.querySelectorAll('.metric-number').forEach(el=>countObserver.observe(el));
+
+  // Scroll reveal with stagger.
+  const revealTargets = [...document.querySelectorAll('section .section-head, .card, .proof-pill, .matrix-item, .roadmap-compact, .project-toolbar')];
+  revealTargets.forEach((el,i)=>{el.classList.add('reveal'); el.classList.add('reveal-delay-'+((i%3)+1));});
+  if(reduceMotion){revealTargets.forEach(el=>el.classList.add('is-visible'));}
+  else{
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');revealObserver.unobserve(e.target);}}),{threshold:.08,rootMargin:'0px 0px -45px'});
+    revealTargets.forEach(el=>revealObserver.observe(el));
+  }
+
+  // Card pointer glow.
+  document.querySelectorAll('.interactive-card').forEach(card => card.addEventListener('pointermove', e => {
+    const r=card.getBoundingClientRect(); card.style.setProperty('--mouse-x',((e.clientX-r.left)/r.width*100)+'%'); card.style.setProperty('--mouse-y',((e.clientY-r.top)/r.height*100)+'%');
+  }));
+
+  // Research maturity filter.
+  const researchItems=[...document.querySelectorAll('[data-research-stage]')];
+  const researchGrid=document.querySelector('.research-selected');
+  document.querySelectorAll('.research-stage').forEach(btn=>btn.addEventListener('click',()=>{
+    const stage=btn.dataset.stageFilter;
+    document.querySelectorAll('.research-stage').forEach(x=>{x.classList.toggle('is-active',x===btn);x.setAttribute('aria-pressed',String(x===btn));});
+    researchItems.forEach(item=>item.classList.toggle('is-filtered-out',stage!=='all'&&item.dataset.researchStage!==stage));
+    const visible=researchItems.filter(x=>!x.classList.contains('is-filtered-out')).length;
+    researchGrid.classList.toggle('is-single',visible===1);
+    track('research_maturity_filter',{research_stage:stage});
+  }));
+
+  // Case-study filtering and expansion.
+  const projectCards=[...document.querySelectorAll('#pocs .project-card')];
+  document.querySelectorAll('.project-filter').forEach(btn=>btn.addEventListener('click',()=>{
+    const filter=btn.dataset.projectFilter;
+    document.querySelectorAll('.project-filter').forEach(x=>{x.classList.toggle('is-active',x===btn);x.setAttribute('aria-pressed',String(x===btn));});
+    projectCards.forEach(card=>{const match=filter==='all'||(card.dataset.category||'').split(' ').includes(filter);card.classList.toggle('is-filtered-out',!match);});
+    track('case_study_filter_change',{filter_name:filter});
+  }));
+  function setCard(card,open){card.classList.toggle('is-open',open);card.setAttribute('aria-expanded',String(open));const btn=card.querySelector('.case-toggle');if(btn){btn.setAttribute('aria-expanded',String(open));btn.querySelector('span:first-child').textContent=open?'Collapse case study':'Explore case study';}}
+  projectCards.forEach(card=>{
+    const btn=card.querySelector('.case-toggle'); btn.addEventListener('click',e=>{e.stopPropagation();setCard(card,!card.classList.contains('is-open'));});
+    card.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target===card){e.preventDefault();setCard(card,!card.classList.contains('is-open'));}});
+  });
+  const expandAll=document.querySelector('.expand-all');
+  expandAll.addEventListener('click',()=>{const open=expandAll.dataset.expanded!=='true';projectCards.filter(c=>!c.classList.contains('is-filtered-out')).forEach(c=>setCard(c,open));expandAll.dataset.expanded=String(open);expandAll.textContent=open?'Collapse all':'Expand all';});
+
+  // In-page YouTube modal.
+  const modal=document.querySelector('#video-modal'); const frame=document.querySelector('#video-frame'); const external=document.querySelector('#video-external'); const modalTitle=document.querySelector('#video-modal-title'); let lastFocus=null;
+  function youtubeId(url){try{const u=new URL(url,window.location.href);if(u.hostname.includes('youtu.be'))return u.pathname.slice(1);if(u.searchParams.get('v'))return u.searchParams.get('v');const parts=u.pathname.split('/');const idx=parts.indexOf('embed');return idx>=0?parts[idx+1]:'';}catch(e){return '';}}
+  function closeModal(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');frame.src='';document.body.classList.remove('modal-open');if(lastFocus)lastFocus.focus();}
+  document.querySelectorAll('.demo-link[href*="youtu"]').forEach(link=>link.addEventListener('click',e=>{const id=youtubeId(link.href);if(!id)return;e.preventDefault();lastFocus=link;modalTitle.textContent=link.querySelector('.demo-label')?.textContent||'Demo walkthrough';frame.src=`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;external.href=link.href;modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');document.querySelector('.video-close').focus();track('demo_modal_open',{demo_name:link.dataset.demo||'',project_name:link.dataset.project||''});}));
+  document.querySelector('.video-close').addEventListener('click',closeModal);document.querySelector('.video-backdrop').addEventListener('click',closeModal);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))closeModal();});
+})();
+</script></body>
+</html>
