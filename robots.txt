@@ -1,0 +1,19 @@
+# Allow search engines to read the noindex directives on portfolio pages.
+User-agent: *
+Allow: /
+
+# Decline AI search, training, and dataset collection for this portfolio.
+# Limit these rules to the portfolio so separate project sites are unaffected.
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: Google-Extended
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: CCBot
+Disallow: /$
+Disallow: /?
+Disallow: /index.html
+Disallow: /previous.html
+Disallow: /previoius_v2.html
+Disallow: /avatar-placeholder.svg
